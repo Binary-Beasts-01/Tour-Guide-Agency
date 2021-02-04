@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <title>Tour Guide Agency</title>
 </head>
@@ -11,7 +12,30 @@
 <body>
     <!-- top header section -->
     <header id="landing-header">
+        <nav class="nav-center">
+            <a class="logo-brand" href="#"><img src="./assets/icons/logo.png" alt="travel-logo"></a>
+            <button class="navigation-toggler">
+                <span class="humberger-menu">
+                    <img src="./assets/icons/sort-24px.svg" alt="">
+                </span>
+            </button>
 
+            <div class="collapsable" id="nav-collapse">
+                <ul class="nav-list">
+                    <li class="list-item"><a href="#">Home</a></li>
+                    <li class="list-item"><a href="#">About</a></li>
+                    <li class="list-item"><a href="#">Guides</a></li>
+                    <li class="list-item"><a href="#">Contact</a></li>
+                    <li>
+                        <i class="fas fa-search"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="btn">
+                Browse Destination
+            </button>
+        </nav>
     </header>
 
     <!-- destination section -->

@@ -53,6 +53,7 @@ Variables
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --thin-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
@@ -143,7 +144,7 @@ p {
   position: relative;
   display: inline-block;
   max-width: 100%;
-  padding: 9px 0px;
+  padding: 12px 0px;
   font-size: 16px;
   font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
   font-weight: 700;
@@ -157,36 +158,11 @@ p {
   user-select: none;
   transition: 0.25s all ease;
   white-space: nowrap;
+  color: var(--clr-brown-dark);
 }
-button {
-  border-radius: 0;
-  appearance: auto;
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: center;
-  align-items: flex-start;
-  cursor: default;
-  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-  box-sizing: border-box;
-  margin: 0em;
-  font: 400 13.3333px Arial;
-  padding: 1px 6px;
-  border-width: 2px;
-  border-style: outset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
+.btn:hover {
+  color: var(--clr-light-brown);
 }
-/* .btn:hover {
-  color: var(--clr-white);
-  background: var(--clr-black);
-} */
 /* .btn-hero {
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
@@ -211,16 +187,15 @@ button {
 Nav
 ===============
 */
-nav {
+header {
   background: var(--clr-white);
-  height: 3rem;
+  height: 6rem;
   display: grid;
   align-items: center;
-  box-shadow: var(--dark-shadow);
+  box-shadow: var(--thin-shadow);
 }
 .nav-center {
-  width: 90vw;
-  max-width: var(--fixed-width);
+  width: 96vw;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -233,16 +208,20 @@ nav {
 .nav-links {
   display: flex;
 }
+/* Nav-logo */
 nav a {
   text-transform: capitalize;
   font-weight: 700;
   font-size: 1rem;
   color: var(--clr-primary-1);
   letter-spacing: var(--spacing);
-  margin-right: 1rem;
 }
 nav a:hover {
-  color: var(--clr-primary-5);
+  color: var(--clr-light-brown);
+}
+nav .logo-brand img {
+  height: 6rem;
+  width: 6rem;
 }
 /*
 =============== 
@@ -266,4 +245,34 @@ main {
 }
 .color {
   color: var(--clr-primary-5);
+}
+
+/* nav toggler */
+.navigation-toggler {
+  display: none;
+}
+.collapsable ul {
+  display: flex;
+}
+.collapsable .list-item,
+.collapsable li {
+  position: relative;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+}
+.collapsable .list-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 2px;
+  width: 0;
+  background-color: var(--clr-light-brown);
+  transition: width 0.2s ease-out;
+}
+.collapsable .list-item:hover:after {
+  width: 100%;
 }

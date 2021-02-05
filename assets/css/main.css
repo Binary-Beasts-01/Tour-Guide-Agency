@@ -319,6 +319,11 @@ main {
   overflow: hidden;
 }
 
+#destination .card-img-top{
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+}
+
 #destination .card-img-top:hover{
   transform: scale(1.05);
   transition: all 1s ease-in-out;
@@ -370,3 +375,33 @@ main {
   box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
 }
 
+/* News section */
+
+.news-button, .news-date{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.img-wrapper{
+  overflow: hidden;
+}
+
+#news .card-img-top{
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+}
+
+#news .card-img-top:hover{
+  transform: scale(1.05);
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 992px) {
+  .destination-header{
+    margin-right: unset;
+    margin-left: unset;
+  }
+}

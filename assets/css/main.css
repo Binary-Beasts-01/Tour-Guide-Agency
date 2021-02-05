@@ -306,3 +306,13 @@ main {
 #slide-landing .carousel-caption p {
   color: var(--clr-grey-9);
 }
+
+
+.titname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin: 0 40px 40px 40px;
+}

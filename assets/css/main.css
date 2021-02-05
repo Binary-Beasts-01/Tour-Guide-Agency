@@ -4,7 +4,7 @@ Fonts
 ===============
 */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:400,700&display=swap');
 /*
 =============== 
 Variables
@@ -45,10 +45,11 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-brown-dark: #2b2b2b;
-  --clr-light-brown: #917a4c;
+  --clr-light-brown: #151515;
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
   --ff-secondary: 'Open Sans', sans-serif;
+  --ff-third: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -72,8 +73,9 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff-secondary);
-  background: var(--clr-grey-10);
+  font-family: var(--ff-third);
+  font-weight: 400;
+  background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -97,7 +99,7 @@ h4 {
   text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
-  font-family: var(--ff-primary);
+  font-family: var(--ff-third);
 }
 h1 {
   font-size: 3rem;
@@ -113,7 +115,7 @@ h4 {
 }
 p {
   margin-bottom: 1.25rem;
-  color: var(--clr-grey-5);
+  letter-spacing: 0.02em;
 }
 @media screen and (min-width: 800px) {
   h1 {
@@ -167,21 +169,7 @@ p {
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
 } */
-/* section */
-.section {
-  padding: 5rem 0;
-}
 
-.section-center {
-  width: 90vw;
-  margin: 0 auto;
-  max-width: 1170px;
-}
-@media screen and (min-width: 992px) {
-  .section-center {
-    width: 95vw;
-  }
-}
 /*
 =============== 
 Nav
@@ -275,4 +263,46 @@ main {
 }
 .collapsable .list-item:hover:after {
   width: 100%;
+}
+
+/* section */
+.section {
+  height: 300px;
+}
+.section {
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+/* Main Slider */
+.slide-img-container {
+  height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+}
+#slide-landing .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  max-width: 600px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  transform: translateY(-50%);
+  color: #fff;
+  text-align: left;
+}
+#slide-landing .carousel-caption h1 {
+  color: var(--clr-white);
+}
+#slide-landing .carousel-caption p {
+  color: var(--clr-grey-9);
 }

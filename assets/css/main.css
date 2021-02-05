@@ -37,7 +37,6 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(206, 33%, 96%);
-  --clr-white-grey: #f7f7f7;
   --clr-light-grey: #f7f7f7;
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
@@ -270,6 +269,7 @@ main {
   height: 300px;
 }
 .section {
+  padding: 5rem;
 }
 .section-center {
   width: 90vw;
@@ -305,4 +305,41 @@ main {
 }
 #slide-landing .carousel-caption p {
   color: var(--clr-grey-9);
+}
+
+/* services */
+#services {
+  min-height: 600px;
+  background-color: var(--clr-light-grey);
+  padding: 5rem 1rem;
+}
+.services .box-minimal-border {
+  padding: 40px 35px 45px;
+  border: 1px solid #dfe1ea;
+  transition: 450ms ease-in-out;
+  min-height: 300px;
+}
+.services h1 {
+  margin-bottom: 4rem;
+}
+.services .box-minimal-border .box-minimal-icon {
+  font-size: 30px;
+  color: #151515;
+  padding: 20px 15px;
+}
+.services .linearicons,
+[class^='linearicons-'],
+[class*=' linearicons-'] {
+  font-family: 'Linearicons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.services .box-minimal-border:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
 }

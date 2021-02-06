@@ -1,0 +1,32 @@
+#about-header {
+    height: 30rem;
+    background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
+    background-size: cover;
+    background-position-y: top;
+    color: white;
+    margin-bottom: 8rem;
+}
+
+#breadcrumb-nav {
+    margin-top: 5rem;
+    color: white;
+    --bs-breadcrumb-divider: "";
+}
+
+#breadcrumb {
+    margin-top: 6rem;
+}
+
+.breadcrumb-item > a, .breadcrumb-item > a::after {
+    color: white;
+    content: " > ";
+    font-weight: lighter;
+}
+
+.breadcrumb-item > a:hover {
+    color: gray;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}

@@ -44,6 +44,7 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-brown-dark: #2b2b2b;
+  --clr-brown: #ad9463;
   --clr-light-brown: #151515;
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
@@ -158,11 +159,20 @@ p {
   cursor: pointer;
   user-select: none;
   transition: 0.25s all ease;
+  border-radius: 0;
   white-space: nowrap;
   color: var(--clr-brown-dark);
 }
+
+.divider {
+  width: 20%;
+  color: var(--clr-brown);
+  height: 3px !important;
+  opacity: 1;
+}
+
 .btn:hover {
-  color: var(--clr-light-brown);
+  color:  var(--clr-brown);
 }
 /* .btn-hero {
   font-size: 1rem;
@@ -511,5 +521,18 @@ main {
 }
 
 #go-to-top:hover, #go-to-top:active {
-  background-color: #ad9463;;
+  background-color: var(--clr-brown);
+}
+
+
+/* Surafel Big background section title */
+
+.big-title-reflection {
+  position: absolute;
+  left: 50px;
+  font-weight: 900;
+  z-index: -1 ;
+  font-size: 160px;
+  letter-spacing: 0;
+  color: #f7f7f7;
 }

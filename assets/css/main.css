@@ -44,6 +44,7 @@ Variables
   --clr-green-dark: hsl(125, 67%, 44%);
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-brown-dark: #2b2b2b;
+  --clr-brown: #ad9463;
   --clr-light-brown: #151515;
   --clr-black: #222;
   --ff-primary: 'Roboto', sans-serif;
@@ -58,6 +59,7 @@ Variables
   --max-width: 1170px;
   --fixed-width: 620px;
 }
+
 /*
 =============== 
 Global Styles
@@ -71,6 +73,7 @@ Global Styles
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: var(--ff-third);
   font-weight: 400;
@@ -79,12 +82,15 @@ body {
   line-height: 1.5;
   font-size: 0.875rem;
 }
+
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 img:not(.nav-logo) {
   width: 100%;
   display: block;
@@ -100,38 +106,49 @@ h4 {
   margin-bottom: 0.75rem;
   font-family: var(--ff-third);
 }
+
 h1 {
   font-size: 3rem;
 }
+
 h2 {
   font-size: 2rem;
 }
+
 h3 {
   font-size: 1.25rem;
 }
+
 h4 {
   font-size: 0.875rem;
 }
+
 p {
   margin-bottom: 1.25rem;
   letter-spacing: 0.02em;
 }
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
   }
+
   h2 {
     font-size: 2.5rem;
   }
+
   h3 {
     font-size: 1.75rem;
   }
+
   h4 {
     font-size: 1rem;
   }
+
   body {
     font-size: 1rem;
   }
+
   h1,
   h2,
   h3,
@@ -139,6 +156,7 @@ p {
     line-height: 1;
   }
 }
+
 /*  global classes */
 
 .btn {
@@ -158,12 +176,22 @@ p {
   cursor: pointer;
   user-select: none;
   transition: 0.25s all ease;
+  border-radius: 0;
   white-space: nowrap;
   color: var(--clr-brown-dark);
 }
-.btn:hover {
-  color: var(--clr-light-brown);
+
+.divider {
+  width: 20%;
+  color: var(--clr-brown);
+  height: 3px !important;
+  opacity: 1;
 }
+
+.btn:hover {
+  color:  var(--clr-brown);
+}
+
 /* .btn-hero {
   font-size: 1rem;
   padding: 0.75rem 1.25rem;
@@ -210,6 +238,7 @@ header {
   align-items: center;
   box-shadow: var(--thin-shadow);
 }
+
 .nav-center {
   width: 96vw;
   margin: 0 auto;
@@ -217,13 +246,16 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
 .nav-center h4 {
   margin-bottom: 0;
   color: var(--clr-primary-5);
 }
+
 .nav-links {
   display: flex;
 }
+
 /* Nav-logo */
 nav a {
   text-transform: capitalize;
@@ -232,13 +264,16 @@ nav a {
   color: var(--clr-primary-1);
   letter-spacing: var(--spacing);
 }
+
 nav a:hover {
   color: var(--clr-light-brown);
 }
+
 nav .logo-brand img {
   height: 6rem;
   width: 6rem;
 }
+
 /*
 =============== 
 wrapper
@@ -249,9 +284,11 @@ main {
   display: grid;
   place-items: center;
 }
+
 .wrapper {
   text-align: center;
 }
+
 .wrapper h2 {
   background: var(--clr-black);
   color: var(--clr-white);
@@ -259,6 +296,7 @@ main {
   border-radius: var(--radius);
   margin-bottom: 2.5rem;
 }
+
 .color {
   color: var(--clr-primary-5);
 }
@@ -267,9 +305,11 @@ main {
 .navigation-toggler {
   display: none;
 }
+
 .collapsable ul {
   display: flex;
 }
+
 .collapsable .list-item,
 .collapsable li {
   position: relative;
@@ -279,6 +319,7 @@ main {
   align-items: center;
   margin: 0 1rem;
 }
+
 .collapsable .list-item::after {
   position: absolute;
   bottom: 0;
@@ -289,6 +330,7 @@ main {
   background-color: var(--clr-light-brown);
   transition: width 0.2s ease-out;
 }
+
 .collapsable .list-item:hover:after {
   width: 100%;
 }
@@ -297,19 +339,23 @@ main {
 .section {
   height: 300px;
 }
+
 .section {
   padding: 5rem;
 }
+
 .section-center {
   width: 90vw;
   margin: 0 auto;
   max-width: 1170px;
 }
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
+
 /* Main Slider */
 #slide-landing {
   position: relative;
@@ -321,6 +367,7 @@ main {
   background-position: center;
   filter: brightness(0.7);
 }
+
 #slide-landing .carousel-caption {
   position: absolute;
   top: 50%;
@@ -332,9 +379,11 @@ main {
   color: #fff;
   text-align: left;
 }
+
 #slide-landing .carousel-caption h1 {
   color: var(--clr-white);
 }
+
 #slide-landing .carousel-caption p {
   color: var(--clr-grey-9);
 }
@@ -387,6 +436,10 @@ select {
   margin-right: 150px;
   margin-left: 150px;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 .img-wrapper {
   overflow: hidden;
 }
@@ -414,20 +467,24 @@ select {
   background-color: var(--clr-light-grey);
   padding: 5rem 1rem;
 }
+
 .services .box-minimal-border {
   padding: 40px 35px 45px;
   border: 1px solid #dfe1ea;
   transition: 450ms ease-in-out;
   min-height: 300px;
 }
+
 .services h1 {
   margin-bottom: 4rem;
 }
+
 .services .box-minimal-border .box-minimal-icon {
   font-size: 30px;
   color: #151515;
   padding: 20px 15px;
 }
+
 .services .linearicons,
 [class^='linearicons-'],
 [class*=' linearicons-'] {
@@ -439,6 +496,7 @@ select {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
+
 .services .box-minimal-border:hover {
   background-color: #ffffff;
   border-color: #ffffff;
@@ -477,6 +535,161 @@ select {
   }
 }
 
+/* Testimonial Section */
+#testimonals{
+  background-color: #f7f7f7;;
+}
+
+.testimonial-header {
+  text-align: center;
+  position: relative;
+  margin: 30px 0 60px;
+}
+
+
+#testimonals .col-center {
+  margin: 0 auto;
+  float: none !important;
+}
+
+#testimonals .carousel {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+
+#testimonals .carousel-item {
+  font-size: 24px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 390px;
+  
+}
+
+#testimonals .carousel .item .img-box {
+  width: 235px;
+  height: 235px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+#testimonals .carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+#testimonals .carousel .testimonial {
+  padding: 30px 0 10px;
+}
+
+#testimonals .carousel .overview {
+  font-style: italic;
+}
+
+#testimonals .carousel .overview b {
+  text-transform: uppercase;
+  color: #db584e;
+}
+
+#testimonals .carousel .carousel-control {
+  width: 10px;
+  height: 10px;
+  margin-top: -20px;
+  top: 50%;
+  background: none;
+}
+
+#testimonals .carousel-control i {
+  font-size: 68px;
+  line-height: 42px;
+  position: absolute;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+#testimonals .carousel .carousel-indicators {
+  bottom: -40px;
+}
+
+#testimonals .carousel-indicators li,
+.carousel-indicators li.active {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+}
+
+#testimonals .carousel-indicators li {
+  background: #999;
+  border-color: transparent;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#testimonals .carousel-indicators li.active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Section */
+
+.gallery_product {
+  margin: 0px;
+  padding: 0;
+  position: relative;
+
+}
+
+.gallery_product .img-info {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  overflow: hidden;
+  color: #fff;
+  top: 0;
+  display: none;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.gallery_product:hover .img-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+
+#gallery-preview .gallery_product {
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+}
+
+#gallery-preview .gallery_product:hover {
+  transform: scale(1.05);
+  transition: all 1s ease-in-out;
+
+}
+
+.visit-us{
+  margin-right: 60px;
+}
+.visit-sub{
+  font-size: 24px;
+}
+
+.gallery-footer{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/*	end gallery */
 /* Surafel Footer Section */
 
 #footer {
@@ -496,7 +709,7 @@ select {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#facebook > a {
+#facebook>a {
   color: white;
 }
 
@@ -511,7 +724,7 @@ select {
   background-color: #3b5998;
 }
 
-#twitter > a {
+#twitter>a {
   color: white;
 }
 
@@ -523,10 +736,14 @@ select {
 #twitter:hover,
 #twitter:active {
   color: white;
+<<<<<<< HEAD
   background-color: #1da1f2;
+=======
+  background-color: #1DA1F2;
+>>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
 
-#instagram > a {
+#instagram>a {
   color: white;
 }
 
@@ -541,7 +758,7 @@ select {
   background-color: black;
 }
 
-#google > a {
+#google>a {
   color: white;
 }
 
@@ -553,10 +770,14 @@ select {
 #google:hover,
 #google:active {
   color: white;
+<<<<<<< HEAD
   background-color: #db4437;
+=======
+  background-color: #DB4437;
+>>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
 
-#linkedin > a {
+#linkedin>a {
   color: white;
 }
 
@@ -568,7 +789,11 @@ select {
 #linkedin:hover,
 #linkedin:active {
   color: white;
+<<<<<<< HEAD
   background-color: #2867b2;
+=======
+  background-color: #2867B2;
+>>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
 
 /* Go To top */
@@ -587,12 +812,34 @@ select {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 #go-to-top:visited,
+=======
+#go-to-top:link,
+>>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 #go-to-top:visited {
   color: white;
 }
 
+<<<<<<< HEAD
 #go-to-top:hover,
 #go-to-top:active {
   background-color: #ad9463;
+=======
+#go-to-top:hover, #go-to-top:active {
+  background-color: var(--clr-brown);
+>>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
+}
+
+
+/* Surafel Big background section title */
+
+.big-title-reflection {
+  position: absolute;
+  left: 50px;
+  font-weight: 900;
+  z-index: -1 ;
+  font-size: 160px;
+  letter-spacing: 0;
+  color: #f7f7f7;
 }

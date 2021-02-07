@@ -169,6 +169,35 @@ p {
   padding: 0.75rem 1.25rem;
 } */
 
+/* Pre Header */
+.pre-header {
+  background-color: var(--clr-brown-dark);
+  height: 50px;
+  color: var(--clr-white);
+  font-family: var(--ff-third);
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pre-header p,
+.pre-header ul {
+  margin-bottom: unset;
+  margin-right: 1.4rem;
+}
+.pre-header .contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pre-header .social-icons i {
+  color: var(--clr-grey-8);
+}
+.pre-header .social-icons i:hover {
+  color: var(--clr-white);
+  background-color: unset;
+}
 /*
 =============== 
 Nav
@@ -282,6 +311,9 @@ main {
   }
 }
 /* Main Slider */
+#slide-landing {
+  position: relative;
+}
 .slide-img-container {
   height: 700px;
   background-repeat: no-repeat;
@@ -307,36 +339,74 @@ main {
   color: var(--clr-grey-9);
 }
 
+/* Slide Banner */
+.slide-banner {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  background-color: var(--clr-light-grey);
+  width: 590px;
+  background-color: rgba(247, 247, 247, 0.8);
+  padding: 45px 40px 65px;
+  border-radius: 8px;
+  color: #29293a;
+  z-index: 11;
+}
+
+.form-label,
+.form-label-outside {
+  line-height: 28px;
+  color: #838386;
+  font-weight: 300;
+}
+.form-wrap-inline {
+  margin: 1rem 0;
+}
+.form-request-modern .form-input,
+select {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  background-color: transparent;
+  background-image: none;
+  border: 0px solid #f7f7f7;
+  -webkit-appearance: none;
+  color: #29293a;
+  border-bottom: 2px solid;
+}
+.form-input:focus,
+select {
+  outline: none;
+}
 /* Destination Section */
-.destination-header{
+.destination-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 150px;
   margin-left: 150px;
 }
-.img-wrapper{
+.img-wrapper {
   overflow: hidden;
 }
 
-#destination .card-img-top{
+#destination .card-img-top {
   transform: scale(1);
   transition: all 1s ease-in-out;
 }
 
-#destination .card-img-top:hover{
+#destination .card-img-top:hover {
   transform: scale(1.05);
   transition: all 1s ease-in-out;
 }
 
 @media screen and (max-width: 992px) {
-  .destination-header{
+  .destination-header {
     margin-right: unset;
     margin-left: unset;
   }
 }
-
-
 
 /* services */
 #services {
@@ -377,7 +447,8 @@ main {
 
 /* News section */
 
-.news-button, .news-date{
+.news-button,
+.news-date {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -385,22 +456,22 @@ main {
   margin-left: 50px;
 }
 
-.img-wrapper{
+.img-wrapper {
   overflow: hidden;
 }
 
-#news .card-img-top{
+#news .card-img-top {
   transform: scale(1);
   transition: all 1s ease-in-out;
 }
 
-#news .card-img-top:hover{
+#news .card-img-top:hover {
   transform: scale(1.05);
   transition: all 1s ease-in-out;
 }
 
 @media screen and (max-width: 992px) {
-  .destination-header{
+  .destination-header {
     margin-right: unset;
     margin-left: unset;
   }
@@ -409,7 +480,7 @@ main {
 /* Surafel Footer Section */
 
 #footer {
-  background-color: #2b2b2b;
+  background-color: var(--clr-brown-dark);
   color: white;
 }
 
@@ -429,65 +500,75 @@ main {
   color: white;
 }
 
-#facebook:link, #facebook:visited {
+#facebook:link,
+#facebook:visited {
   color: white;
 }
 
-#facebook:hover, #facebook:active {
+#facebook:hover,
+#facebook:active {
   color: white;
-  background-color: #3b5998; 
+  background-color: #3b5998;
 }
 
 #twitter > a {
   color: white;
 }
 
-#twitter:link, #twitter:visited {
+#twitter:link,
+#twitter:visited {
   color: white;
 }
 
-#twitter:hover, #twitter:active {
+#twitter:hover,
+#twitter:active {
   color: white;
-  background-color: #1DA1F2; 
+  background-color: #1da1f2;
 }
 
 #instagram > a {
   color: white;
 }
 
-#instagram:link, #instagram:visited {
+#instagram:link,
+#instagram:visited {
   color: white;
 }
 
-#instagram:hover, #instagram:active {
+#instagram:hover,
+#instagram:active {
   color: white;
-  background-color: black; 
+  background-color: black;
 }
 
 #google > a {
   color: white;
 }
 
-#google:link, #google:visited {
+#google:link,
+#google:visited {
   color: white;
 }
 
-#google:hover, #google:active {
+#google:hover,
+#google:active {
   color: white;
-  background-color:  #DB4437;
+  background-color: #db4437;
 }
 
 #linkedin > a {
   color: white;
 }
 
-#linkedin:link, #linkedin:visited {
+#linkedin:link,
+#linkedin:visited {
   color: white;
 }
 
-#linkedin:hover, #linkedin:active {
+#linkedin:hover,
+#linkedin:active {
   color: white;
-  background-color:  #2867B2;
+  background-color: #2867b2;
 }
 
 /* Go To top */
@@ -499,17 +580,19 @@ main {
   padding: 20px;
   height: 50px;
   border: 0 solid;
-  transition: .45s all ease-in-out;
+  transition: 0.45s all ease-in-out;
   border-radius: 9px;
   background-color: #2b2b2b;
   color: white;
   font-size: 20px;
 }
 
-#go-to-top:visited, #go-to-top:visited {
+#go-to-top:visited,
+#go-to-top:visited {
   color: white;
 }
 
-#go-to-top:hover, #go-to-top:active {
-  background-color: #ad9463;;
+#go-to-top:hover,
+#go-to-top:active {
+  background-color: #ad9463;
 }

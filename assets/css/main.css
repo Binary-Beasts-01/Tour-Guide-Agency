@@ -58,6 +58,8 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  --fs-headline-1: 4.5rem;
+  --fs-headline-2: 4rem;
 }
 
 /*
@@ -127,7 +129,14 @@ p {
   margin-bottom: 1.25rem;
   letter-spacing: 0.02em;
 }
-
+.headline-1 {
+  font-size: var(--fs-headline-1);
+  font-weight: 700;
+}
+.headline-2 {
+  font-size: var(--fs-headline-2);
+  font-weight: 400;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -189,7 +198,7 @@ p {
 }
 
 .btn:hover {
-  color:  var(--clr-brown);
+  color: var(--clr-brown);
 }
 
 /* .btn-hero {
@@ -319,7 +328,9 @@ main {
   align-items: center;
   margin: 0 1rem;
 }
-
+.nav-list .active {
+  border-bottom: 4px solid var(--clr-light-brown);
+}
 .collapsable .list-item::after {
   position: absolute;
   bottom: 0;
@@ -331,8 +342,34 @@ main {
   transition: width 0.2s ease-out;
 }
 
-.collapsable .list-item:hover:after {
+.collapsable .list-item:not(.active):hover:after {
   width: 100%;
+}
+
+/* BreadCrumb */
+#breadcrumb-nav {
+  margin-top: 5rem;
+  color: white;
+  --bs-breadcrumb-divider: '';
+}
+
+#breadcrumb {
+  margin-top: 6rem;
+}
+
+.breadcrumb-item > a,
+.breadcrumb-item > a::after {
+  color: white;
+  content: ' > ';
+  font-weight: lighter;
+}
+
+.breadcrumb-item > a:hover {
+  color: gray;
+}
+
+.breadcrumb-item.active {
+  color: white;
 }
 
 /* section */
@@ -436,10 +473,6 @@ select {
   margin-right: 150px;
   margin-left: 150px;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 .img-wrapper {
   overflow: hidden;
 }
@@ -536,8 +569,8 @@ select {
 }
 
 /* Testimonial Section */
-#testimonals{
-  background-color: #f7f7f7;;
+#testimonals {
+  background-color: #f7f7f7;
 }
 
 .testimonial-header {
@@ -545,7 +578,6 @@ select {
   position: relative;
   margin: 30px 0 60px;
 }
-
 
 #testimonals .col-center {
   margin: 0 auto;
@@ -562,7 +594,6 @@ select {
   text-align: center;
   overflow: hidden;
   min-height: 390px;
-  
 }
 
 #testimonals .carousel .item .img-box {
@@ -638,9 +669,12 @@ select {
   margin: 0px;
   padding: 0;
   position: relative;
-
+  overflow: hidden;
+  height: 400px;
 }
-
+.gallery_product .img-holder {
+  overflow: hidden;
+}
 .gallery_product .img-info {
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
@@ -656,7 +690,7 @@ select {
   transition: 2s;
 }
 
-.gallery_product:hover .img-info {
+.gallery_product .img-info:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -665,26 +699,24 @@ select {
   transition: 2s;
 }
 
-
 #gallery-preview .gallery_product {
   transform: scale(1);
   transition: all 1s ease-in-out;
 }
 
-#gallery-preview .gallery_product:hover {
+#gallery-preview .gallery_product:hover .img-holder img {
   transform: scale(1.05);
   transition: all 1s ease-in-out;
-
 }
 
-.visit-us{
+.visit-us {
   margin-right: 60px;
 }
-.visit-sub{
+.visit-sub {
   font-size: 24px;
 }
 
-.gallery-footer{
+.gallery-footer {
   margin-top: 100px;
   margin-bottom: 100px;
 }
@@ -709,7 +741,7 @@ select {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#facebook>a {
+#facebook > a {
   color: white;
 }
 
@@ -724,7 +756,7 @@ select {
   background-color: #3b5998;
 }
 
-#twitter>a {
+#twitter > a {
   color: white;
 }
 
@@ -736,14 +768,10 @@ select {
 #twitter:hover,
 #twitter:active {
   color: white;
-<<<<<<< HEAD
   background-color: #1da1f2;
-=======
-  background-color: #1DA1F2;
->>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
 
-#instagram>a {
+#instagram > a {
   color: white;
 }
 
@@ -758,7 +786,7 @@ select {
   background-color: black;
 }
 
-#google>a {
+#google > a {
   color: white;
 }
 
@@ -770,14 +798,10 @@ select {
 #google:hover,
 #google:active {
   color: white;
-<<<<<<< HEAD
   background-color: #db4437;
-=======
-  background-color: #DB4437;
->>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
 
-#linkedin>a {
+#linkedin > a {
   color: white;
 }
 
@@ -789,11 +813,7 @@ select {
 #linkedin:hover,
 #linkedin:active {
   color: white;
-<<<<<<< HEAD
   background-color: #2867b2;
-=======
-  background-color: #2867B2;
->>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
 
 /* Go To top */
@@ -812,25 +832,15 @@ select {
   font-size: 20px;
 }
 
-<<<<<<< HEAD
-#go-to-top:visited,
-=======
 #go-to-top:link,
->>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 #go-to-top:visited {
   color: white;
 }
 
-<<<<<<< HEAD
 #go-to-top:hover,
 #go-to-top:active {
-  background-color: #ad9463;
-=======
-#go-to-top:hover, #go-to-top:active {
   background-color: var(--clr-brown);
->>>>>>> ae3f9483a44bf62f589aea3de4d5a687e7a00cf5
 }
-
 
 /* Surafel Big background section title */
 
@@ -838,7 +848,7 @@ select {
   position: absolute;
   left: 50px;
   font-weight: 900;
-  z-index: -1 ;
+  z-index: -1;
   font-size: 160px;
   letter-spacing: 0;
   color: #f7f7f7;

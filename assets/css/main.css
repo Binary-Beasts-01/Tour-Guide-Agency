@@ -37,7 +37,7 @@ Variables
   --clr-grey-8: hsl(210, 31%, 80%);
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(206, 33%, 96%);
-  --clr-light-grey: #f7f7f7;
+  --clr-light-grey: #faf9f9;
   --clr-white: #fff;
   --clr-red-dark: hsl(360, 67%, 44%);
   --clr-red-light: hsl(360, 71%, 66%);
@@ -58,6 +58,8 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+  --fs-headline-1: 4.5rem;
+  --fs-headline-2: 4rem;
 }
 
 /*
@@ -127,7 +129,14 @@ p {
   margin-bottom: 1.25rem;
   letter-spacing: 0.02em;
 }
-
+.headline-1 {
+  font-size: var(--fs-headline-1);
+  font-weight: 700;
+}
+.headline-2 {
+  font-size: var(--fs-headline-2);
+  font-weight: 400;
+}
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 4rem;
@@ -189,14 +198,52 @@ p {
 }
 
 .btn:hover {
-  color:  var(--clr-brown);
+  color: var(--clr-brown);
 }
 
-/* .btn-hero {
-  font-size: 1rem;
-  padding: 0.75rem 1.25rem;
-} */
+.divider-default {
+  background: var(--clr-brown);
+}
 
+.divider {
+  display: inline-block;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+  height: 3px;
+  max-width: 100px;
+  width: 100%;
+}
+
+/* Pre Header */
+.pre-header {
+  background-color: var(--clr-brown-dark);
+  height: 50px;
+  color: var(--clr-white);
+  font-family: var(--ff-third);
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pre-header p,
+.pre-header ul {
+  margin-bottom: unset;
+  margin-right: 1.4rem;
+}
+.pre-header .contact-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pre-header .social-icons i {
+  color: var(--clr-grey-8);
+}
+.pre-header .social-icons i:hover {
+  color: var(--clr-white);
+  background-color: unset;
+}
 /*
 =============== 
 Nav
@@ -290,7 +337,9 @@ main {
   align-items: center;
   margin: 0 1rem;
 }
-
+.nav-list .active {
+  border-bottom: 4px solid var(--clr-light-brown);
+}
 .collapsable .list-item::after {
   position: absolute;
   bottom: 0;
@@ -302,8 +351,34 @@ main {
   transition: width 0.2s ease-out;
 }
 
-.collapsable .list-item:hover:after {
+.collapsable .list-item:not(.active):hover:after {
   width: 100%;
+}
+
+/* BreadCrumb */
+#breadcrumb-nav {
+  margin-top: 5rem;
+  color: white;
+  --bs-breadcrumb-divider: '';
+}
+
+#breadcrumb {
+  margin-top: 6rem;
+}
+
+.breadcrumb-item > a,
+.breadcrumb-item > a::after {
+  color: white;
+  content: ' > ';
+  font-weight: lighter;
+}
+
+.breadcrumb-item > a:hover {
+  color: gray;
+}
+
+.breadcrumb-item.active {
+  color: white;
 }
 
 /* section */
@@ -328,6 +403,9 @@ main {
 }
 
 /* Main Slider */
+#slide-landing {
+  position: relative;
+}
 .slide-img-container {
   height: 700px;
   background-repeat: no-repeat;
@@ -356,6 +434,46 @@ main {
   color: var(--clr-grey-9);
 }
 
+/* Slide Banner */
+.slide-banner {
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translateY(-50%);
+  background-color: var(--clr-light-grey);
+  width: 590px;
+  background-color: rgba(247, 247, 247, 0.8);
+  padding: 45px 40px 65px;
+  border-radius: 8px;
+  color: #29293a;
+  z-index: 11;
+}
+
+.form-label,
+.form-label-outside {
+  line-height: 28px;
+  color: #838386;
+  font-weight: 300;
+}
+.form-wrap-inline {
+  margin: 1rem 0;
+}
+.form-request-modern .form-input,
+select {
+  display: block;
+  width: 100%;
+  min-height: 80px;
+  background-color: transparent;
+  background-image: none;
+  border: 0px solid #f7f7f7;
+  -webkit-appearance: none;
+  color: #29293a;
+  border-bottom: 2px solid;
+}
+.form-input:focus,
+select {
+  outline: none;
+}
 /* Destination Section */
 .destination-header {
   display: flex;
@@ -364,7 +482,6 @@ main {
   margin-right: 150px;
   margin-left: 150px;
 }
-
 .img-wrapper {
   overflow: hidden;
 }
@@ -385,8 +502,6 @@ main {
     margin-left: unset;
   }
 }
-
-
 
 /* services */
 #services {
@@ -432,6 +547,11 @@ main {
 
 /* News section */
 
+#news {
+  width: 95%;
+  margin: 0 auto;
+}
+
 .news-button,
 .news-date {
   display: flex;
@@ -461,16 +581,24 @@ main {
     margin-left: unset;
   }
 }
-
 /* Testimonial Section */
-#testimonals{
-  background-color: #f7f7f7;;
+#testimonals {
+  background-color: var(--clr-light-grey);
 }
 
 .testimonial-header {
   text-align: center;
   position: relative;
-  margin: 30px 0 60px;
+  margin: 100px 0 60px;
+}
+
+.item .img-box{
+  float: left;
+  margin-right: 40px;
+}
+
+.item .testi-conent{
+  float: right;
 }
 
 
@@ -486,16 +614,16 @@ main {
 
 #testimonals .carousel-item {
   font-size: 24px;
-  text-align: center;
+  /* text-align: center; */
   overflow: hidden;
   min-height: 390px;
-  
+
 }
 
 #testimonals .carousel .item .img-box {
   width: 235px;
   height: 235px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-radius: 50%;
 }
 
@@ -516,19 +644,18 @@ main {
 
 #testimonals .carousel .overview b {
   text-transform: uppercase;
-  color: #db584e;
 }
 
 #testimonals .carousel .carousel-control {
   width: 10px;
   height: 10px;
-  margin-top: -20px;
+  margin-top: -50px;
   top: 50%;
   background: none;
 }
 
 #testimonals .carousel-control i {
-  font-size: 68px;
+  font-size: 38px;
   line-height: 42px;
   position: absolute;
   display: inline-block;
@@ -559,13 +686,72 @@ main {
   box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 992px) {
+  .img-box{
+    margin: 0 auto;
+  }
+}
 /* Gallery Section */
 
 .gallery_product {
-  margin: 0px;
+  margin: 0;
   padding: 0;
   position: relative;
 
+}
+
+.event-default {
+  position: relative;
+  max-width: 730px;
+  max-height: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  perspective: 1000px;
+  overflow: hidden;
+}
+.event-default img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+.event-default-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 550ms ease-in-out;
+  opacity: 0;
+}
+.event-default-image {
+  transition: 550ms ease-in-out;
+  object-fit: cover;
+}
+.event-default:hover .event-default-image,
+.event-default:hover .event-default-caption,
+.event-default:hover .button {
+  transform: scale3d(1.05, 1.05, 1.05);
+  opacity: 1;
+}
+
+.event-default-inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem 0rem;
+}
+.event-default-inner h5 a,
+.event-default-inner span {
+  color: var(--clr-brown-dark);
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .gallery_product .img-info {
@@ -592,6 +778,9 @@ main {
   transition: 2s;
 }
 
+/* 
+
+
 
 #gallery-preview .gallery_product {
   transform: scale(1);
@@ -604,23 +793,26 @@ main {
 
 }
 
-.visit-us{
+.visit-us {
   margin-right: 60px;
 }
-.visit-sub{
+
+.visit-sub {
   font-size: 24px;
 }
 
-.gallery-footer{
+
+} */
+
+.gallery-footer {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
 /*	end gallery */
 /* Surafel Footer Section */
 
 #footer {
-  background-color: #2b2b2b;
+  background-color: var(--clr-brown-dark);
   color: white;
 }
 
@@ -636,7 +828,7 @@ main {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-#facebook>a {
+#facebook > a {
   color: white;
 }
 
@@ -651,7 +843,7 @@ main {
   background-color: #3b5998;
 }
 
-#twitter>a {
+#twitter > a {
   color: white;
 }
 
@@ -663,10 +855,10 @@ main {
 #twitter:hover,
 #twitter:active {
   color: white;
-  background-color: #1DA1F2;
+  background-color: #1da1f2;
 }
 
-#instagram>a {
+#instagram > a {
   color: white;
 }
 
@@ -681,7 +873,7 @@ main {
   background-color: black;
 }
 
-#google>a {
+#google > a {
   color: white;
 }
 
@@ -693,10 +885,10 @@ main {
 #google:hover,
 #google:active {
   color: white;
-  background-color: #DB4437;
+  background-color: #db4437;
 }
 
-#linkedin>a {
+#linkedin > a {
   color: white;
 }
 
@@ -708,7 +900,7 @@ main {
 #linkedin:hover,
 #linkedin:active {
   color: white;
-  background-color: #2867B2;
+  background-color: #2867b2;
 }
 
 /* Go To top */
@@ -720,7 +912,7 @@ main {
   padding: 20px;
   height: 50px;
   border: 0 solid;
-  transition: .45s all ease-in-out;
+  transition: 0.45s all ease-in-out;
   border-radius: 9px;
   background-color: #2b2b2b;
   color: white;
@@ -732,10 +924,10 @@ main {
   color: white;
 }
 
-#go-to-top:hover, #go-to-top:active {
+#go-to-top:hover,
+#go-to-top:active {
   background-color: var(--clr-brown);
 }
-
 
 /* Surafel Big background section title */
 
@@ -743,7 +935,7 @@ main {
   position: absolute;
   left: 50px;
   font-weight: 900;
-  z-index: -1 ;
+  z-index: -1;
   font-size: 160px;
   letter-spacing: 0;
   color: #f7f7f7;

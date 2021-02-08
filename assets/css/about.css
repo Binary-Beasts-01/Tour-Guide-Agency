@@ -30,3 +30,36 @@
 .breadcrumb-item.active {
     color: white;
 }
+
+.about-us {
+    background-color: var(--clr-light-grey);
+}
+
+.big-icon-header {
+    color: var(--clr-brown);
+    font-size: 3rem;
+}
+
+.social-media-icon > a {
+    color: var(--clr-light-brown);
+}
+
+.social-media-icon > a:hover {
+    color: var(--clr-brown);
+}
+
+.team-image {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.team-member-name {
+    color: var(--clr-brown);
+}
+
+.our-team {
+    width: fit-content !important;
+    padding: 0 !important;
+    padding-top: .5rem !important;
+}

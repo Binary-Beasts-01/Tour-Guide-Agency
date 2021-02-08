@@ -46,17 +46,25 @@
   object-fit: cover;
 }
 .event-default:hover .event-default-image,
-.event-default:hover .event-default-caption {
+.event-default:hover .event-default-caption,
+.event-default:hover .button {
   transform: scale3d(1.05, 1.05, 1.05);
   opacity: 1;
 }
+
 .event-default-inner {
   display: flex;
   justify-content: space-between;
   padding: 1.6rem 0rem;
 }
+.event-default-inner h5 a,
+.event-default-inner span {
+  color: var(--clr-brown-dark);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
 .divider-default {
-  background: #ad9463;
+  background: var(--clr-brown);
 }
 
 .divider {
@@ -72,4 +80,19 @@
 #top-destination .title-description {
   width: 50%;
   margin: auto;
+}
+.button-xs {
+  padding: 9px 28px;
+  font-size: 14px;
+  line-height: 24px;
+  min-width: 150px;
+  transition: 550ms ease-in-out;
+  text-align: center;
+}
+
+.button-primary,
+.button-primary:focus {
+  color: #ffffff;
+  background-color: var(--clr-brown);
+  border-color: var(--clr-brown);
 }

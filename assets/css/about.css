@@ -6,3 +6,89 @@
   color: white;
   margin-bottom: 8rem;
 }
+
+#breadcrumb-nav {
+    margin-top: 5rem;
+    color: white;
+    --bs-breadcrumb-divider: "";
+}
+
+#breadcrumb {
+    margin-top: 6rem;
+}
+
+.breadcrumb-item > a, .breadcrumb-item > a::after {
+    color: white;
+    content: " > ";
+    font-weight: lighter;
+}
+
+.breadcrumb-item > a:hover {
+    color: gray;
+}
+
+.breadcrumb-item.active {
+    color: white;
+}
+
+.about-us {
+    background-color: var(--clr-light-grey);
+}
+
+.big-icon-header {
+    color: var(--clr-brown);
+    font-size: 3rem;
+}
+
+.social-media-icon > a {
+    color: var(--clr-light-brown);
+}
+
+.social-media-icon > a:hover {
+    color: var(--clr-brown);
+}
+
+.team-image {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+.team-member-name {
+    color: var(--clr-brown);
+}
+
+.our-team {
+    width: fit-content !important;
+    padding: 0 !important;
+    padding-top: .5rem !important;
+}
+
+
+.our-history {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    margin-bottom: 4rem;
+    /* max-height: 50rem; */
+    background-color: #29293a;
+    color: white;
+    /* #c2c2c3 */
+}
+
+.history-image {
+    max-height: 300px !important;
+}
+
+.time-line {
+    position: relative;
+    padding-left: 4rem;
+    border-left: 2px solid var(--clr-brown);
+}
+
+.timeline-indicator {
+    position: absolute;
+    left: -.6rem;
+    color: var(--clr-brown);
+    background-color: #29293a;
+}

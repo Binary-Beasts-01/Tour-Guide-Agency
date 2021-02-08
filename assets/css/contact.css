@@ -16,6 +16,9 @@
 #breadcrumb {
     margin-top: 6rem;
 }
+#contact-container{
+    padding-left: 70px;
+}
 #Form-label{
     border-radius: 30px;
     
@@ -28,19 +31,37 @@
    
 
 }
+
+.icons {
+    color: var(--clr-brown);
+}
+
 #Form-label:focus{outline: none;
 
 }
 .breadcrumb-item > a, .breadcrumb-item > a::after {
     color: white;
     content: " > ";
-    font-weight: lighter;
-}
-
+    font-weight: lighter; 
 .breadcrumb-item > a:hover {
     color: gray;
 }
 
 .breadcrumb-item.active {
     color: white;
+}
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:250rem;
+    width:100%;
+}
+.mapouter{
+    position:relative;
+    text-align:right;
+    height: 250rem;
+    width:100%;
 }

@@ -2,14 +2,12 @@
   height: 27rem;
   background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
   background-size: cover;
-  background-position-y: top;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
-  margin-bottom: 8rem;
+  margin-bottom: 7rem;
 }
-#destination-header h1 {
-  font-weight: 700;
-  font-size: var(--fs-headline-1);
-}
+
 .event-default {
   position: relative;
   max-width: 630px;

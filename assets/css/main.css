@@ -201,10 +201,19 @@ p {
   color: var(--clr-brown);
 }
 
-/* .btn-hero {
-  font-size: 1rem;
-  padding: 0.75rem 1.25rem;
-} */
+.divider-default {
+  background: var(--clr-brown);
+}
+
+.divider {
+  display: inline-block;
+  border: 0;
+  font-size: 0;
+  line-height: 0;
+  height: 3px;
+  max-width: 100px;
+  width: 100%;
+}
 
 /* Pre Header */
 .pre-header {

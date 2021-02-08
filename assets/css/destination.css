@@ -63,19 +63,6 @@
   font-size: 1.3rem;
   font-weight: 600;
 }
-.divider-default {
-  background: var(--clr-brown);
-}
-
-.divider {
-  display: inline-block;
-  border: 0;
-  font-size: 0;
-  line-height: 0;
-  height: 3px;
-  max-width: 100px;
-  width: 100%;
-}
 
 #top-destination .title-description {
   width: 50%;

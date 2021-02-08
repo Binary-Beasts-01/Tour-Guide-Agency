@@ -63,3 +63,32 @@
     padding: 0 !important;
     padding-top: .5rem !important;
 }
+
+
+.our-history {
+    margin-top: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    margin-bottom: 4rem;
+    /* max-height: 50rem; */
+    background-color: #29293a;
+    color: white;
+    /* #c2c2c3 */
+}
+
+.history-image {
+    max-height: 300px !important;
+}
+
+.time-line {
+    position: relative;
+    padding-left: 4rem;
+    border-left: 2px solid var(--clr-brown);
+}
+
+.timeline-indicator {
+    position: absolute;
+    left: -.6rem;
+    color: var(--clr-brown);
+    background-color: #29293a;
+}

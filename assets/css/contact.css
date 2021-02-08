@@ -43,6 +43,7 @@
     color: white;
     content: " > ";
     font-weight: lighter; 
+}
 .breadcrumb-item > a:hover {
     color: gray;
 }
@@ -55,13 +56,12 @@
     padding-right: 0px;}
 .gmap_canvas {
     overflow:hidden;
-    background:none!important;
-    height:250rem;
+    height:12.5rem;
     width:100%;
 }
 .mapouter{
     position:relative;
     text-align:right;
-    height: 250rem;
+    height: 200rem;
     width:100%;
 }

@@ -700,11 +700,7 @@ select {
   margin: 0;
   padding: 0;
   position: relative;
-  transition: background-color 2s;
   max-width: 100%;
-}
-.gallery_product:hover {
-  background-color: rgba(0, 0, 0, 0.72);
 }
 .event-default {
   position: relative;
@@ -721,6 +717,7 @@ select {
   min-height: 399px;
   vertical-align: middle;
   border-style: none;
+  transition: all 1s;
 }
 @media screen and (max-width: 2500px) {
   .event-default {
@@ -773,14 +770,15 @@ select {
   background-color: transparent;
   left: 0;
   right: 0;
-  bottom: 0;
+  top: 0;
+  bottom: 0px;
   padding: 20px;
   overflow: hidden;
   color: #fff;
-  top: 0;
   display: none;
   -webkit-transition: 2s;
-  transition: background-color 2s;
+  transition: all 2s;
+  transition-delay: 0.25s;
 }
 
 .gallery_product:hover .img-info {
@@ -788,7 +786,9 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.72);
+}
+.gallery_product:hover .event-default img {
+  filter: brightness(0.4);
 }
 
 .gallery-footer {

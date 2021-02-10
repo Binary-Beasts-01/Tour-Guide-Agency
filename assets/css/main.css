@@ -85,6 +85,7 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+  overflow-x: hidden;
 }
 
 ul {
@@ -202,7 +203,9 @@ p {
 .btn:hover {
   color: var(--clr-brown);
 }
-
+.btn:focus {
+  outline: none;
+}
 .divider-default {
   background: var(--clr-brown);
 }
@@ -594,15 +597,14 @@ select {
   margin: 100px 0 60px;
 }
 
-.item .img-box{
+.item .img-box {
   float: left;
   margin-right: 40px;
 }
 
-.item .testi-conent{
+.item .testi-conent {
   float: right;
 }
-
 
 #testimonals .col-center {
   margin: 0 auto;
@@ -619,7 +621,6 @@ select {
   /* text-align: center; */
   overflow: hidden;
   min-height: 390px;
-
 }
 
 #testimonals .carousel .item .img-box {
@@ -689,7 +690,7 @@ select {
 }
 
 @media screen and (max-width: 992px) {
-  .img-box{
+  .img-box {
     margin: 0 auto;
   }
 }
@@ -699,13 +700,17 @@ select {
   margin: 0;
   padding: 0;
   position: relative;
-
+  transition: background-color 2s;
+  max-width: 100%;
 }
-
+.gallery_product:hover {
+  background-color: rgba(0, 0, 0, 0.72);
+}
 .event-default {
   position: relative;
-  max-width: 730px;
-  max-height: 390px;
+  max-width: 630px;
+  max-height: 399px;
+  min-height: 399px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -715,7 +720,8 @@ select {
 .event-default img {
   display: inline-block;
   max-width: 100%;
-  height: auto;
+  max-height: 399px;
+  min-height: 399px;
   vertical-align: middle;
   border-style: none;
 }
@@ -758,7 +764,7 @@ select {
 
 .gallery_product .img-info {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
   left: 0;
   right: 0;
   bottom: 0;
@@ -768,7 +774,7 @@ select {
   top: 0;
   display: none;
   -webkit-transition: 2s;
-  transition: 2s;
+  transition: background-color 2s;
 }
 
 .gallery_product:hover .img-info {
@@ -776,8 +782,7 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  -webkit-transition: 2s;
-  transition: 2s;
+  background-color: rgba(0, 0, 0, 0.72);
 }
 
 .gallery-footer {

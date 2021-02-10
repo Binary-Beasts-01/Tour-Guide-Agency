@@ -1,0 +1,51 @@
+#gallery-header {
+  height: 27rem;
+  background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  margin-bottom: 7rem;
+}
+.filter-button-group {
+  display: inline-block;
+  float: none;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #d3d5df;
+  overflow: visible;
+}
+.filter-button-group .btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  color: #29293a;
+  font-size: 26px;
+  border: none;
+  transition: color 0.3s ease-in;
+}
+.filter-button-group .btn.active,
+.filter-button-group .btn:hover,
+.filter-button-group button:focus {
+  color: var(--clr-dark-brown);
+  border-bottom: 1px solid var(--clr-dark-brown);
+  outline: none;
+  box-shadow: none;
+}
+.gallery-span {
+  height: 10rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background-color: #ad9463;
+}
+.gallery-span p {
+  margin: auto;
+  color: var(--clr-white);
+  font-size: 1.8rem;
+}
+.gallery-span p span {
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.434);
+}

@@ -1,150 +1,114 @@
 body {
-    background-image: url('/assets/images/f581484c_Simien\ Mountains\ -\ dreamstime_xl_27714848.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+  position: relative;
+  background-image: url('/assets/images/6.\ Simien-Mountains-1024x681.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
 }
-
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -99;
+  background: rgba(0, 0, 0, 0.4);
+}
+nav a {
+  color: white;
+  font-weight: 400;
+}
 #landing-header,
 #footer {
-    background: rgba(255, 255, 255, 0) ;
-    border: 0 !important;
+  background: rgba(255, 255, 255, 0);
+  border: 0 !important;
 }
 
 #login-header {
-    height: 30rem;
-    background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
-    background-size: cover;
-    background-position-y: top;
-    color: white;
-    margin-bottom: 8rem;
+  height: 30rem;
+  background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
+  background-size: cover;
+  background-position-y: top;
+  color: white;
+  margin-bottom: 8rem;
 }
 
 #breadcrumb-nav {
-    margin-top: 5rem;
-    color: white;
-    --bs-breadcrumb-divider: "";
+  margin-top: 5rem;
+  color: white;
+  --bs-breadcrumb-divider: '';
 }
 
 #breadcrumb {
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
 
 .login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-.log-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.log-icons a {
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-#myfacebook>a {
-    color: white;
-}
-
-#mytwitter>a {
-    color: white;
-}
-
-#mygoogle>a {
-    color: white;
-}
-
-#myfacebook {
-    background-color: #3b5998;
-}
-
-#mytwitter {
-    background-color: #1da1f2;
-}
-
-#mygoogle {
-    background-color: #db4437;
-}
-
-#myfacebook:hover {
-    background-color: #133785;
-}
-
-#mytwitter:hover {
-    background-color: #79c2f0;
-}
-
-#mygoogle:hover {
-    background-color: #f32f1d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #Form-label {
-    border-radius: 30px;
-    width: 100%;
-    padding: .375rem .75rem;
-    line-height: 2.5;
-    border: none;
-    background-color: rgb(247, 247, 247);
+  border-radius: 30px;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  line-height: 2.5;
+  border: none;
+  background-color: rgb(247, 247, 247);
 }
-.browse-btn{
-    padding: 12px 32px;
-    white-space: nowrap;
-    background-color: var(--clr-brown);
-    border: 2px solid var(--clr-brown);
-    font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
-    color: white;
+.browse-btn {
+  padding: 12px 32px;
+  white-space: nowrap;
+  background-color: var(--clr-brown);
+  border: 2px solid var(--clr-brown);
+  font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
+  color: white;
 }
 
 .login-btn {
-    position: relative;
-    padding: 12px 0px;
-    font-size: 16px;
-    font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    border: 2px solid var(--clr-brown);
-    text-align: center;
-    cursor: pointer;
-    user-select: none;
-    transition: 0.25s all ease;
-    border-radius: 50px;
-    white-space: nowrap;
-    background-color: var(--clr-brown);
+  position: relative;
+  padding: 12px 0px;
+  font-size: 16px;
+  font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--clr-brown);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s all ease;
+  border-radius: 50px;
+  white-space: nowrap;
+  color: white;
+  background-color: var(--clr-brown);
 }
 
-
 .login-btn:hover {
-    background-color: var(--clr-dark-brown);
+  background-color: var(--clr-dark-brown);
 }
 
 #Form-label:focus {
-    outline: none;
+  outline: none;
 }
 
-.breadcrumb-item>a,
-.breadcrumb-item>a::after {
-    color: white;
-    content: " > ";
-    font-weight: lighter;
+.breadcrumb-item > a,
+.breadcrumb-item > a::after {
+  color: white;
+  content: ' > ';
+  font-weight: lighter;
 }
 
-.breadcrumb-item>a:hover {
-    color: gray;
+.breadcrumb-item > a:hover {
+  color: gray;
 }
 
 .breadcrumb-item.active {
-    color: white;
+  color: white;
 }
 
 .container-fluid {
-    padding-left: 0px;
-    padding-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }

@@ -37,6 +37,7 @@
 
 .big-icon-header {
     color: var(--clr-brown);
+    width: fit-content;
     font-size: 3rem;
 }
 
@@ -76,9 +77,6 @@
     /* #c2c2c3 */
 }
 
-.history-image {
-    max-height: 300px !important;
-}
 
 .time-line {
     position: relative;
@@ -91,4 +89,56 @@
     left: -.6rem;
     color: var(--clr-brown);
     background-color: #29293a;
+}
+
+.nav-pills .nav-link {
+    border-radius: 0;
+    font-style: bold;
+}
+
+.nav-pills .nav-link.active {
+    color: var(--clr-brown);
+    background-color: white;
+}
+
+.nav-pills a.nav-link {
+    color: black;
+    font-size: 1.5rem;
+}
+
+.nav-pills a.nav-link:hover {
+    color: var(--clr-brown);
+}
+
+.newsletter-instruction {
+    padding: 1.5rem;
+    background-color: var(--clr-light-grey);
+    border-radius: 4%;
+}
+
+.form-container {
+    padding: 0;
+    border-radius: 30px;
+    background-color:rgb(247, 247, 247);
+}
+
+.Form-label{
+    border-radius: 30px;
+    
+    width: 100%;
+    padding: .375rem .75rem;
+
+    line-height:2.5;
+    border: none;
+    background-color:rgb(247, 247, 247);
+}
+
+.btn-form {
+    width: 100%;
+    padding: .375rem .75rem;
+    border-radius: 30px;
+    line-height:2.5;
+    border: none;
+    color: white;
+    background-color: var(--clr-brown);
 }

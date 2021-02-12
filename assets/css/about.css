@@ -1,8 +1,8 @@
 #about-header {
-  height: 30rem;
+  height: 27rem;
   background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
   background-size: cover;
-  background-position-y: top;
+  background-position-y: center;
   color: white;
   margin-bottom: 8rem;
 }

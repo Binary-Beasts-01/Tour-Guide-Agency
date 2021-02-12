@@ -57,6 +57,9 @@
                     <li class="list-item">
                         <a data-toggle="modal" data-target="#accountModal" href="#">signin/signup</a>
                     </li>
+                    <li class="list-item"><a href="guides.html">Guides</a></li>
+                    <li class="list-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="list-item"><a href="gallery.html">Contact</a></li>
                     <li>
                         <i class="fas fa-search"></i>
                     </li>
@@ -82,7 +85,7 @@
                         style="background: url(/assets/images/main_slide/gettyimages-1094635342-2048x2048.jpg) center/cover no-repeat;">
                     </div>
                     <div class="carousel-caption d-none d-md-block">
-                        <h1>Welcome To Arba Minch Tour Guide Agency</h1>
+                        <h1>Welcome To Your Tour Guide Agency</h1>
                         <p>Our agency offers comfortable accommodation with a wide variety of tour destinations,
                             additional services, and amenities available to all our guests.</p>
                     </div>
@@ -108,11 +111,13 @@
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev visually-hidden" href="#carouselExampleCaptions" role="button"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+            <a class="carousel-control-next visually-hidden" href="#carouselExampleCaptions" role="button"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </a>
@@ -162,7 +167,7 @@
     <!-- destination section -->
     <section id="destination">
         <div class="container-fluid">
-            <div class="destination-header my-5 py-5">
+            <div class="destination-header">
                 <h1>Top Destination</h1>
                 <span class="text-uppercase big-title-reflection">Top Destination</span>
                 <button class="btn">All Destination</button>
@@ -378,7 +383,7 @@
     <!-- News section -->
     <section id="news">
         <div class="container-fluid py-5">
-            <div class="destination-header my-5 py-5">
+            <div class="destination-header">
                 <h1>Latest News</h1>
                 <span class="text-uppercase big-title-reflection">Latest News</span>
                 <button class="btn">All Blog Posts</button>
@@ -386,10 +391,13 @@
 
             <div class="row">
                 <div id="owl-example" class="owl-carousel owl-theme container-fluid">
-                    <div class="mb-4">
-                        <div class="bg-white rounded shadow-sm img-wrapper news-card"><img
-                                src="./assets/images/gettyimages-120503242-2048x2048.jpg" alt=""
-                                class="img-fluid card-img-top">
+                    <div class="mb-4 box-minimal-border">
+                        <div class="bg-white rounded shadow-sm img-wrapper news-card">
+                            <div class="img-wrapper">
+                                <img src="./assets/images/gettyimages-120503242-2048x2048.jpg" alt=""
+                                    class="img-fluid card-img-top">
+                            </div>
+
                             <div class="news-button">
                                 <button type="button" class="btn btn-light mb-4">News</button>
                                 <p>by Naboni Abebe</p>
@@ -408,10 +416,12 @@
                         </div>
                     </div>
 
-                    <div class="mb-4">
-                        <div class="bg-white rounded shadow-sm img-wrapper"><img
-                                src="./assets/images/gettyimages-988621664-2048x2048.jpg" alt=""
-                                class="img-fluid card-img-top">
+                    <div class="mb-4 box-minimal-border">
+                        <div class="bg-white rounded shadow-sm img-wrapper">
+                            <div class="img-wrapper">
+                                <img src="./assets/images/gettyimages-988621664-2048x2048.jpg" alt=""
+                                    class="img-fluid card-img-top">
+                            </div>
                             <div class="news-button">
                                 <button type="button" class="btn btn-light mb-4">News</button>
                                 <p>by Naboni Abebe</p>
@@ -430,10 +440,13 @@
                         </div>
                     </div>
 
-                    <div class="mb-4">
-                        <div class="bg-white rounded shadow-sm img-wrapper"><img
-                                src="./assets/images/istockphoto-186914973-612x612.jpg" alt=""
-                                class="img-fluid card-img-top">
+                    <div class="mb-4 box-minimal-border">
+                        <div class="bg-white rounded shadow-sm">
+                            <div class="img-wrapper">
+                                <img src="./assets/images/istockphoto-186914973-612x612.jpg" alt=""
+                                    class="img-fluid card-img-top">
+                            </div>
+
                             <div class="news-button">
                                 <button type="button" class="btn btn-light mb-4">News</button>
                                 <p>by Naboni Abebe</p>
@@ -460,13 +473,13 @@
     <section id="testimonals">
         <div class="container">
             <div class="row">
-                <div class="col-center m-auto">
+                <div class="mx-auto">
                     <h1 class="testimonial-header">Testimonials</h3>
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Carousel -->
                             <div class="carousel-inner">
                                 <div class="item carousel-item active">
-                                    <div class="img-box mt-5">
+                                    <div class="img-box">
                                         <img src="./assets/images/gettyimages-120503242-2048x2048.jpg" alt="">
                                     </div>
                                     <div class="testi-content">
@@ -479,28 +492,27 @@
                                             semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse
                                             varius
                                             nibh non aliquet.</p>
-                                        <p class="overview"><b>Jennifer Smith</b>, </p>
-                                        <p class="overview-2">Office Worker</p>
+                                        <p class="overview fw-bold">Jennifer Smith</p>
+                                        <p class="overview-occupation">Office Worker</p>
                                     </div>
                                 </div>
                                 <div class="item carousel-item">
-                                    <div class="img-box mt-5 ">
+                                    <div class="img-box">
                                         <img src="./assets/images/gettyimages-154926670-2048x2048.jpg" alt="">
                                     </div>
                                     <div>
-                                        <!-- <div class="quote"><i class="fas fa-quote-left"></i></div> -->
                                         <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus.
                                             Pellentesque
                                             eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque
                                             viverra
                                             sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh,
                                             facilisis gravida odio.</p>
-                                        <p class="overview"><b>Dauglas McNun</b>, </p>
-                                        <p class="overview-">Financial Advisor</p>
+                                        <p class="overview fw-bold">Dauglas McNun</p>
+                                        <p class="overview-occupation">Financial Advisor</p>
                                     </div>
                                 </div>
                                 <div class="item carousel-item">
-                                    <div class="img-box mt-5">
+                                    <div class="img-box">
                                         <img src="./assets/images/gettyimages-163639070-2048x2048.jpg" alt="">
                                     </div>
                                     <div>
@@ -513,19 +525,21 @@
                                             fringilla
                                             massa.
                                             Etiam hendrerit dolor eget rutrum.</p>
-                                        <p class="overview"><b>Hellen Wright</b>, </p>
-                                        <p class="overview-2">Athelete</p>
+                                        <p class="overview fw-bold mb-0 pb-0">Hellen Wright</p>
+                                        <p class="overview-occupation my-0 py-2">Athelete</p>
                                     </div>
                                 </div>
                             </div>
                             <!-- Carousel Controls -->
-                            <a class="carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
-                                <i class="fas fa-chevron-circle-left"></i>
+                            <a class="carousel-control left carousel-control-prev" type="button"
+                                data-bs-target="#myCarousel" data-bs-slide="prev">
+                                <span><i class="fas fa-arrow-left"></i></span>
+                                <span class="visually-hidden">Previous</span>
                             </a>
-                            <a class="carousel-control right carousel-control-next" href="#myCarousel"
-                                data-slide="next">
-                                <img src="./assets/images/next.png" alt="">
-                                <i class="fas fa-chevron-circle-right"></i>
+                            <a class="carousel-control right carousel-control-next" type="button"
+                                data-bs-target="#myCarousel" data-bs-slide="next">
+                                <span><i class="fas fa-arrow-right"></i></span>
+                                <span class="visually-hidden">Next</span>
                             </a>
                         </div>
                 </div>
@@ -694,7 +708,7 @@
     </div>
     <!-- Gallery footer section -->
     <section>
-        <div class="destination-header gallery-footer">
+        <div class="destination-header gallery-footer my-5 py-5">
             <div class="visit-us">
                 <p class="display-4">Enjoy your stay at Ethiopia</p>
                 <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional

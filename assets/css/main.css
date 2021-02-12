@@ -291,10 +291,26 @@ nav a {
 nav a:hover {
   color: var(--clr-light-brown);
 }
-
+.logo-brand {
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: inherit;
+  font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
+  letter-spacing: 0.6rem;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
 nav .logo-brand img {
   height: 6rem;
   width: 6rem;
+}
+.hum-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hum-menu i {
+  font-size: 2rem;
+  display: none;
 }
 
 /*
@@ -764,7 +780,6 @@ select {
   font-size: 1.3rem;
   font-weight: 600;
 }
-
 .gallery_product .img-info {
   position: absolute;
   background-color: transparent;
@@ -813,6 +828,13 @@ select {
   border: 0 solid;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+}
+.form-container .social-media-icon {
+  background-color: var(--clr-brown-dark);
+  font-size: 15px;
+  height: 30px;
+  width: 30px;
+  padding: 4px;
 }
 
 #facebook > a {
@@ -926,4 +948,72 @@ select {
   font-size: 160px;
   letter-spacing: 0;
   color: var(--clr-light-grey);
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-label {
+  border-radius: 30px;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  line-height: 2.5;
+  border: none;
+  background-color: rgb(247, 247, 247);
+}
+
+#form-label:focus,
+.login-btn:focus {
+  outline: none;
+}
+.login-btn {
+  position: relative;
+  padding: 12px 0px;
+  font-size: 16px;
+  font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: 2px solid var(--clr-brown);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.25s all ease;
+  border-radius: 50px;
+  white-space: nowrap;
+  color: white;
+  background-color: var(--clr-brown);
+}
+.login-btn:hover {
+  background-color: var(--clr-dark-brown);
+}
+.modal-content {
+  overflow-x: hidden;
+}
+.modal-content .form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  transition: all 1.5s cubic-bezier(0, 1.2, 1, 1);
+}
+.modal-dialog {
+  max-width: 402px;
+  margin: 1.75rem auto;
+  margin-top: 6rem;
+}
+.form-container .d {
+  width: 400px;
+  margin: 0 auto;
+}
+.form-spanner {
+  background-color: var(--clr-brown);
+}
+.form-anim-l .form-container {
+  transform: translateX(-200%);
+}
+.form-anim-r .form-container {
+  transform: translateX(0%);
 }

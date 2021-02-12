@@ -1,0 +1,18 @@
+/* Index: media query */
+
+@media screen and (max-width: 400px) {
+  .hum-menu a {
+    margin-left: 20px;
+  }
+}
+@media screen and (max-width: 7000px) {
+}
+@media screen and (max-width: 1176px) {
+  .hum-menu i {
+    display: block;
+    padding-right: 1.2rem;
+  }
+  .pre-header {
+    display: none;
+  }
+}

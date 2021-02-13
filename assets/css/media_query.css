@@ -6,6 +6,7 @@
   }
 }
 @media screen and (max-width: 7000px) {
+  
 }
 @media screen and (max-width: 1176px) {
   .hum-menu i {
@@ -14,5 +15,28 @@
   }
   .pre-header {
     display: none;
+  }
+  .big-title-reflection {
+    display: none;
+  }
+  .carousel-control {
+    display: none;
+  }
+
+  #testimonals .carousel {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .social-media-icon {
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    height: 20px;
+    width: 20px;
+    border: 0 solid;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 }

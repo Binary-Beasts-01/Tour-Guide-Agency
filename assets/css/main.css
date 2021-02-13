@@ -140,25 +140,25 @@ p {
   font-size: var(--fs-headline-2);
   font-weight: 400;
 }
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
   h1 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   h3 {
-    font-size: 1.75rem;
+    font-size: 0.75rem;
   }
 
   h4 {
-    font-size: 1rem;
+    font-size: .5rem;
   }
 
   body {
-    font-size: 1rem;
+    font-size: .5rem;
   }
 
   h1,
@@ -517,8 +517,8 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10rem 8rem 3rem 10rem;
-  margin-left: 3rem;
+  padding: 8rem 0;
+  margin-left: 1rem;
 }
 .img-wrapper {
   overflow: hidden;
@@ -652,7 +652,7 @@ select {
   float: right;
 }
 
-.testimonial::before {
+/* .testimonial::before {
   content: '\201C';
   position: absolute;
   top: -1.8rem;
@@ -662,8 +662,8 @@ select {
   font-size: 120px;
   opacity: 0.6;
   /* background: transparent; */
-  pointer-events: none;
-}
+  /* pointer-events: none;
+} */ 
 
 #testimonals .carousel {
   margin: 50px auto;
@@ -736,6 +736,7 @@ select {
   padding: 0;
   position: relative;
   max-width: 100%;
+  box-sizing: content-box;
 }
 .event-default {
   position: relative;

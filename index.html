@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/media_query.css">
 
     <title>Tour Guide Agency</title>
 </head>
@@ -36,9 +37,8 @@
         </div>
     </div>
     <!-- top header section -->
-    <header id="landing-header">
+    <!-- <header id="landing-header">
         <nav class="nav-center">
-            <!-- <a class="logo-brand" href="#"><img src="./assets/icons/logo.png" alt="travel-logo"></a> -->
             <a class="logo-brand" href="#">IMALA</a>
             <button class="navigation-toggler">
                 <span class="humberger-menu">
@@ -70,7 +70,7 @@
                 Browse Destination
             </button>
         </nav>
-    </header>
+    </header> -->
     <!-- Slide landing section -->
     <section id="slide-landing">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -167,13 +167,19 @@
     <!-- destination section -->
     <section id="destination">
         <div class="container-fluid">
-            <div class="destination-header">
-                <h1>Top Destination</h1>
-                <span class="text-uppercase big-title-reflection">Top Destination</span>
-                <button class="btn">All Destination</button>
+            <div class="row destination-header">
+                <div class="col-xl-11  col-sm-12">
+                    <h1>Top Destination</h1>
+                    <span class="text-uppercase big-title-reflection">Top Destination</span>
+                </div>
+                <div class="col-xl-1 col-sm-12">
+                    <button class="btn">All Destination</button>
+                </div>
+            </div>
+            <!-- <div class=" d-sm-flex flex-sm-column"> -->
             </div>
 
-            <div class="row">
+            <div class="row container-fluid">
                 <!-- Gallery item -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="rounded shadow-sm">
@@ -383,10 +389,14 @@
     <!-- News section -->
     <section id="news">
         <div class="container-fluid py-5">
-            <div class="destination-header">
-                <h1>Latest News</h1>
-                <span class="text-uppercase big-title-reflection">Latest News</span>
-                <button class="btn">All Blog Posts</button>
+            <div class="row destination-header">
+                <div class="col-xl-11  col-sm-12">
+                    <h1>Latest News</h1>
+                    <span class="text-uppercase big-title-reflection">Latest News</span>
+                </div>
+                <div class="col-xl-1 col-sm-12">
+                    <button class="btn">All Blog Posts</button>
+                </div>
             </div>
 
             <div class="row">
@@ -470,10 +480,10 @@
     </section>
 
     <!-- Testimonals section -->
-    <section id="testimonals">
+    <section id="testimonals" class="container-fluid">
         <div class="container">
             <div class="row">
-                <div class="mx-auto">
+                <div class="mx-auto mx-md-0">
                     <h1 class="testimonial-header">Testimonials</h3>
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Carousel -->
@@ -549,7 +559,7 @@
 
 
     <!-- Gallery Preview section -->
-    <section class="gallery-preview">
+    <section class="gallery-preview container-fluid">
         <div class="row grid">
             <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
                 <article class="event-default-wrap">
@@ -708,13 +718,17 @@
     </div>
     <!-- Gallery footer section -->
     <section>
-        <div class="destination-header gallery-footer my-5 py-5">
-            <div class="visit-us">
-                <p class="display-4">Enjoy your stay at Ethiopia</p>
-                <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional
-                    services.</p>
+        <div class="row destination-header gallery-footer my-5 py-5">
+            <div class="col-xl-11 col-md-12">
+                <div class="visit-us">
+                    <p class="display-4">Enjoy your stay at Ethiopia</p>
+                    <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional
+                        services.</p>
+                </div>
             </div>
-            <button class="btn">Book Now</button>
+            <div class="col-xl-1 col-md-12">
+                <button class="btn">Book Now</button>
+            </div>
         </div>
     </section>
 

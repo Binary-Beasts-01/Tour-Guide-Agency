@@ -37,6 +37,7 @@ $('.owl-carousel').owlCarousel({
 //     navBar.classList.remove('fixed-nav');
 //   }
 // });
+
 $(document).ready(function () {
   $('#sidebarCollapse').on('click', function () {
     $('#sidebar').toggleClass('active');

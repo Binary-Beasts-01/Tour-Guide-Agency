@@ -255,15 +255,19 @@ Nav
 ===============
 */
 header {
+  width: 100%;
   background: var(--clr-white);
   height: 6rem;
   display: grid;
   align-items: center;
   box-shadow: var(--thin-shadow);
+  position: fixed;
+  z-index: 88;
 }
 
 .nav-center {
-  width: 96vw;
+  width: 100%;
+  padding: 0 1rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -278,7 +282,8 @@ header {
 .nav-links {
   display: flex;
 }
-
+nav {
+}
 /* Nav-logo */
 nav a {
   text-transform: capitalize;
@@ -298,19 +303,21 @@ nav a:hover {
   font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
   letter-spacing: 0.6rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 nav .logo-brand img {
   height: 6rem;
   width: 6rem;
 }
+nav .nav-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .hum-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.hum-menu i {
-  font-size: 2rem;
-  display: none;
 }
 
 /*
@@ -341,10 +348,18 @@ main {
 }
 
 /* nav toggler */
-.navigation-toggler {
+.navigation-toggler,
+.navigation-menu {
   display: none;
 }
-
+.navigation-menu .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.collapsable {
+  display: flex;
+}
 .collapsable ul {
   display: flex;
 }
@@ -467,7 +482,7 @@ main {
   opacity: 1;
 }
 
-#slide-landing .carousel-indicators li.active { 
+#slide-landing .carousel-indicators li.active {
   background-color: var(--clr-brown);
 }
 
@@ -499,7 +514,7 @@ main {
 select {
   display: block;
   width: 100%;
-  min-height: 80px;
+  min-height: 50px;
   background-color: transparent;
   background-image: none;
   border: 0px solid #f7f7f7;
@@ -699,7 +714,6 @@ select {
   font-size: 1.3rem;
 }
 
-
 #testimonals .carousel a.carousel-control {
   width: 10px;
   height: 10px;
@@ -711,18 +725,17 @@ select {
 #testimonals a.carousel-control i {
   position: absolute;
   color: gray;
-  padding: .6rem;
+  padding: 0.6rem;
   border: solid 1px;
   border-radius: 50%;
   border-color: gray;
 }
 
-#testimonals a.carousel-control i:hover  {
+#testimonals a.carousel-control i:hover {
   color: white;
   border-color: white;
   background: black;
 }
-
 
 @media screen and (max-width: 992px) {
   .img-box {

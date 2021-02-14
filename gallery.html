@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/media_query.css">
     <link rel="stylesheet" href="./assets/css/gallery.css">
 
     <title>Tour Guide Agency</title>
@@ -39,207 +40,242 @@
     <!-- top header section -->
     <header id="landing-header">
         <nav class="nav-center">
-            <a class="logo-brand" href="#"><img src="./assets/icons/logo.png" alt="travel-logo"></a>
-            <button class="navigation-toggler">
-                <span class="humberger-menu">
+            <div class="nav-head">
+                <span class="navigation-toggler humberger-menu me-3">
                     <img src="./assets/icons/sort-24px.svg" alt="">
                 </span>
-            </button>
+                <a class="logo-brand" href="#">IMALA</a>
+            </div>
 
             <div class="collapsable" id="nav-collapse">
                 <ul class="nav-list">
-                    <li class="list-item active"><a href="#">Home</a></li>
+                    <li class="list-item"><a href="index.html">Home</a></li>
                     <li class="list-item"><a href="about.html">About</a></li>
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
-                    <li class="list-item"><a href="#">Guides</a></li>
-                    <li class="list-item"><a href="#">Gallery</a></li>
-                    <li class="list-item"><a href="#">Contact</a></li>
-                    <li class="list-item"><a href="login.html">Login</a></li>
-                    <li class="list-item"><a href="register.html">Register</a></li>
+                    <li class="list-item"><a href="guides.html">Guides</a></li>
+                    <li class="list-item active"><a href="gallery.html">Gallery</a></li>
+                    <li class="list-item"><a href="contact.html">Contact</a></li>
                     <li>
                         <i class="fas fa-search"></i>
                     </li>
                 </ul>
             </div>
+            <div class="collapsable">
+                <ul class=" ml-auto">
+                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
 
-            <button class="btn">
-                Browse Destination
-            </button>
-        </nav>
-    </header>
-    <section class="container-fluid d-flex align-items-end justify-content-center" id="gallery-header">
-        <div>
-            <h1 class="headline-1">Gallery</h1>
-            <div class="d-flex justify-content-center mb-5" id="breadcrumb">
-                <nav class="my-4" id="breadcrumb-nav" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item" aria-current="page">Gallery</li>
-                    </ol>
-                </nav>
+                </ul>
             </div>
+            <div class="navigation-menu">
+                <ul class="nav-list">
+                    <li>
+                        <i class="fas fa-search px-4"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-2x fa-ellipsis-v"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="sidebar">
+            <ul class="nav-list">
+                <li class="list-item"><a href="index.html">Home</a></li>
+                <li class="list-item"><a href="about.html">About</a></li>
+                <li class="list-item"><a href="destination.html">Destinations</a></li>
+                <li class="list-item"><a href="guides.html">Guides</a></li>
+                <li class="list-item active"><a href="gallery.html">Gallery</a></li>
+                <li class="list-item"><a href="contact.html">Contact</a></li>
+                </li>
+            </ul>
         </div>
-    </section>
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="gallery-wrapper">
-            <div class="row justify-content-md-center mb-4 text-center">
-                <div class="col-sm-12 mb-5">
-                    <h1 class="headline-2">Our Gallery</h1>
+    </header>
+
+    <div id="overlay">
+    </div>
+    <div class="content-wrapper">
+        <section class="container-fluid d-flex align-items-end justify-content-center" id="gallery-header">
+            <div>
+                <h1 class="headline-1">Gallery</h1>
+                <div class="d-flex justify-content-center mb-5" id="breadcrumb">
+                    <nav class="my-4" id="breadcrumb-nav" aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex flex-row justify-content-center align-items-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item" aria-current="page">Gallery</li>
+                        </ol>
+                    </nav>
                 </div>
-                <div class="gallery-tab mb-4">
-                    <div class="button-group filter-button-group">
-                        <button class="btn active" data-filter="*">All Category</button>
-                        <button class="btn" data-filter=".g-places">Places</button>
-                        <button class="btn" data-filter=".g-facility">facility</button>
+            </div>
+        </section>
+        <!-- Gallery Section -->
+        <section id="gallery">
+            <div class="gallery-wrapper">
+                <div class="row justify-content-md-center mb-4 text-center">
+                    <div class="col-sm-12 mb-5">
+                        <h1 class="headline-2">Our Gallery</h1>
+                    </div>
+                    <div class="gallery-tab mb-4">
+                        <div class="button-group filter-button-group">
+                            <button class="btn active" data-filter="*">All Category</button>
+                            <button class="btn" data-filter=".g-places">Places</button>
+                            <button class="btn" data-filter=".g-facility">Facility</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img src="/assets/images/5. Harar-1024x768.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img
+                                        src="./assets/images/6. Simien-Mountains-1024x681.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-facility places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img
+                                        src="./assets/images/1. The-Omo-Valley-1024x768.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img src="./assets/images/2. Gondar-1024x768.jpg"
+                                        alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img
+                                        src="./assets/images/3. The-Rift-Valley-1024x692.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img src="./assets/images/4. Lake-Chamo-1024x652.jpg"
+                                        alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img
+                                        src="./assets/images/gettyimages-138178737-2048x2048.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img
+                                        src="./assets/images/gettyimages-521452438-2048x2048.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
+                        <article class="event-default-wrap">
+                            <div class="event-default">
+                                <figure class="event-default-image"><img
+                                        src="./assets/images/gettyimages-94507303-2048x2048.jpg" alt="">
+                                </figure>
+                                <div class='img-info'>
+                                    <h4>Image Title 1</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </article>
                     </div>
                 </div>
             </div>
-            <div class="row grid">
-                <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img src="/assets/images/5. Harar-1024x768.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
+            <section>
+                <div class="gallery-span">
+                    <p>We are your #1 choice if you are looking for a amazing places to visit.
+                        <span>Book
+                            a tour now!</span>
+                    </p>
                 </div>
-                <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img
-                                    src="./assets/images/6. Simien-Mountains-1024x681.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-facility places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img
-                                    src="./assets/images/1. The-Omo-Valley-1024x768.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img src="./assets/images/2. Gondar-1024x768.jpg"
-                                    alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img
-                                    src="./assets/images/3. The-Rift-Valley-1024x692.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img src="./assets/images/4. Lake-Chamo-1024x652.jpg"
-                                    alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img
-                                    src="./assets/images/gettyimages-138178737-2048x2048.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img
-                                    src="./assets/images/gettyimages-521452438-2048x2048.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-                <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                    <article class="event-default-wrap">
-                        <div class="event-default">
-                            <figure class="event-default-image"><img
-                                    src="./assets/images/gettyimages-94507303-2048x2048.jpg" alt="">
-                            </figure>
-                            <div class='img-info'>
-                                <h4>Image Title 1</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-        <section>
-            <div class="gallery-span">
-                <p>We are your #1 choice if you are looking for a amazing places to visit.
-                    <span>Book
-                        a tour now!</span>
-                </p>
-            </div>
+            </section>
         </section>
-    </section>
-
-    <!-- footer section -->
-    <footer id="footer" class="p-4 pt-5">
-        <div class="row justify-content-sm-center align-items-md-center mx-5">
-            <div class="col-md-10 col-lg-7 col-xl-4"></div>
-            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-center">
-                <p>&copy;2021. All Rights Reserved. Privacy Policy</p>
+    
+        <!-- footer section -->
+        <footer id="footer" class="p-4 pt-5">
+            <div class="row justify-content-sm-center align-items-md-center mx-5">
+                <div class="col-md-10 col-lg-7 col-xl-4"></div>
+                <div class="col-md-10 col-lg-7 col-xl-4 text-xl-center">
+                    <p>&copy;2021. All Rights Reserved. Privacy Policy</p>
+                </div>
+                <div class="col-md-10 col-lg-7 col-xl-4 text-xl-end">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                    class="fab fa-twitter"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="instagram"><a href=""><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                    class="fab fa-google"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="linkedin"><a href=""><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-end">
-                <ul class="list-unstyled list-inline">
-                    <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
-                                class="fab fa-facebook-f"></i></a></li>
-                    <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
-                                class="fab fa-twitter"></i></a></li>
-                    <li class="list list-inline-item social-media-icon" id="instagram"><a href=""><i
-                                class="fab fa-instagram"></i></a></li>
-                    <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
-                                class="fab fa-google"></i></a></li>
-                    <li class="list list-inline-item social-media-icon" id="linkedin"><a href=""><i
-                                class="fab fa-linkedin-in"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+        </footer>
+        <a href="#" id="go-to-top">^</a>
+    </div>
 
-    <a href="#" id="go-to-top">^</a>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

@@ -1,27 +1,36 @@
-// set date dynamically
-var datePicker = document.querySelector('.slide-banner input[type="date"]');
-let today = new Date().toISOString().substr(0, 10);
-datePicker.value = today;
+// Nav bar scroll listner
+const preHeader = document.querySelector('.pre-header');
+const headerBar = document.querySelector('#landing-header');
 
-// owl carousel for news section
+// Humberger menu
+const humToggle = document.querySelector('.humberger-menu');
+const sideBar = document.querySelector('.sidebar');
+const content = document.querySelector('.content-wrapper');
+const overlay = document.querySelector('#overlay');
+var overlayEffect = true;
+humToggle.addEventListener('click', (e) => {
+  sideBar.classList.toggle('slide');
+  if (overlayEffect) {
+    overlay.style.display = "block";
+    overlayEffect = false;
+  } else {
+    overlay.style.display = "none";
+    overlayEffect = true;
+  }
+});
 
-$('.owl-carousel').owlCarousel({
-    loop:true,
-    margin:10,
-    nav:false,
-    autoplay:true,
-    autoplayTimeout:3000,
-    dots:false,
-    responsive:{
-        0:{
-            items:1
-        },
-        600:{
-            items:2
-        },
-        1000:{
-            items:3
-        }
-    }
+overlay.addEventListener('click', (e) => {
+  sideBar.classList.remove('slide');
+  overlay.style.display = "none";
+  overlayEffect = true;
 })
+
+window.addEventListener('scroll', (e) => {
+  let navHeight = Number(headerBar.getBoundingClientRect().bottom);
+  if (window.pageYOffset > navHeight) {
+    headerBar.classList.add('fixed-nav');
+  } else {
+    headerBar.classList.remove('fixed-nav');
+  }
+});
 

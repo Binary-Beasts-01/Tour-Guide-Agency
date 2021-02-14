@@ -1,22 +1,6 @@
 body{
     background-color:var(--clr-brown-dark);
 }
-header{
-    background-color:var(--clr-brown-dark);
-    color: white;
-}
-.browse-btn{
-    padding: 12px 32px;
-    white-space: nowrap;
-    background-color: var(--clr-brown);
-    border: 2px solid var(--clr-brown);
-    font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
-    color: white;
-}
-.browse-btn:hover {
-  background-color: var(--clr-dark-brown);
-  border: none;
-}
 .message-form {
     display: flex;
     flex-direction: column;
@@ -24,13 +8,12 @@ header{
     align-items: center;
 
 }
-
 .back-btn {
   position: relative;
   display: inline-block;
   max-width: 100%;
   padding: 12px 0px;
-  font-size: 16px;
+  font-size: 19px;
   font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -52,4 +35,3 @@ header{
 .back-btn:focus {
   outline: none;
 }
-

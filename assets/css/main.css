@@ -376,7 +376,7 @@ Side Bar Menu
   width: 100%;
   max-width: 260px;
   height: 100%;
-  z-index: 3;
+  z-index: 9;
   display: none;
   font-size: 1rem;
   transition: all 0.4s ease-in-out;
@@ -403,6 +403,20 @@ Side Bar Menu
 }
 .slide {
   transform: translateX(0);
+}
+
+#overlay {
+  display: none;
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 4; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
 }
 /*
 =============== 
@@ -448,6 +462,8 @@ main {
 
 /* BreadCrumb */
 #breadcrumb-nav {
+  background-color: transparent;
+  z-index: unset;
   margin-top: 5rem;
   color: white;
   --bs-breadcrumb-divider: '';
@@ -455,6 +471,10 @@ main {
 
 #breadcrumb {
   margin-top: 6rem;
+}
+
+.breadcrumb {
+  background-color: transparent;
 }
 
 .breadcrumb-item > a,
@@ -539,7 +559,7 @@ main {
   padding: 40px 35px 40px;
   border-radius: 8px;
   color: #29293a;
-  z-index: 11;
+  z-index: 8;
 }
 
 .form-label,
@@ -1008,7 +1028,7 @@ select {
   top: 0.5rem;
   font-weight: 900;
   z-index: -1;
-  font-size: 160px;
+  font-size: 8rem;
   letter-spacing: 0;
   color: var(--clr-light-grey);
 }

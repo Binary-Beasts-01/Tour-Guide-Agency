@@ -38,33 +38,60 @@
     </div>
     <!-- top header section -->
     <header id="landing-header">
-        <nav class="nav-center">
-            <a class="logo-brand" href="#"><img src="./assets/icons/logo.png" alt="travel-logo"></a>
-            <button class="navigation-toggler">
-                <span class="humberger-menu">
-                    <img src="./assets/icons/sort-24px.svg" alt="">
-                </span>
-            </button>
+      <nav class="nav-center">
+          <div class="nav-head">
+              <span class="navigation-toggler humberger-menu me-3">
+                  <img src="./assets/icons/sort-24px.svg" alt="">
+              </span>
+              <a class="logo-brand" href="#">IMALA</a>
+          </div>
 
-            <div class="collapsable" id="nav-collapse">
-                <ul class="nav-list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
-                    <li class="list-item"><a href="about.html">About</a></li>
-                    <li class="list-item"><a href="destination.html">Destinations</a></li>
-                    <li class="list-item active"><a href="guides.html">Guides</a></li>
-                    <li class="list-item"><a href="gallery.html">Gallery</a></li>
-                    <li class="list-item"><a href="contact.html">Contact</a></li>
-                    <li>
-                        <i class="fas fa-search"></i>
-                    </li>
-                </ul>
-            </div>
+          <div class="collapsable" id="nav-collapse">
+              <ul class="nav-list">
+                  <li class="list-item"><a href="index.html">Home</a></li>
+                  <li class="list-item"><a href="about.html">About</a></li>
+                  <li class="list-item"><a href="destination.html">Destinations</a></li>
+                  <li class="list-item active"><a href="guides.html">Guides</a></li>
+                  <li class="list-item"><a href="gallery.html">Gallery</a></li>
+                  <li class="list-item"><a href="gallery.html">Contact</a></li>
+                  <li>
+                      <i class="fas fa-search"></i>
+                  </li>
+              </ul>
+          </div>
+          <div class="collapsable">
+              <ul class=" ml-auto">
+                  <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
 
-            <button class="btn">
-                Browse Destination
-            </button>
-        </nav>
-    </header>
+              </ul>
+          </div>
+          <div class="navigation-menu">
+              <ul class="nav-list">
+                  <li>
+                      <i class="fas fa-search px-4"></i>
+                  </li>
+                  <li>
+                      <i class="fas fa-2x fa-ellipsis-v"></i>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+      <div class="sidebar">
+          <ul class="nav-list">
+              <li class="list-item"><a href="index.html">Home</a></li>
+              <li class="list-item"><a href="about.html">About</a></li>
+              <li class="list-item"><a href="destination.html">Destinations</a></li>
+              <li class="list-item active"><a href="guides.html">Guides</a></li>
+              <li class="list-item"><a href="gallery.html">Gallery</a></li>
+              <li class="list-item"><a href="contact.html">Contact</a></li>
+              </li>
+          </ul>
+      </div>
+  </header>
+
+  <div id="overlay">
+  </div>
+  <div class="content-wrapper">
     <section class="container-fluid d-flex align-items-end justify-content-center" id="destination-header">
         <div>
             <h1 class="headline-1">Guides</h1>
@@ -80,7 +107,7 @@
     </section>
 
 
-    <div class="row mx-5">
+    <div class="row mx-lg-5">
       <div class="col-12 col-md-6 col-lg-4">
         <div class="row">
           <div class="col-6">
@@ -304,6 +331,7 @@
     </footer>
 
     <a href="#" id="go-to-top">^</a>
+  </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>

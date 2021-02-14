@@ -17,6 +17,26 @@
 
 <body>
     <!-- pre-header -->
+    <div class="pre-header d-none d-lg-flex">
+        <div class="contact-list">
+            <p><i class="fas fa-phone"></i> +25194516911</p>
+            <p><i class="fas fa-map-marker"></i> 6 Kilo Squer, Addis Ababa</p>
+            <p><i class="fas fa-phone"></i> +25194516911</p>
+        </div>
+        <div class="social-icons">
+            <ul class="list-unstyled list-inline d-flex align-items-center">
+                <li class="list list-inline-item"><a href=""><i class="fab fa-facebook-f p-2"></i></a>
+                </li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-twitter p-2"></i></a></li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-instagram p-2"></i></a>
+                </li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-google p-2"></i></a></li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-linkedin-in p-2"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- top header section -->
     <header id="landing-header">
         <nav class="nav-center">
             <div class="nav-head">
@@ -63,16 +83,17 @@
                 <li class="list-item"><a href="destination.html">Destinations</a></li>
                 <li class="list-item"><a href="guides.html">Guides</a></li>
                 <li class="list-item"><a href="gallery.html">Gallery</a></li>
-                <li class="list-item"><a href="gallery.html">Contact</a></li>
-                </li>
+                <li class="list-item"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </header>
 
+    <div id="overlay">
+    </div>
     <div class="content-wrapper">
         <!-- Slide landing section -->
         <section class="main-slider">
-            <div class="container-fluid">
+            <div class="container-fluid" id="slide-landing">
                 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
@@ -84,7 +105,7 @@
                             <div class="slide-img-container"
                                 style="background: url(/assets/images/main_slide/gettyimages-1094635342-2048x2048.jpg) center/cover no-repeat;">
                             </div>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-none d-xl-block">
                                 <h1>Welcome To Your Tour Guide Agency</h1>
                                 <p>Our agency offers comfortable accommodation with a wide variety of tour destinations,
                                     additional services, and amenities available to all our guests.</p>
@@ -94,7 +115,7 @@
                             <div class="slide-img-container"
                                 style="background: url(/assets/images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg) center/cover no-repeat;">
                             </div>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-none d-xl-block">
                                 <h1>A VARIETY OF ROOMS FOR YOU</h1>
                                 <p>Our tour destinations has a wide variety of greatly furnished and fully equipped
                                     rooms
@@ -106,7 +127,7 @@
                             <div class="slide-img-container"
                                 style="background: url(/assets/images/main_slide/gettyimages-98371189-2048x2048.jpg) center/cover no-repeat;">
                             </div>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="carousel-caption d-md-none d-xl-block">
                                 <h1>COMFORTABLE FACILITIES</h1>
                                 <p>At our service, you can always feel comfortable in your tours, having the right
                                     surroundings
@@ -179,171 +200,176 @@
         <!-- destination section -->
         <section id="destination">
             <div class="container-fluid">
-                <div class="destination-header">
-                    <h1>Top Destination</h1>
-                    <span class="text-uppercase big-title-reflection">Top Destination</span>
-                    <button class="btn">All Destination</button>
+                <div class="row destination-header">
+                    <div class="col-xl-10 col-md-10 col-sm-12">
+                        <h1>Top Destination</h1>
+                        <span class="text-uppercase big-title-reflection">Top Destination</span>
+                    </div>
+                    <div class="col-xl-2 col-md-2 col-sm-12">
+                        <button class="btn">All Destination</button>
+
+                    </div>
+                </div>
+        </section>
+        <section id="gallery" class="container-fluid">
+            <div class="row">
+                <!-- Gallery item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded shadow-sm">
+                        <div class="bg-white img-wrapper">
+                            <img src="/assets/images/f581484c_Simien Mountains - dreamstime_xl_27714848.jpg" alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+                        <div class="p-4">
+                            <h5> <a href="#" class="text-dark">Simien Mountains</a></h5>
+                            <p class="small text-muted mb-0">The Simien Mountain range is a designated UNESCO World
+                                Heritage Site and is rightfully known as God’s playground.
+                                A trek alone the escarpment provides one of the most phenomenal vistas in the
+                                country.
+                                You’re also guaranteed to run in to a group of the Gelada bleeding heart baboons.
+                                Inside the Simien National park are a wide variety of wildlife like the Walia ibex,
+                                a
+                                goat found nowhere else on Earth.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row">
-                    <!-- Gallery item -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rounded shadow-sm">
-                            <div class="bg-white img-wrapper">
-                                <img src="/assets/images/f581484c_Simien Mountains - dreamstime_xl_27714848.jpg" alt=""
-                                    class="img-fluid card-img-top">
-                            </div>
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Simien Mountains</a></h5>
-                                <p class="small text-muted mb-0">The Simien Mountain range is a designated UNESCO World
-                                    Heritage Site and is rightfully known as God’s playground.
-                                    A trek alone the escarpment provides one of the most phenomenal vistas in the
-                                    country.
-                                    You’re also guaranteed to run in to a group of the Gelada bleeding heart baboons.
-                                    Inside the Simien National park are a wide variety of wildlife like the Walia ibex,
-                                    a
-                                    goat found nowhere else on Earth.
-                                </p>
-                            </div>
+                <!-- End -->
+
+                <!-- Gallery item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded shadow-sm">
+                        <div class="bg-white img-wrapper">
+                            <img src="/assets/images/df11aa22_Inside the explosion crater of Dallol volcano, Danakil Depression - dreamstime_xxl_95577365.jpg"
+                                alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="p-4">
+                            <h5> <a href="#" class="text-dark">Danakil Depression</a></h5>
+                            <p class="small text-muted mb-0">The Danakil Depression is found in Northern Ethiopia,
+                                close
+                                to the border with Eritrea. With parts of
+                                Danakil 100 metres below sea level, this is one of the lowest places on Earth and
+                                also
+                                one of the hottest in average yearly temperature.
+                                Two active volcanoes, Mount Ayalu and Erta Ale have large lava lakes, whilst the
+                                Dallol
+                                Sulphur Springs is a photographers' dream.
+                            </p>
                         </div>
                     </div>
-
-                    <!-- End -->
-
-                    <!-- Gallery item -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rounded shadow-sm">
-                            <div class="bg-white img-wrapper">
-                                <img src="/assets/images/df11aa22_Inside the explosion crater of Dallol volcano, Danakil Depression - dreamstime_xxl_95577365.jpg"
-                                    alt="" class="img-fluid card-img-top">
-                            </div>
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Danakil Depression</a></h5>
-                                <p class="small text-muted mb-0">The Danakil Depression is found in Northern Ethiopia,
-                                    close
-                                    to the border with Eritrea. With parts of
-                                    Danakil 100 metres below sea level, this is one of the lowest places on Earth and
-                                    also
-                                    one of the hottest in average yearly temperature.
-                                    Two active volcanoes, Mount Ayalu and Erta Ale have large lava lakes, whilst the
-                                    Dallol
-                                    Sulphur Springs is a photographers' dream.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rounded shadow-sm">
-                            <div class="bg-white img-wrapper">
-                                <img src="/assets/images/istockphoto-186914973-612x612.jpg" alt=""
-                                    class="img-fluid card-img-top">
-                            </div>
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Axum</a></h5>
-                                <p class="small text-muted mb-0">This fascinating town was the centre of the Axumite
-                                    Empire,
-                                    one of the most important and technologically
-                                    advanced civilisations of its time and a major force in world trade between the 1st
-                                    and
-                                    7th centuries AD.
-                                    A further twist in the town's long history is speculation that it could have held
-                                    the
-                                    court of the Queen of Sheba and also that it is
-                                    the final resting place of the Ark of the Covenant. It is undoubtedly the holiest
-                                    city
-                                    of the Ethiopian Orthodox church</p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End -->
-
-                    <!-- Gallery item -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rounded shadow-sm">
-                            <div class="bg-white img-wrapper">
-                                <img src="/assets/images/mulugeta-wolde-6SgfEwkA02Y-unsplash.jpg" alt=""
-                                    class="img-fluid card-img-top">
-                            </div>
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Lalibela</a></h5>
-                                <p class="small text-muted mb-0">Lalibela is famous throughout the world for its
-                                    incredible
-                                    rock-hewn churches. At 2,630 m and perched
-                                    among wild mountains, the setting is fantastic.
-                                    From the 10th to the mid-13th century it was the capital of the Zagwe Dynasty that
-                                    ruled
-                                    the country and it was under the
-                                    direction of its most famous King, Lalibela, that the churches were carved. He
-                                    gathered
-                                    together the greatest craftsmen possible
-                                    and some estimates think as many as 40,000 people were required to create the
-                                    churches.
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- End -->
-
-                    <!-- Gallery item -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rounded shadow-sm">
-                            <div class="bg-white img-wrapper">
-                                <img src="/assets/images/36821ae1_Fasilides Castle in Gonder - dreamstime_xxl_118941485.jpg"
-                                    alt="" class="img-fluid card-img-top">
-                            </div>
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Gonder, Fasiledes</a></h5>
-                                <p class="small text-muted mb-0">Up until the beginning of the 17th century, Ethiopia
-                                    had
-                                    what was locally referred to as a 'mobile capital'.
-                                    But in 1632 Fasilidas took the throne and proclaimed Gonder as his capital, where it
-                                    remained for the next 200 years. As king and emperor
-                                    Fasilidas not only ushered in a period of relative calm in Abyssinia's turbulent
-                                    history
-                                    he also built a stupendous fort at this strategic
-                                    location - added to by his successors - most of which is still intact. Wandering
-                                    around
-                                    the fort's spectacular turreted citadels, vast
-                                    banqueting halls and bathhouses leaves you in no doubt whatsoever as to the
-                                    importance
-                                    of this Christian kingdom 400 years ago.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End -->
-
-                    <!-- Gallery item -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="rounded shadow-sm">
-                            <div class="bg-white img-wrapper">
-                                <img src="/assets/images/3c09b320_Muslim girls outside mosque in harar - dreamstime_xxl_24601948.jpg"
-                                    alt="" class="img-fluid card-img-top">
-                            </div>
-                            <div class="p-4">
-                                <h5> <a href="#" class="text-dark">Harar</a></h5>
-                                <p class="small text-muted mb-0">This holy, historic and walled city is a mesmerizing
-                                    web of
-                                    narrow alleyways. Built in the early 16th century,
-                                    it’s the oldest Islamic city in Africa.
-                                    It was once the commercial link between Africa and the middle east and today is an
-                                    enchanting lost-in-time city that’s famous for the impressive
-                                    walls and centuries old buildings.
-                                    There are roughly 99 mosques within the city. A popular attraction is the nightly
-                                    ritual
-                                    of feeding they hyenas which happens on the outskirts of the city.
-                                    It’s been taking place for generations and you can participate if you’re feeling
-                                    adventurous.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded shadow-sm">
+                        <div class="bg-white img-wrapper">
+                            <img src="/assets/images/istockphoto-186914973-612x612.jpg" alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+                        <div class="p-4">
+                            <h5> <a href="#" class="text-dark">Axum</a></h5>
+                            <p class="small text-muted mb-0">This fascinating town was the centre of the Axumite
+                                Empire,
+                                one of the most important and technologically
+                                advanced civilisations of its time and a major force in world trade between the 1st
+                                and
+                                7th centuries AD.
+                                A further twist in the town's long history is speculation that it could have held
+                                the
+                                court of the Queen of Sheba and also that it is
+                                the final resting place of the Ark of the Covenant. It is undoubtedly the holiest
+                                city
+                                of the Ethiopian Orthodox church</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End -->
+
+                <!-- Gallery item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded shadow-sm">
+                        <div class="bg-white img-wrapper">
+                            <img src="/assets/images/mulugeta-wolde-6SgfEwkA02Y-unsplash.jpg" alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+                        <div class="p-4">
+                            <h5> <a href="#" class="text-dark">Lalibela</a></h5>
+                            <p class="small text-muted mb-0">Lalibela is famous throughout the world for its
+                                incredible
+                                rock-hewn churches. At 2,630 m and perched
+                                among wild mountains, the setting is fantastic.
+                                From the 10th to the mid-13th century it was the capital of the Zagwe Dynasty that
+                                ruled
+                                the country and it was under the
+                                direction of its most famous King, Lalibela, that the churches were carved. He
+                                gathered
+                                together the greatest craftsmen possible
+                                and some estimates think as many as 40,000 people were required to create the
+                                churches.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- End -->
+
+                <!-- Gallery item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded shadow-sm">
+                        <div class="bg-white img-wrapper">
+                            <img src="/assets/images/36821ae1_Fasilides Castle in Gonder - dreamstime_xxl_118941485.jpg"
+                                alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="p-4">
+                            <h5> <a href="#" class="text-dark">Gonder, Fasiledes</a></h5>
+                            <p class="small text-muted mb-0">Up until the beginning of the 17th century, Ethiopia
+                                had
+                                what was locally referred to as a 'mobile capital'.
+                                But in 1632 Fasilidas took the throne and proclaimed Gonder as his capital, where it
+                                remained for the next 200 years. As king and emperor
+                                Fasilidas not only ushered in a period of relative calm in Abyssinia's turbulent
+                                history
+                                he also built a stupendous fort at this strategic
+                                location - added to by his successors - most of which is still intact. Wandering
+                                around
+                                the fort's spectacular turreted citadels, vast
+                                banqueting halls and bathhouses leaves you in no doubt whatsoever as to the
+                                importance
+                                of this Christian kingdom 400 years ago.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End -->
+
+                <!-- Gallery item -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="rounded shadow-sm">
+                        <div class="bg-white img-wrapper">
+                            <img src="/assets/images/3c09b320_Muslim girls outside mosque in harar - dreamstime_xxl_24601948.jpg"
+                                alt="" class="img-fluid card-img-top">
+                        </div>
+                        <div class="p-4">
+                            <h5> <a href="#" class="text-dark">Harar</a></h5>
+                            <p class="small text-muted mb-0">This holy, historic and walled city is a mesmerizing
+                                web of
+                                narrow alleyways. Built in the early 16th century,
+                                it’s the oldest Islamic city in Africa.
+                                It was once the commercial link between Africa and the middle east and today is an
+                                enchanting lost-in-time city that’s famous for the impressive
+                                walls and centuries old buildings.
+                                There are roughly 99 mosques within the city. A popular attraction is the nightly
+                                ritual
+                                of feeding they hyenas which happens on the outskirts of the city.
+                                It’s been taking place for generations and you can participate if you’re feeling
+                                adventurous.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -744,15 +770,17 @@
                 </div>
             </div>
         </div>
-        <!-- Gallery footer section -->
-        <section>
-            <div class="destination-header gallery-footer my-5 py-5">
-                <div class="visit-us">
+        
+        <section class="container">
+            <div class="row container-fluid destination-header gallery-footer my-5 py-5">
+                <div class="col-xl-10 col-md-9  col-sm-12 visit-us">
                     <p class="display-4">Enjoy your stay at Ethiopia</p>
                     <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional
                         services.</p>
                 </div>
-                <button class="btn">Book Now</button>
+                <div class="col-xl-2 col-md-3 col-sm-12">
+                    <button class="btn">Book Now</button>
+                </div>
             </div>
         </section>
 
@@ -792,6 +820,7 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/homePage.js"></script>
 </body>
 
 </html>

@@ -19,7 +19,7 @@
 #contact-container{
     padding-left: 70px;
 }
-#Form-label{
+.form-input{
     border-radius: 30px;
     
     width: 100%;
@@ -36,7 +36,7 @@
     color: var(--clr-brown);
 }
 
-#Form-label:focus{outline: none;
+.form-inout:focus{outline: none;
 
 }
 .breadcrumb-item > a, .breadcrumb-item > a::after {

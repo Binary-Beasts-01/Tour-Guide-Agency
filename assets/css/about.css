@@ -142,3 +142,31 @@
     color: white;
     background-color: var(--clr-brown);
 }
+
+
+@media screen and (max-width: 969px) {
+    .team-image {
+        border-radius: 50%;
+        width: 120px;
+        height: 180px;
+    }
+
+    #vertical-tab .time-line {
+        border: none;
+        padding: 0 1rem;
+    }
+
+    .time-line {
+        position: relative;
+        padding-left: 1rem;
+        border-left: 2px solid var(--clr-brown);
+    }
+    
+    .timeline-indicator {
+        position: absolute;
+        left: -.3rem;
+        color: var(--clr-brown);
+        background-color: #29293a;
+    }
+    
+}

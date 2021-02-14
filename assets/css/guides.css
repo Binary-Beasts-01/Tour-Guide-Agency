@@ -1,132 +1,132 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
-  .padding {
-    padding: 3rem !important
+.padding {
+  padding: 3rem !important;
 }
 
 .user-card-full {
-    overflow: hidden
+  overflow: hidden;
 }
 
 .card {
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-    box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
-    border: none;
-    margin-bottom: 30px
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+  box-shadow: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+  border: none;
+  margin-bottom: 30px;
 }
 
 .m-r-0 {
-    margin-right: 0px
+  margin-right: 0px;
 }
 
 .m-l-0 {
-    margin-left: 0px
+  margin-left: 0px;
 }
 
 .user-card-full .user-profile {
-    border-radius: 5px 0 0 5px
+  border-radius: 5px 0 0 5px;
 }
 
 .bg-c-lite-green {
-    background: gray;
+  background: gray;
 }
 
 .user-profile {
-    padding: 20px 0
+  padding: 20px 0;
 }
 
 .card-block {
-    padding: 1.25rem
+  padding: 1.25rem;
 }
 
 .m-b-25 {
-    margin-bottom: 25px
+  margin-bottom: 25px;
 }
 
 .img-radius {
-    border-radius: 5px
+  border-radius: 5px;
 }
 
 h6 {
-    font-size: 14px
+  font-size: 14px;
 }
 
 .card .card-block p {
-    line-height: 25px
+  line-height: 25px;
 }
 
 @media only screen and (min-width: 1400px) {
-    p {
-        font-size: 14px
-    }
+  p {
+    font-size: 14px;
+  }
 }
 
 .card-block {
-    padding: 1.25rem
+  padding: 1.25rem;
 }
 
 .b-b-default {
-    border-bottom: 1px solid #e0e0e0
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .m-b-20 {
-    margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .p-b-5 {
-    padding-bottom: 5px !important
+  padding-bottom: 5px !important;
 }
 
 .card .card-block p {
-    line-height: 25px
+  line-height: 25px;
 }
 
 .m-b-10 {
-    margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .text-muted {
-    color: #919aa3 !important
+  color: #919aa3 !important;
 }
 
 .b-b-default {
-    border-bottom: 1px solid #e0e0e0
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .f-w-600 {
-    font-weight: 600
+  font-weight: 600;
 }
 
 .m-b-20 {
-    margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .m-t-40 {
-    margin-top: 20px
+  margin-top: 20px;
 }
 
 .p-b-5 {
-    padding-bottom: 5px !important
+  padding-bottom: 5px !important;
 }
 
 .m-b-10 {
-    margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 .m-t-40 {
-    margin-top: 20px
+  margin-top: 20px;
 }
 
 .user-card-full .social-link li {
-    display: inline-block
+  display: inline-block;
 }
 
 .user-card-full .social-link li a {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out
+  font-size: 20px;
+  margin: 0 10px 0 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .our-team {
@@ -148,7 +148,7 @@ h6 {
 }
 
 .our-team .picture::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 0;
   border-radius: 50%;
@@ -167,7 +167,7 @@ h6 {
 }
 
 .our-team .picture::after {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -230,42 +230,47 @@ h6 {
   color: var(--clr-brown);
   background-color: #f7f5ec;
 }
-  
 
-.rating { 
+.rating {
   border: none;
   float: left;
 }
 
-.rating > input { display: none; } 
-.rating > label:before { 
+.rating > input {
+  display: none;
+}
+.rating > label:before {
   margin: 5px;
   font-size: 1.25em;
   font-family: FontAwesome;
   display: inline-block;
-  content: "\f005";
+  content: '\f005';
 }
 
-.rating > .half:before { 
-  content: "\f089";
+.rating > .half:before {
+  content: '\f089';
   position: absolute;
 }
 
-.rating > label { 
-  color: #ddd; 
- float: right; 
+.rating > label {
+  color: #ddd;
+  float: right;
 }
 
 /***** CSS Magic to Highlight Stars on Hover *****/
 
 .rating > input:checked ~ label, /* show gold star when clicked */
 .rating:not(:checked) > label:hover, /* hover current star */
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+.rating:not(:checked) > label:hover ~ label {
+  color: #ffd700;
+} /* hover previous stars in list */
 
 .rating > input:checked + label:hover, /* hover current star when changing rating */
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+.rating > input:checked ~ label:hover ~ label {
+  color: #ffed85;
+}
 
 .product-rating {
   font-size: 1.5rem;
@@ -277,4 +282,122 @@ h6 {
 
 .total-rating {
   font-size: 1.3rem;
+}
+
+.card-guide {
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 100%;
+  max-width: 380px;
+  width: 100%;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.4em;
+  background-color: var(--clr-brown-darken);
+  max-height: 470px;
+  cursor: pointer;
+}
+.card-guide * {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.card-guide img {
+  max-width: 100%;
+  height: 200px;
+  vertical-align: top;
+  opacity: 0.85;
+  object-fit: cover;
+}
+.card-guide figcaption {
+  width: 100%;
+  background-color: var(--clr-brown-darken);
+  padding: 25px;
+  position: relative;
+}
+.card-guide figcaption:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent var(--clr-brown-darken);
+  overflow: hidden;
+}
+.card-guide figcaption a {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.card-guide figcaption a:hover {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(231, 224, 224, 0.482);
+}
+.card-guide .profile {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  z-index: 10;
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.1s;
+}
+.card-guide .cover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  content: '';
+  height: 100%;
+  width: 100%;
+  z-index: 9;
+  padding-top: 50%;
+  padding-left: 1rem;
+  background-color: rgba(27, 8, 8, 0.938);
+  transform: translateX(-150%);
+  transition: all 0.3s ease-in-out;
+}
+.card-guide:hover .cover {
+  transform: translateX(0);
+}
+.card-guide:hover .profile {
+  transform: translateY(-90%);
+}
+/* .card-guide .follow {
+  margin-right: 4%;
+  border-color: #2980b9;
+  color: #2980b9;
+} */
+.card-guide h2 {
+  margin: 0 0 5px;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px rgba(1, 1, 1, 0.3);
+}
+.card-guide h2 span {
+  display: block;
+  font-size: 0.5em;
+  color: #000000;
+}
+.card-guide p {
+  margin: 0 0 10px;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  opacity: 0.8;
 }

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/media_query.css">
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 
     <title>Tour Guide Agency</title>
 </head>
@@ -701,13 +702,14 @@
                                 <hr class="divider" />
                                 <form action="">
                                     <div class="form-group col-md-12 mt-4">
-                                        <input id="form-label" type="text" placeholder="E-mail or nickname">
+                                        <input name="email" id="form-label" type="text"
+                                            placeholder="E-mail or nickname">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input id="form-label" type="text" placeholder="Password">
+                                        <input name="password" id="form-label" type="text" placeholder="Password">
                                     </div>
                                     <div>
-                                        <button class="login-btn col-md-12 mt-4">
+                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
                                             Sign In
                                         </button>
                                     </div>
@@ -736,19 +738,20 @@
                                 <hr class="divider" />
                                 <form action="">
                                     <div class="form-group col-md-12 mt-4">
-                                        <input id="form-label" type="text" placeholder="Full Name">
+                                        <input name="name" id="form-label" type="text" placeholder="Full Name">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input id="form-label" type="text" placeholder="E-mail">
+                                        <input name="email" id="form-label" type="text" placeholder="E-mail">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input id="form-label" type="text" placeholder="Password">
+                                        <input name="password" id="form-label" type="text" placeholder="Password">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input id="form-label" type="text" placeholder="Confirm Password">
+                                        <input name="cpassword" id="form-label" type="text"
+                                            placeholder="Confirm Password">
                                     </div>
                                     <div>
-                                        <button class="login-btn col-md-12 mt-4">
+                                        <button id="register-btn" class="login-btn col-md-12 mt-4">
                                             Sign Up
                                         </button>
                                     </div>
@@ -770,7 +773,7 @@
                 </div>
             </div>
         </div>
-        
+
         <section class="container">
             <div class="row container-fluid destination-header gallery-footer my-5 py-5">
                 <div class="col-xl-10 col-md-9  col-sm-12 visit-us">
@@ -819,7 +822,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
+    <script src="./assets/js/database.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/authUser.js"></script>
     <script src="./assets/js/homePage.js"></script>
 </body>
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/destination.css">
     <link rel="stylesheet" href="./assets/css/about.css">
+    <link rel="stylesheet" href="./assets/css/media_query.css">
 
     <title>Tour Guide Agency</title>
 </head>
@@ -71,7 +72,7 @@
 
             <div class="d-flex justify-content-center mb-5" id="breadcrumb">
                 <nav class="my-4" id="breadcrumb-nav" aria-label="breadcrumb">
-                    <ol class="breadcrumb">
+                    <ol class="breadcrumb d-flex flex-row justify-content-center align-items-center">
                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                         <li class="breadcrumb-item" aria-current="page">About</li>
                     </ol>
@@ -147,15 +148,15 @@
     </section>
 
     <!-- Vertical Tab -->
-    <section class="container my-5">
+    <section class="container my-5 py-5" id="vertical-tab">
         <h2 class="display-5 text-center mb-5">vertical tabs</h2>
         <div class="row d-flex justify-content-center align-items-start mx-xl-5">
-            <div class="col-xl-2 col-sm-3 nav flex-column text-center nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="nav-link active h-2" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
-                <a class="nav-link h-2" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                <a class="nav-link h-2" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+            <div class="mb-3 col-xl-2 col-sm-12 nav flex-xl-column flex-sm-row text-center nav-pills me-xl-3 mx-sm-0" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active h-xl-2 h-sm-5 pe-2" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</a>
+                <a class="nav-link h-xl-2 h-sm-5 pe-2" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                <a class="nav-link h-xl-2 h-sm-5 px-0" id="v-pills-messages-tab" data-bs-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
             </div>
-            <div class="col-xl-6 col-s87 tab-content time-line" id="v-pills-tabContent">
+            <div class="col-xl-6 col-sm-12 tab-content time-line" id="v-pills-tabContent">
                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                     <h3 class="pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
                     <p class="pb-4">
@@ -279,7 +280,7 @@
                     <div class="col-9 time-line pt-5">
                         <i class="far fa-circle timeline-indicator"></i>
                         <div>
-                            <h3 class="h4">We established Tour Guide Agency in Addis Ababa in 2021 as a start up company.</h3>
+                            <h3 class="h-xl-4">We established Tour Guide Agency in Addis Ababa in 2021 as a start up company.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic quidem autem repellendus, commodi quam doloribus, laboriosam, voluptate suscipit vel nam libero pariatur quos qui officiis soluta obcaecati dignissimos perferendis.</p>
                         </div>
                     </div>
@@ -291,7 +292,7 @@
                     <div class="col-9 time-line py-5">
                         <i class="far fa-circle timeline-indicator"></i>
                         <div>
-                            <h3 class="h4">We established Tour Guide Agency in Addis Ababa in 2021 as a start up company.</h3>
+                            <h3 class="h-xl-4">We established Tour Guide Agency in Addis Ababa in 2021 as a start up company.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic quidem autem repellendus, commodi quam doloribus, laboriosam, voluptate suscipit vel nam libero pariatur quos qui officiis soluta obcaecati dignissimos perferendis.</p>
                         </div>
                     </div>
@@ -303,7 +304,7 @@
                     <div class="col-9 time-line">
                         <i class="far fa-circle timeline-indicator"></i>
                         <div>
-                            <h3 class="h4">We established Tour Guide Agency in Addis Ababa in 2021 as a start up company.</h3>
+                            <h3 class="h-xl-4">We established Tour Guide Agency in Addis Ababa in 2021 as a start up company.</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic quidem autem repellendus, commodi quam doloribus, laboriosam, voluptate suscipit vel nam libero pariatur quos qui officiis soluta obcaecati dignissimos perferendis.</p>
                         </div>
                     </div>
@@ -340,7 +341,7 @@
                         enim, provident nihil tempore ad consectetur repudiandae ullam mollitia in numquam officiis maiores ratione vitae velit.
                     </p>
                 </div>
-                <div class="row form-group mt-3 mx-2 form-container">
+                <div class="row form-group mt-3 mx-xl-2 form-container">
                     <div class="col-8">
                         <input class="Form-label" type="text" placeholder="Enter your e-mail">
                     </div>

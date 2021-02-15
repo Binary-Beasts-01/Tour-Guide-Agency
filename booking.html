@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/media_query.css">
+    <link rel="stylesheet" href="./assets/css/booking.css">
+
+    <title>Tour Guide Agency</title>
+</head>
+
+<body>
+    <!-- pre-header -->
+    <div class="pre-header d-none d-lg-flex">
+        <div class="contact-list">
+            <p><i class="fas fa-phone"></i> +25194516911</p>
+            <p><i class="fas fa-map-marker"></i> 6 Kilo Squer, Addis Ababa</p>
+            <p><i class="fas fa-phone"></i> +25194516911</p>
+        </div>
+        <div class="social-icons">
+            <ul class="list-unstyled list-inline d-flex align-items-center">
+                <li class="list list-inline-item"><a href=""><i class="fab fa-facebook-f p-2"></i></a>
+                </li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-twitter p-2"></i></a></li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-instagram p-2"></i></a>
+                </li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-google p-2"></i></a></li>
+                <li class="list list-inline-item"><a href=""><i class="fab fa-linkedin-in p-2"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- top header section -->
+    <header id="landing-header">
+        <nav class="nav-center">
+            <div class="nav-head">
+                <span class="navigation-toggler humberger-menu me-3">
+                    <img src="./assets/icons/sort-24px.svg" alt="">
+                </span>
+                <a class="logo-brand" href="#">IMALA</a>
+            </div>
+
+            <div class="collapsable" id="nav-collapse">
+                <ul class="nav-list">
+                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item"><a href="about.html">About</a></li>
+                    <li class="list-item"><a href="destination.html">Destinations</a></li>
+                    <li class="list-item"><a href="guides.html">Guides</a></li>
+                    <li class="list-item"><a href="gallery.html">Gallery</a></li>
+                    <li class="list-item"><a href="gallery.html">Contact</a></li>
+                    <li class="list-item active"><a href="booking.html">Booking</a></li>
+                    <li>
+                        <i class="fas fa-search"></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="collapsable">
+                <ul class=" ml-auto">
+                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
+
+                </ul>
+            </div>
+            <div class="navigation-menu">
+                <ul class="nav-list">
+                    <li>
+                        <i class="fas fa-search px-4"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-2x fa-ellipsis-v"></i>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="sidebar">
+            <ul class="nav-list">
+                <li class="list-item"><a href="index.html">Home</a></li>
+                <li class="list-item"><a href="about.html">About</a></li>
+                <li class="list-item"><a href="destination.html">Destinations</a></li>
+                <li class="list-item"><a href="guides.html">Guides</a></li>
+                <li class="list-item"><a href="gallery.html">Gallery</a></li>
+                <li class="list-item"><a href="contact.html">Contact</a></li>
+                <li class="list-item active"><a href="booking.html">Booking</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="overlay">
+    </div>
+    <div class="content-wrapper">
+        <!-- checkout section -->
+        <section class="mt-2 pt-2 checkout">
+            <div class="container">
+                <h2 class="my-5 h2 text-center">Checkout form</h2>
+                <div class="row">
+                    <div class="col-md-8 mb-4">
+                        <div class="card">
+                            <form class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="md-form">
+                                            <label for="firstName" class="">First name</label>
+                                            <input type="text" id="firstName" class="form-input">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="md-form">
+                                            <label for="lastName" class="">Last name</label>
+                                            <input type="text" id="lastName" class="form-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md-form mb-3">
+                                    <label for="email" class="">Email (optional)</label>
+                                    <input type="text" id="email" class="form-input"
+                                        placeholder="youremail@example.com">
+                                </div>
+                                <div class="md-form mb-3">
+                                    <label for="address" class="">Address</label>
+                                    <input type="text" id="address" class="form-input" placeholder="1234 Main St">
+                                </div>
+                                <div class="md-form mb-3">
+                                    <label for="address-2" class="">Address 2 (optional)</label>
+                                    <input type="text" id="address-2" class="form-input"
+                                        placeholder="Apartment or suite">
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-12 mb-3">
+                                        <label for="country">Country</label>
+                                        <select class="custom-select d-block w-100" id="country" required>
+                                            <option value="">Choose...</option>
+                                            <option>United States</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please select a valid country.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-3">
+                                        <label for="state">State</label>
+                                        <select class="custom-select d-block w-100" id="state" required>
+                                            <option value="">Choose...</option>
+                                            <option>California</option>
+                                        </select>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid state.
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 mb-3">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" class="form-input" id="zip" placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Zip code required.
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="custom-control custom-checkbox">
+                                    <label class="custom-control-label" for="same-address">Shipping address is the same
+                                    <input type="checkbox" class="custom-control-input" id="same-address">
+                                        as my billing address</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <label class="custom-control-label" for="save-info">Save this information for next
+                                    <input type="checkbox" class="custom-control-input" id="save-info">
+                                        time</label>
+                                </div>
+                                <hr>
+                                <div class="d-block my-3">
+                                    <div class="custom-control custom-radio">
+                                        <label class="custom-control-label" for="credit">Credit card</label>
+                                        <input id="credit" name="paymentMethod" type="radio"
+                                            class="custom-control-input" checked required>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <label class="custom-control-label" for="debit">Debit card</label>
+                                        <input id="debit" name="paymentMethod" type="radio" class="custom-control-input"
+                                            required>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <label class="custom-control-label" for="paypal">Paypal</label>
+                                        <input id="paypal" name="paymentMethod" type="radio"
+                                            class="custom-control-input" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-name">Name on card</label>
+                                        <input type="text" class="form-input" id="cc-name" placeholder="" required>
+                                        <small class="text-muted">Full name as displayed on card</small>
+                                        <div class="invalid-feedback">
+                                            Name on card is required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="cc-number">Credit card number</label>
+                                        <input type="text" class="form-input" id="cc-number" placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Credit card number is required
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">Expiration</label>
+                                        <input type="text" class="form-input" id="cc-expiration" placeholder=""
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Expiration date required
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 mb-3">
+                                        <label for="cc-expiration">CVV</label>
+                                        <input type="text" class="form-input" id="cc-cvv" placeholder="" required>
+                                        <div class="invalid-feedback">
+                                            Security code required
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="mb-4">
+                                <button class="btn pt-3" type="submit">Continue to
+                                    checkout</button>
+                            </form>
+
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    
+
+                    
+                    <div class="col-md-4 mb-4">
+
+                        <!-- Heading -->
+                        <h4 class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="text-muted">Expenditure</span>
+                            <span class="badge badge-secondary badge-pill">3</span>
+                        </h4>
+
+                        <!-- Cart -->
+                        <ul class="list-group mb-3 z-depth-1">
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Tour agent</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">1200 Birr</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Travel Expense </h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">8000 Birr</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                <div>
+                                    <h6 class="my-0">Reservations</h6>
+                                    <small class="text-muted">Brief description</small>
+                                </div>
+                                <span class="text-muted">1500 Birr</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between bg-light">
+                                <div class="text-success">
+                                    <h6 class="my-0">Miscellaneous</h6>
+                                    <small>Other Expenses</small>
+                                </div>
+                                <span class="text-success">-1300 Birr</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total (ETB)</span>
+                                <strong>12000 Birr</strong>
+                            </li>
+                        </ul>
+                        <!-- Cart -->
+
+                        <!-- Promo code -->
+                        <form class="card p-2">
+                            <div class="input-group">
+                                <input type="text" class="form-input" placeholder="Promo code"
+                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn pt-3 m-0"
+                                        type="button">Redeem</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- footer section -->
+        <footer id="footer" class="p-4 pt-5">
+            <div class="row justify-content-sm-center align-items-md-center mx-5">
+                <div class="col-md-10 col-lg-7 col-xl-4"></div>
+                <div class="col-md-10 col-lg-7 col-xl-4 text-xl-center">
+                    <p>&copy;2021. All Rights Reserved. Privacy Policy</p>
+                </div>
+                <div class="col-md-10 col-lg-7 col-xl-4 text-xl-end">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                    class="fab fa-facebook-f"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                    class="fab fa-twitter"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="instagram"><a href=""><i
+                                    class="fab fa-instagram"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                    class="fab fa-google"></i></a></li>
+                        <li class="list list-inline-item social-media-icon" id="linkedin"><a href=""><i
+                                    class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <a href="#" id="go-to-top">^</a>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

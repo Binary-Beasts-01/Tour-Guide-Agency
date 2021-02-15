@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function validateEmail(inputText) {
     var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (inputText.value.match(mailformat)) {
@@ -54,3 +55,21 @@ function validateZipcode(str)
             return false;
           }
 }
+=======
+function validateForm(type, vlaue) {
+  switch (type) {
+    case INPUT_TYPE.name:
+      break;
+    case INPUT_TYPE.email:
+      break;
+    case INPUT_TYPE.phone:
+      break;
+    case INPUT_TYPE.zip:
+      break;
+    case INPUT_TYPE.credit_card:
+      break;
+    default:
+      break;
+  }
+}
+>>>>>>> d610e98a3f89c76ef3e41f3c0b4c8efbe8f7730d

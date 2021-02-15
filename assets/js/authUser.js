@@ -5,6 +5,9 @@ const lEmailField = document.querySelector('.form-login input[name=email]');
 const lPasswordField = document.querySelector(
   '.form-login input[name=password]'
 );
+
+const errorDiv = document.querySelector('.error-div')
+
 const rNameField = document.querySelector('.form-register input[name=name]');
 const rEmailField = document.querySelector('.form-register input[name=email]');
 const rPasswordField = document.querySelector(
@@ -32,7 +35,9 @@ function register(name, email, password) {
         console.log('Error adding');
       })
       .then((r) => {
-        if (r) console.log('Registration Success!');
+        if (r){
+          console.log('Registration Success!');
+        } 
       });
   })
     .then(() => {
@@ -53,8 +58,16 @@ function login(email, password) {
       .then((r) => {
         if (r) {
           console.log('Login success');
+          window.location.reload
         } else {
           console.log('Login failure');
+		      errorDiv.style.display = "block";
+          errorDiv.style.color = "#C62828";
+          errorDiv.innerHTML = 
+                `The email and password you entered
+                did not match our records. Please double-check
+                and try again.
+                `;
         }
       });
   })
@@ -65,6 +78,7 @@ function login(email, password) {
       console.log('Transaction fail');
     });
 }
+
 
 // validation function
 

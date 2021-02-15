@@ -35,16 +35,16 @@ window.addEventListener('scroll', (e) => {
 });
 
 // Toggle account animation
-const accountToggleL = document.querySelector('.account-toggle.l span');
-const accountToggleR = document.querySelector('.account-toggle.r span');
-const formContainer = document.querySelector('.form-container');
-accountToggleL.addEventListener('click', (e) => {
-  e.preventDefault();
-  formContainer.parentElement.classList.add('form-anim-l');
-  formContainer.parentElement.classList.remove('form-anim-r');
-});
-accountToggleR.addEventListener('click', (e) => {
-  e.preventDefault();
-  formContainer.parentElement.classList.remove('form-anim-l');
-  formContainer.parentElement.classList.add('form-anim-r');
-});
+// const accountToggleL = document.querySelector('.account-toggle.l span');
+// const accountToggleR = document.querySelector('.account-toggle.r span');
+// const formContainer = document.querySelector('.form-container');
+// accountToggleL.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   formContainer.parentElement.classList.add('form-anim-l');
+//   formContainer.parentElement.classList.remove('form-anim-r');
+// });
+// accountToggleR.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   formContainer.parentElement.classList.remove('form-anim-l');
+//   formContainer.parentElement.classList.add('form-anim-r');
+// });

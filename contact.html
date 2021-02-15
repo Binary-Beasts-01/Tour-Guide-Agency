@@ -106,44 +106,46 @@
             </div>
         </section>
         <!-- contact information -->
-        <section >
-            <div class="container" >
+        <section>
+            <div class="container">
                 <div class="row mt-3 mb-5 ">
                     <div class="col-md-7">
-                    
+
                         <h1 class="headline-2">Contact Us</h1>
                         <hr class="divider" />
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in non aspernatur quas dicta eveniet omnis nulla eius, nemo doloremque deleniti alias tenetur excepturi asperiores quod repudiandae necessitatibus. Eligendi, doloremque!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus in non aspernatur quas
+                            dicta eveniet omnis nulla eius, nemo doloremque deleniti alias tenetur excepturi asperiores
+                            quod repudiandae necessitatibus. Eligendi, doloremque!</p>
                         <form action="">
-                            <div class="row " >
-                                <div class="form-group col-md-6 pt-3"  >
+                            <div class="row ">
+                                <div class="form-group col-md-6 pt-3">
                                     <label for="form-fname">First Name</label>
 
-                                    <input type="text" id="form-fname"  class="form-input">
+                                    <input type="text" id="form-fname" class="form-input">
                                 </div>
                                 <div class="form-group col-md-6 pt-3">
                                     <label for="form-lname">Last Name</label>
 
-                                    <input class="form-input" id="form-lname" type="text" >
+                                    <input class="form-input" id="form-lname" type="text">
                                 </div>
                                 <div class="form-group col-md-6 pt-4">
                                     <label for="form-name">E-mail</label>
 
-                                    <input class="form-input" id="form-input" type="text" >
+                                    <input class="form-input" id="form-input" type="text">
                                 </div>
                                 <div class="form-group col-md-6 pt-4">
                                     <label for="form-name">Phone</label>
 
-                                    <input class="form-input" id="form-input" type="text" >
+                                    <input class="form-input" id="form-input" type="text">
 
                                 </div>
 
                                 <div class="form-group col-md-12 pt-4">
                                     <label for="form-name">Message</label>
 
-                                    
-                                    <textarea class="form-input"  id="form-input"  rows="4"></textarea>
-  
+
+                                    <textarea class="form-input" id="form-input" rows="4"></textarea>
+
                                 </div>
 
                                 <div>
@@ -211,7 +213,89 @@
 
         <!-- map section -->
 
+        <!-- Modal -->
+        <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="form-container">
+                        <div class="d form-login">
+                            <div class="login-form mt-5">
+                                <h2 class="login">Login</h2>
+                                <hr class="divider" />
+                                <form action="">
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="email" id="form-label" type="text"
+                                            placeholder="E-mail or nickname">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                    </div>
+                                    <div>
+                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
+                                            Sign In
+                                        </button>
+                                    </div>
+                                    <div class="form-group text-center col-md-12 mt-4">
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
+                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
+                                                    href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="google"><a
+                                                    href=""><i class="fab fa-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
+                                            Up</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d form-spanner">
 
+                        </div>
+                        <div class="d form-register">
+                            <div class="login-form mt-5">
+                                <h2 class="login">Create account</h2>
+                                <hr class="divider" />
+                                <form action="">
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="name" id="form-label" type="text" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="email" id="form-label" type="text" placeholder="E-mail">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="cpassword" id="form-label" type="text"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                    <div>
+                                        <button id="register-btn" class="login-btn col-md-12 mt-4">
+                                            Sign Up
+                                        </button>
+                                    </div>
+                                    <div class="form-group text-center col-md-12 mt-4">
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
+                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
+                                                    href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="google"><a
+                                                    href=""><i class="fab fa-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid p-0">
             <div class="gmap_canvas">
                 <iframe width="100%" height="200rem" id="gmap_canvas"
@@ -254,6 +338,8 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/utils/constants.js"></script>
+    <script src="./assets/js/utils/formValidate.js"></script>
 </body>
 
 </html>

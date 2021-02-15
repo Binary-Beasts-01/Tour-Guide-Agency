@@ -34,7 +34,7 @@
 
 
 .breadcrumb-item > a, .breadcrumb-item > a::after {
-    color: white;
+    color: var(--clr-white);
     content: " > ";
     font-weight: lighter; 
 }
@@ -45,7 +45,7 @@
 
 .card-header{
   background-color: var(--clr-brown);
-  color: white;
+  color: var(--clr-white);
   
 }
 .card{
@@ -53,11 +53,11 @@
   background-color: var(--clr-brown);
 }
 .card-body{
-  background-color: white;
+  background-color: var(--clr-white);
 }
 .card:hover{
-  background-color: #ffffff !important;
-  border-color: #ffffff;
+  background-color: var(--clr-white) !important;
+  border-color:var(--clr-white);
   box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
   border: none;
   
@@ -79,7 +79,7 @@
   user-select: none;
   transition: 0.25s all ease;
   white-space: nowrap;
-  color: white;
+  color:var(--clr-white);
   background-color: var(--clr-brown);
 }
 
@@ -87,6 +87,42 @@
   background-color: var(--clr-dark-brown) !important;
 }
 
+.collapsible {
+  background-color:transparent;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
+}
+
+
+.collapsible:after {
+  content: '\002B';
+  color:black;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+
+}
+}
+
+.active:after {
+  content: "\2212";
+  
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+ 
+}
 
 
 

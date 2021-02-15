@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/media_query.css">
     <link rel="stylesheet" href="./assets/css/destination.css">
-
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <title>Tour Guide Agency</title>
 </head>
 
@@ -122,105 +122,10 @@
                             tempora</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-6 col-xl-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="/assets/images/gettyimages-111919734-2048x2048.jpg" alt="" width="570"
-                                        height="370">
-                                </figure>
-                                <div class="event-default-caption"><a class="button button-xs button-primary"
-                                        href="rooms-&amp;-suites.html">Learn More</a></div>
-                            </div>
-                            <div class="event-default-inner">
-                                <h5><a class="event-default-title" href="rooms-&amp;-suites.html">Lalibela</a></h5><span
-                                    class="event-default-price">from 280 Birr</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-xl-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="/assets/images/gettyimages-138178737-2048x2048.jpg" alt="" width="570"
-                                        height="370">
-                                </figure>
-                                <div class="event-default-caption"><a class="button button-xs button-primary"
-                                        href="rooms-&amp;-suites.html">Learn More</a></div>
-                            </div>
-                            <div class="event-default-inner">
-                                <h5><a class="event-default-title" href="rooms-&amp;-suites.html">Fasilades</a></h5>
-                                <span class="event-default-price">from 480 Birr</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-xl-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="/assets/images/gettyimages-182174818-2048x2048.jpg" alt="" width="570"
-                                        height="370">
-                                </figure>
-                                <div class="event-default-caption"><a class="button button-xs button-primary"
-                                        href="rooms-&amp;-suites.html">Learn More</a></div>
-                            </div>
-                            <div class="event-default-inner">
-                                <h5><a class="event-default-title" href="rooms-&amp;-suites.html">Sof Umer Cave</a></h5>
-                                <span class="event-default-price">from 550 Birr</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-xl-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="/assets/images/gettyimages-697529054-612x612.jpg" alt="" width="570"
-                                        height="370">
-                                </figure>
-                                <div class="event-default-caption"><a class="button button-xs button-primary"
-                                        href="rooms-&amp;-suites.html">Learn More</a></div>
-                            </div>
-                            <div class="event-default-inner">
-                                <h5><a class="event-default-title" href="rooms-&amp;-suites.html">Addis Ababa</a></h5>
-                                <span class="event-default-price">from 350 Birr</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-xl-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="/assets/images/gettyimages-905176238-2048x2048.jpg" alt="" width="570"
-                                        height="370">
-                                </figure>
-                                <div class="event-default-caption"><a class="button button-xs button-primary"
-                                        href="rooms-&amp;-suites.html">Learn More</a></div>
-                            </div>
-                            <div class="event-default-inner">
-                                <h5><a class="event-default-title" href="rooms-&amp;-suites.html">Semen Mountains</a>
-                                </h5>
-                                <span class="event-default-price">from 520 Birr</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-sm-6 col-xl-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="/assets/images/gettyimages-988621664-2048x2048.jpg" alt="" width="570"
-                                        height="370">
-                                </figure>
-                                <div class="event-default-caption"><a class="button button-xs button-primary"
-                                        href="rooms-&amp;-suites.html">Learn More</a></div>
-                            </div>
-                            <div class="event-default-inner">
-                                <h5><a class="event-default-title" href="rooms-&amp;-suites.html">Konso</a></h5><span
-                                    class="event-default-price">from 600 Birr</span>
-                            </div>
-                        </article>
-                    </div>
+                <div class="row" id="tour_destination">
+                    <!-- Content is added here programatically -->
                 </div>
+                    
             </div>
             <div class="text-center my-5">
                 <button class="btn">
@@ -262,6 +167,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/destination.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 

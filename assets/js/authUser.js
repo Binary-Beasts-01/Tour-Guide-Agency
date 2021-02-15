@@ -1,3 +1,4 @@
+// const formBox = document.querySelectorAll('.form-container .form input');
 const loginBtn = document.querySelector('#sign-in-btn');
 const registerBtn = document.querySelector('#register-btn');
 
@@ -13,15 +14,43 @@ const rPasswordField = document.querySelector(
 const rCpasswordField = document.querySelector(
   '.form-register input[name=cpassword]'
 );
-
 loginBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  login(lEmailField.value, lPasswordField.value);
+  login(emailVal, lPasswordField.value);
 });
 
 registerBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  register(rNameField.value, rEmailField.value, rPasswordField.value);
+
+  clearError(rNameField);
+  clearError(rEmailField);
+  clearError(rPasswordField);
+
+  let emailVal = rEmailField.value;
+  let nameVal = rNameField.value;
+  let passVal = rPasswordField;
+  if (!validateForm(INPUT_TYPE.name, nameVal)) {
+    displayError('Invalid username format!', rNameField, null);
+    return;
+  }
+  if (!validateForm(INPUT_TYPE.email, emailVal)) {
+    console.log('object');
+    displayError('Invalid email format!', rEmailField, null);
+    return;
+  }
+  if (!validateForm(INPUT_TYPE.password, rPasswordField)) {
+    displayError(
+      'Passowrd must be of length 8 or above!',
+      rPasswordField,
+      null
+    );
+    return;
+  }
+  if (passVal != rCpasswordField.value) {
+    displayError("Password doesn't match!", rCpasswordField, null);
+    return;
+  }
+  register(nameVal, emailVal, rPasswordField.value);
 });
 
 function register(name, email, password) {
@@ -65,9 +94,3 @@ function login(email, password) {
       console.log('Transaction fail');
     });
 }
-
-// validation function
-
-// error handler function
-
-// success handler function

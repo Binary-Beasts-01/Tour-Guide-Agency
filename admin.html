@@ -94,24 +94,36 @@
         <section>
 
                 <div class="container text-center">
-                    <h1 class="headline-1">
+                    <h1 class="headline-1 mt-2">
                          Administrator
                       </h1>
                       <hr class="divider" />
                     <div class="d-flex justify-content-center">
                         <form class="w-50">
-                            <input type="text" id="userid" class="form-control form-input" autocomplete="off" readonly
-                                placeholder="ID" />
-                            <input type="text" id="proname" class="form-control form-input" autocomplete="off"
-                                placeholder="Landscape" />
                             <div class="row">
                                 <div class="col">
                                     <input type="text" id="seller" class="form-control form-input m-0" autocomplete="off"
-                                        placeholder="Tour Agent" />
+                                    placeholder="Tour destination" />
                                 </div>
                                 <div class="col">
                                     <input type="text" id="price" class="form-control form-input m-0" autocomplete="off"
-                                        placeholder="Price" />
+                                    placeholder="Price" />
+                                </div>
+                            </div>
+                            <input type="text" id="proname" class="form-control form-input" autocomplete="off"
+                            placeholder="Location" />
+                            <input type="text" id="userid" class="form-control form-input" autocomplete="off"
+                                placeholder="Image relative location" />
+                            <div class="row">
+                                <div class="col d-flex flex-row align-items-center">
+                                    <label for="toDate" class="text-left">From</label>
+                                    <input type="date" id="fromDate" class="form-control form-input m-0" autocomplete="off"
+                                    placeholder="Starting date" />
+                                </div>
+                                <div class="col d-flex flex-row align-items-center">
+                                    <label for="toDate" class="text-left">To</label>
+                                    <input type="date" id="toDate" class="form-control form-input m-0" autocomplete="off"
+                                    placeholder="End date" />
                                 </div>
                             </div>
                         </form>
@@ -145,9 +157,9 @@
         </section>
 
         <!-- Labels -->
-        <div class="w-100 btn btn-success insertmsg">Data Inserted Successfully...!</div>
+        <!-- <div class="w-100 btn btn-success insertmsg">Data Inserted Successfully...!</div>
           <div class="w-100 btn btn-warning updatemsg">Data Updated..! Refresh Database To See Result</div>
-          <div class="w-100 btn btn-danger deletemsg">Data Deleted..!</div>
+          <div class="w-100 btn btn-danger deletemsg">Data Deleted..!</div> -->
 
         <!-- footer section -->
         <footer id="footer" class="p-4 pt-5">
@@ -187,8 +199,7 @@
   </script>
   <!-- Include Dexie -->
   <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <!-- <script src="./assets/js/main.js"></script> -->
-    <script src="./assets/js/admin.js" type="module"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

@@ -6,14 +6,15 @@ import prodb, {
 } from "./module.js";
 
 
-let db = prodb("Productdb", {
-  products: `++id, name, seller, price`
-});
+// let db = prodb("Productdb", {
+//   tour: `++id, name, location, price`
+// });
 
 // input tags
 const userid = document.getElementById("userid");
 const proname = document.getElementById("proname");
-const seller = document.getElementById("seller");
+const location = document.getElementById("location");
+const image = document.getElementById("image");
 const price = document.getElementById("price");
 
 // create button
@@ -27,25 +28,26 @@ const btndelete = document.getElementById("btn-delete");
 // event listerner for create button
 btncreate.onclick = event => {
   // insert values
-  let flag = bulkcreate(db.products, {
+  let flag = bulkcreate(db.tour, {
     name: proname.value,
-    seller: seller.value,
-    price: price.value
+    location: location.value,
+    price: price.value, 
+    image: image.value
   });
   // reset textbox values
   //proname.value = "";
-  //seller.value = "";
+  //location.value = "";
   // price.value = "";
-  proname.value = seller.value = price.value = "";
+  proname.value = location.value = price.value = "";
 
   // set id textbox value
-  getData(db.products, data => {
-    userid.value = data.id + 1 || 1;
-  });
+  // getData(db.tour, data => {
+  //   userid.value = data.id + 1 || 1;
+  // });
   table();
 
-  let insertmsg = document.querySelector(".insertmsg");
-  getMsg(flag, insertmsg);
+  // let insertmsg = document.querySelector(".insertmsg");
+  // getMsg(flag, insertmsg);
 };
 
 // event listerner for create button
@@ -53,12 +55,11 @@ btnread.onclick = table;
 
 // button update
 btnupdate.onclick = () => {
-  const id = parseInt(userid.value || 0);
   if (id) {
     // call dexie update method
-    db.products.update(id, {
+    db.tour.update(id, {
       name: proname.value,
-      seller: seller.value,
+      location: location.value,
       price: price.value
     }).then((updated) => {
       // let get = updated ? `data updated` : `couldn't update data`;
@@ -68,7 +69,7 @@ btnupdate.onclick = () => {
       let updatemsg = document.querySelector(".updatemsg");
       getMsg(get, updatemsg);
 
-      proname.value = seller.value = price.value = "";
+      proname.value = location.value = price.value = "";
       //console.log(get);
     })
   } else {
@@ -80,7 +81,7 @@ btnupdate.onclick = () => {
 btndelete.onclick = () => {
   db.delete();
   db = prodb("Productdb", {
-    products: `++id, name, seller, price`
+    tour: `++id, name, location, price`
   });
   db.open();
   table();
@@ -109,7 +110,7 @@ function table() {
   }
 
 
-  getData(db.products, (data, index) => {
+  getData(db.tour, (data, index) => {
     if (data) {
       createEle("tr", tbody, tr => {
         for (const value in data) {
@@ -143,11 +144,11 @@ function table() {
 
 const editbtn = (event) => {
   let id = parseInt(event.target.dataset.id);
-  db.products.get(id, function (data) {
+  db.tour.get(id, function (data) {
     let newdata = SortObj(data);
     userid.value = newdata.id || 0;
     proname.value = newdata.name || "";
-    seller.value = newdata.seller || "";
+    location.value = newdata.location || "";
     price.value = newdata.price || "";
   });
 }
@@ -155,13 +156,13 @@ const editbtn = (event) => {
 // delete icon remove element 
 const deletebtn = event => {
   let id = parseInt(event.target.dataset.id);
-  db.products.delete(id);
+  db.tour.delete(id);
   table();
 }
 
 // textbox id
 function textID(textboxid) {
-  getData(db.products, data => {
+  getData(db.tour, data => {
     textboxid.value = data.id + 1 || 1;
   });
 }

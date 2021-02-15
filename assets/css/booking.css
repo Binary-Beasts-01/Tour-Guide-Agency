@@ -10,3 +10,7 @@
 .container{
     width: 60%;
 }
+
+.card.booking-form{
+    border: 0;
+}

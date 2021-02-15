@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/media_query.css">
+    <link rel="stylesheet" href="./assets/css/tourdetail.css">
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 
     <title>Tour Guide Agency</title>
@@ -49,7 +50,7 @@
 
             <div class="collapsable" id="nav-collapse">
                 <ul class="nav-list">
-                    <li class="list-item active"><a href="#">Home</a></li>
+                    <li class="list-item"><a href="index.html">Home</a></li>
                     <li class="list-item"><a href="about.html">About</a></li>
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
                     <li class="list-item"><a href="guides.html">Guides</a></li>
@@ -79,7 +80,7 @@
         </nav>
         <div class="sidebar">
             <ul class="nav-list">
-                <li class="list-item active"><a href="#">Home</a></li>
+                <li class="list-item"><a href="index.html">Home</a></li>
                 <li class="list-item"><a href="about.html">About</a></li>
                 <li class="list-item"><a href="destination.html">Destinations</a></li>
                 <li class="list-item"><a href="guides.html">Guides</a></li>
@@ -92,687 +93,262 @@
     <div id="overlay">
     </div>
     <div class="content-wrapper">
-        <!-- Slide landing section -->
-        <section class="main-slider">
-            <div class="container-fluid" id="slide-landing">
-                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-                        <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="slide-img-container"
-                                style="background: url(/assets/images/main_slide/gettyimages-1094635342-2048x2048.jpg) center/cover no-repeat;">
-                            </div>
-                            <div class="carousel-caption d-md-none d-xl-block">
-                                <h1>Welcome To Your Tour Guide Agency</h1>
-                                <p>Our agency offers comfortable accommodation with a wide variety of tour destinations,
-                                    additional services, and amenities available to all our guests.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="slide-img-container"
-                                style="background: url(/assets/images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg) center/cover no-repeat;">
-                            </div>
-                            <div class="carousel-caption d-md-none d-xl-block">
-                                <h1>A VARIETY OF ROOMS FOR YOU</h1>
-                                <p>Our tour destinations has a wide variety of greatly furnished and fully equipped
-                                    rooms
-                                    for
-                                    every guest. We have what you need to enjoy your stay.</p>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="slide-img-container"
-                                style="background: url(/assets/images/main_slide/gettyimages-98371189-2048x2048.jpg) center/cover no-repeat;">
-                            </div>
-                            <div class="carousel-caption d-md-none d-xl-block">
-                                <h1>COMFORTABLE FACILITIES</h1>
-                                <p>At our service, you can always feel comfortable in your tours, having the right
-                                    surroundings
-                                    to relax and reload as it is utmost important.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev visually-hidden" href="#carouselExampleCaptions" role="button"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next visually-hidden" href="#carouselExampleCaptions" role="button"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
-                </div>
-                <!-- Slider Banner -->
-                <div class="slide-banner mt-5">
-                    <div class="form-request-modern">
-                        <h3>Browse Destinations</h3>
-                        <form novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-wrap-inline">
-                                        <label class="form-label-outside">Choose Date</label>
-                                        <div>
-                                            <input type="date" class="form-input" id="data-time-picker-arrow"
-                                                id="tour-time" name="tour-time">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12">
-                                    <div class="form-wrap-inline">
-                                        <label class="form-label-outside">Choose Destination</label>
-                                        <select name="select" id="select">
-                                            <option selected value="Danakil Depression">Addis Ababa</option>
-                                            <option value="Danakil Depression">Danakil Depression</option>
-                                            <option value="Danakil Depression">National Museum of Ethiopia</option>
-                                            <option value="Danakil Depression">Axum</option>
-                                            <option value="Danakil Depression">Gheralta</option>
-                                            <option value="Danakil Depression">Rock-Hewn Churches of Lalibela
-                                            </option>
-                                            <option value="Danakil Depression">Fasiledes Castle</option>
-                                            <option value="Danakil Depression">Simien Mountains</option>
-                                            <option value="Danakil Depression">Blue Nile Falls</option>
-                                            <option value="Danakil Depression">Brba Minch</option>
-                                            <option value="Danakil Depression">People of the Lower Omo Valley
-                                            </option>
-                                            <option value="Danakil Depression">Babile Elephant Sanctuary</option>
-                                            <option value="Danakil Depression">Harar Walled City</option>
-                                            <option value="Danakil Depression">Lake Tana Monasteries</option>
-                                            <option value="Danakil Depression">Nechsar National Park</option>
-                                            <option value="Danakil Depression">Sof Omar Cave</option>
-                                            <option value="Danakil Depression">Bale Mountains National Park</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn" type="submit">Check Availability</button>
-                            </div>
-                        </form>
-                    </div>
+        <section class="container-fluid d-flex align-items-end justify-content-center" id="tourdetail-header">
+            <div>
+                <h1 class="headline-1">Tour Detail</h1>
+
+                <div class="d-flex justify-content-center mb-5" id="breadcrumb">
+                    <nav class="my-4" id="breadcrumb-nav" aria-label="breadcrumb">
+                        <ol class="breadcrumb d-flex flex-row justify-content-center align-items-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item" aria-current="page">Tour Detail</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </section>
+        
+        <section class="container">
+            <div class="row mt-5">
+                <div class="col-xl-6 col-10">
 
-        <!-- destination section -->
-        <section id="destination">
-            <div class="container-fluid">
-                <div class="row destination-header">
-                    <div class="col-xl-10 col-md-10 col-sm-12">
-                        <h1>Top Destination</h1>
-                        <span class="text-uppercase big-title-reflection">Top Destination</span>
-                    </div>
-                    <div class="col-xl-2 col-md-2 col-sm-12">
-                        <button class="btn">All Destination</button>
+                    <h1>Overview</h1>
+                    <hr class="divider my-3" />
+                    <p class="pt-4">Vel nihil percipitur ei. Fugit option oportere est in, te dignissim philosophia mea,
+                        duo
+                        diceret eruditi ea. In eum porro bonorum, ut stet partiendo efficiantur vis. No errem platonem
+                        consectetuer quo, legimus tincidunt percipitur pri id. No nec congue libris interpretaris</p>
+                    <div class="row">
+                        <div class="col-1">
+                        </div>
+                        <div class="col-8">
+                            <p class="fw-bold h5">Vel nihil percipitur ei. Fugit option oportere est in, te dignissim philosophia mea,
+                                duo
+                                diceret eruditi ea. </p>
+                            
+                        </div>
 
                     </div>
+                    <p class="pt-4">Vel nihil percipitur ei. Fugit option oportere est in, te dignissim philosophia mea,
+                        duo
+                        diceret eruditi ea. In eum porro bonorum, ut stet partiendo efficiantur vis. No errem platonem
+                        consectetuer quo, legimus tincidunt percipitur pri id. No nec congue libris interpretaris</p>
+
+                        <ul class=" ml-auto">
+                            <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Book Now</a>
+        
+                        </ul>
                 </div>
-        </section>
-        <section id="gallery" class="container-fluid">
-            <div class="row">
-                <!-- Gallery item -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded shadow-sm">
-                        <div class="bg-white img-wrapper">
-                            <img src="/assets/images/f581484c_Simien Mountains - dreamstime_xl_27714848.jpg" alt=""
-                                class="img-fluid card-img-top">
-                        </div>
-                        <div class="p-4">
-                            <h5> <a href="#" class="text-dark">Simien Mountains</a></h5>
-                            <p class="small text-muted mb-0">The Simien Mountain range is a designated UNESCO World
-                                Heritage Site and is rightfully known as God’s playground.
-                                A trek alone the escarpment provides one of the most phenomenal vistas in the
-                                country.
-                                You’re also guaranteed to run in to a group of the Gelada bleeding heart baboons.
-                                Inside the Simien National park are a wide variety of wildlife like the Walia ibex,
-                                a
-                                goat found nowhere else on Earth.
-                            </p>
-                        </div>
-                    </div>
+                <div class="col-xl-6 col-10 p-5 d-flex align-items-center">
+                    <img class="img-fluid" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
                 </div>
-
-                <!-- End -->
-
-                <!-- Gallery item -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded shadow-sm">
-                        <div class="bg-white img-wrapper">
-                            <img src="/assets/images/df11aa22_Inside the explosion crater of Dallol volcano, Danakil Depression - dreamstime_xxl_95577365.jpg"
-                                alt="" class="img-fluid card-img-top">
-                        </div>
-                        <div class="p-4">
-                            <h5> <a href="#" class="text-dark">Danakil Depression</a></h5>
-                            <p class="small text-muted mb-0">The Danakil Depression is found in Northern Ethiopia,
-                                close
-                                to the border with Eritrea. With parts of
-                                Danakil 100 metres below sea level, this is one of the lowest places on Earth and
-                                also
-                                one of the hottest in average yearly temperature.
-                                Two active volcanoes, Mount Ayalu and Erta Ale have large lava lakes, whilst the
-                                Dallol
-                                Sulphur Springs is a photographers' dream.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded shadow-sm">
-                        <div class="bg-white img-wrapper">
-                            <img src="/assets/images/istockphoto-186914973-612x612.jpg" alt=""
-                                class="img-fluid card-img-top">
-                        </div>
-                        <div class="p-4">
-                            <h5> <a href="#" class="text-dark">Axum</a></h5>
-                            <p class="small text-muted mb-0">This fascinating town was the centre of the Axumite
-                                Empire,
-                                one of the most important and technologically
-                                advanced civilisations of its time and a major force in world trade between the 1st
-                                and
-                                7th centuries AD.
-                                A further twist in the town's long history is speculation that it could have held
-                                the
-                                court of the Queen of Sheba and also that it is
-                                the final resting place of the Ark of the Covenant. It is undoubtedly the holiest
-                                city
-                                of the Ethiopian Orthodox church</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End -->
-
-                <!-- Gallery item -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded shadow-sm">
-                        <div class="bg-white img-wrapper">
-                            <img src="/assets/images/mulugeta-wolde-6SgfEwkA02Y-unsplash.jpg" alt=""
-                                class="img-fluid card-img-top">
-                        </div>
-                        <div class="p-4">
-                            <h5> <a href="#" class="text-dark">Lalibela</a></h5>
-                            <p class="small text-muted mb-0">Lalibela is famous throughout the world for its
-                                incredible
-                                rock-hewn churches. At 2,630 m and perched
-                                among wild mountains, the setting is fantastic.
-                                From the 10th to the mid-13th century it was the capital of the Zagwe Dynasty that
-                                ruled
-                                the country and it was under the
-                                direction of its most famous King, Lalibela, that the churches were carved. He
-                                gathered
-                                together the greatest craftsmen possible
-                                and some estimates think as many as 40,000 people were required to create the
-                                churches.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- End -->
-
-                <!-- Gallery item -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded shadow-sm">
-                        <div class="bg-white img-wrapper">
-                            <img src="/assets/images/36821ae1_Fasilides Castle in Gonder - dreamstime_xxl_118941485.jpg"
-                                alt="" class="img-fluid card-img-top">
-                        </div>
-                        <div class="p-4">
-                            <h5> <a href="#" class="text-dark">Gonder, Fasiledes</a></h5>
-                            <p class="small text-muted mb-0">Up until the beginning of the 17th century, Ethiopia
-                                had
-                                what was locally referred to as a 'mobile capital'.
-                                But in 1632 Fasilidas took the throne and proclaimed Gonder as his capital, where it
-                                remained for the next 200 years. As king and emperor
-                                Fasilidas not only ushered in a period of relative calm in Abyssinia's turbulent
-                                history
-                                he also built a stupendous fort at this strategic
-                                location - added to by his successors - most of which is still intact. Wandering
-                                around
-                                the fort's spectacular turreted citadels, vast
-                                banqueting halls and bathhouses leaves you in no doubt whatsoever as to the
-                                importance
-                                of this Christian kingdom 400 years ago.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End -->
-
-                <!-- Gallery item -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="rounded shadow-sm">
-                        <div class="bg-white img-wrapper">
-                            <img src="/assets/images/3c09b320_Muslim girls outside mosque in harar - dreamstime_xxl_24601948.jpg"
-                                alt="" class="img-fluid card-img-top">
-                        </div>
-                        <div class="p-4">
-                            <h5> <a href="#" class="text-dark">Harar</a></h5>
-                            <p class="small text-muted mb-0">This holy, historic and walled city is a mesmerizing
-                                web of
-                                narrow alleyways. Built in the early 16th century,
-                                it’s the oldest Islamic city in Africa.
-                                It was once the commercial link between Africa and the middle east and today is an
-                                enchanting lost-in-time city that’s famous for the impressive
-                                walls and centuries old buildings.
-                                There are roughly 99 mosques within the city. A popular attraction is the nightly
-                                ritual
-                                of feeding they hyenas which happens on the outskirts of the city.
-                                It’s been taking place for generations and you can participate if you’re feeling
-                                adventurous.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                
             </div>
         </section>
 
-        <!-- Services section -->
+
+
+
         <section class="section services" id="services">
             <div class="container-fluid">
-                <h1 class="text-center">Our Services</h1>
+                <div class="row container justify-content-center mx-auto">
+                    <h1 class="mb-3 text-center">Pricing</h1>
+                    <hr class="divider mb-5" />
+                </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-                        <article class="box-minimal-border">
-                            <div class="box-minimal-icon novi-icon linearicons-wifi">
-                                <i class="fas fa-car"></i>
+                        <div class="card" id="hovcard">
+                            <h5 class="card-header text-center">Basic</h5>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">350 Birr</h5>
+                              <div class="text-center">
+                                <button class="book-btn mt-4 ">
+                                    Book Now
+                                </button>
                             </div>
-                            <p class="big box-minimal-title">Transportation</p>
-                            <hr>
-                            <div class="box-minimal-text text-spacing-sm">Our Transportation service is
-                                available
-                                24-hours in the facilities and to you stay connected
-                                wherever you are.</div>
-                        </article>
+                             <div class="my-4">
+                                 <ul>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                 </ul>
+                                 
+                             </div>
+                            </div>
+                          </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-                        <article class="box-minimal-border">
-                            <div class="box-minimal-icon novi-icon linearicons-wifi">
-                                <i class="fas fa-pen-fancy"></i>
+                        <div class="card" id="hovcard">
+                            <h5 class="card-header text-center">Standard</h5>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">450 Birr</h5>
+                              <div class="text-center">
+                                <button class="book-btn mt-4 ">
+                                    Book Now
+                                </button>
                             </div>
-                            <p class="big box-minimal-title">Booking</p>
-                            <hr>
-                            <div class="box-minimal-text text-spacing-sm">Our free Wi-Fi internet service is
-                                available
-                                24-hours in lobby, meeting room, facilities and guest rooms to hel you stay
-                                connected
-                                wherever you are.</div>
-                        </article>
+                             <div class="my-4">
+                                 <ul>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                 </ul>
+                                 
+                             </div>
+                            </div>
+                          </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-                        <article class="box-minimal-border">
-                            <div class="box-minimal-icon novi-icon linearicons-wifi">
-                                <i class="fas fa-users"></i>
+                        <div class="card" id="hovcard">
+                            <h5 class="card-header text-center">Gold</h5>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">650 Birr</h5>
+                              <div class="text-center">
+                                <button class="book-btn mt-4 ">
+                                    Book Now
+                                </button>
                             </div>
-                            <p class="big box-minimal-title">Customer Care</p>
-                            <hr>
-                            <div class="box-minimal-text text-spacing-sm">Our free Wi-Fi internet service is
-                                available
-                                24-hours in lobby, meeting room, facilities and guest rooms to hel you stay
-                                connected
-                                wherever you are.</div>
-                        </article>
+                             <div class="my-4">
+                                 <ul>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                 </ul>
+                                 
+                             </div>
+                            </div>
+                          </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
-                        <article class="box-minimal-border">
-                            <div class="box-minimal-icon novi-icon linearicons-wifi">
-                                <i class="fas fa-info-circle"></i>
+                        <div class="card" id="hovcard">
+                            <h5 class="card-header text-center">Platinum</h5>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">850 Birr</h5>
+                              <div class="text-center">
+                                <button class="book-btn mt-4 ">
+                                    Book Now
+                                </button>
                             </div>
-                            <p class="big box-minimal-title">Tour Escort</p>
-                            <hr>
-                            <div class="box-minimal-text text-spacing-sm">Our free Wi-Fi internet service is
-                                available
-                                24-hours in lobby, meeting room, facilities and guest rooms to hel you stay
-                                connected
-                                wherever you are.</div>
-                        </article>
+                             <div class="my-4">
+                                 <ul>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                    <article class="mt-2">
+                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </article>
+                                 </ul>
+                                 
+                             </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- News section -->
-        <section id="news">
-            <div class="container-fluid py-5">
-                <div class="destination-header">
-                    <h1>Latest News</h1>
-                    <span class="text-uppercase big-title-reflection">Latest News</span>
-                    <button class="btn">All Blog Posts</button>
+        <section class="container">
+            <div class="row mt-5">
+                <div class="col-xl-6 col-10">
+
+                    <h1>Frequently Asked Questions</h1>
+                    
+
+                        
                 </div>
-
-                <div class="row">
-                    <div id="owl-example" class="owl-carousel owl-theme container-fluid">
-                        <div class="mb-4 box-minimal-border">
-                            <div class="bg-white rounded shadow-sm img-wrapper news-card">
-                                <div class="img-wrapper">
-                                    <img src="./assets/images/gettyimages-120503242-2048x2048.jpg" alt=""
-                                        class="img-fluid card-img-top">
-                                </div>
-
-                                <div class="news-button">
-                                    <button type="button" class="btn btn-light mb-4">News</button>
-                                    <p>by Naboni Abebe</p>
-                                </div>
-                                <div class="p-4">
-                                    <h5> <a href="#" class="text-dark">Red paint cup</a></h5>
-                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="news-date">
-                                    <p>February 2, 2021</p>
-                                    <i class="fa fa-comment-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-4 box-minimal-border">
-                            <div class="bg-white rounded shadow-sm img-wrapper">
-                                <div class="img-wrapper">
-                                    <img src="./assets/images/gettyimages-988621664-2048x2048.jpg" alt=""
-                                        class="img-fluid card-img-top">
-                                </div>
-                                <div class="news-button">
-                                    <button type="button" class="btn btn-light mb-4">News</button>
-                                    <p>by Naboni Abebe</p>
-                                </div>
-                                <div class="p-4">
-                                    <h5> <a href="#" class="text-dark">Blorange</a></h5>
-                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="news-date">
-                                    <p>February 2, 2021</p>
-                                    <i class="fa fa-comment-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mb-4 box-minimal-border">
-                            <div class="bg-white rounded shadow-sm">
-                                <div class="img-wrapper">
-                                    <img src="./assets/images/istockphoto-186914973-612x612.jpg" alt=""
-                                        class="img-fluid card-img-top">
-                                </div>
-
-                                <div class="news-button">
-                                    <button type="button" class="btn btn-light mb-4">News</button>
-                                    <p>by Naboni Abebe</p>
-                                </div>
-                                <div class="p-4">
-                                    <h5> <a href="#" class="text-dark">And She Realized</a></h5>
-                                    <p class="small text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                        elit
-                                    </p>
-                                </div>
-                                <hr>
-                                <div class="news-date">
-                                    <p>February 2, 2021</p>
-                                    <i class="fa fa-comment-alt"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-xl-6 col-10 p-5 d-flex align-items-center">
+                    <img class="img-fluid" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
                 </div>
+                
             </div>
         </section>
-
-        <!-- Testimonals section -->
-        <section id="testimonals">
-            <div class="container">
-                <div class="row">
-                    <div class="mx-auto">
-                        <h1 class="testimonial-header">Testimonials</h3>
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="item carousel-item active">
-                                        <div class="img-box">
-                                            <img src="./assets/images/gettyimages-120503242-2048x2048.jpg" alt="">
-                                        </div>
-                                        <div class="testi-content">
-                                            <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit.
-                                                Nam
-                                                eu
-                                                sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
-                                                turpis
-                                                vel,
-                                                semper malesuada ante. Idac bibendum scelerisque non non purus.
-                                                Suspendisse
-                                                varius
-                                                nibh non aliquet.</p>
-                                            <p class="overview fw-bold">Jennifer Smith</p>
-                                            <p class="overview-occupation">Office Worker</p>
-                                        </div>
-                                    </div>
-                                    <div class="item carousel-item">
-                                        <div class="img-box">
-                                            <img src="./assets/images/gettyimages-154926670-2048x2048.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus.
-                                                Pellentesque
-                                                eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus.
-                                                Pellentesque
-                                                viverra
-                                                sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida
-                                                nibh,
-                                                facilisis gravida odio.</p>
-                                            <p class="overview fw-bold">Dauglas McNun</p>
-                                            <p class="overview-occupation">Financial Advisor</p>
-                                        </div>
-                                    </div>
-                                    <div class="item carousel-item">
-                                        <div class="img-box">
-                                            <img src="./assets/images/gettyimages-163639070-2048x2048.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra
-                                                feugiat
-                                                ante
-                                                id
-                                                lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at
-                                                accumsan
-                                                tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
-                                                fringilla
-                                                massa.
-                                                Etiam hendrerit dolor eget rutrum.</p>
-                                            <p class="overview fw-bold mb-0 pb-0">Hellen Wright</p>
-                                            <p class="overview-occupation my-0 py-2">Athelete</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <a class="carousel-control left carousel-control-prev" type="button"
-                                    data-bs-target="#myCarousel" data-bs-slide="prev">
-                                    <span><i class="fas fa-arrow-left"></i></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </a>
-                                <a class="carousel-control right carousel-control-next" type="button"
-                                    data-bs-target="#myCarousel" data-bs-slide="next">
-                                    <span><i class="fas fa-arrow-right"></i></span>
-                                    <span class="visually-hidden">Next</span>
-                                </a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
+            
+       
 
 
-        <!-- Gallery Preview section -->
-        <section class="gallery-preview">
-            <div class="container-fluid">
-                <div class="row grid">
-                    <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img src="/assets/images/5. Harar-1024x768.jpg"
-                                        alt="">
-                                </figure>
-                                <div class='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="./assets/images/6. Simien-Mountains-1024x681.jpg" alt="">
-                                </figure>
-                                <div class='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="g-facility places gallery_product col-sm-12 col-md-6 col-lg-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="./assets/images/1. The-Omo-Valley-1024x768.jpg" alt="">
-                                </figure>
-                                <div class='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img src="./assets/images/2. Gondar-1024x768.jpg"
-                                        alt="">
-                                </figure>
-                                <div class='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="g-facility gallery_product col-sm-12 col-md-6 col-lg-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="./assets/images/3. The-Rift-Valley-1024x692.jpg" alt="">
-                                </figure>
-                                <div class='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                        </article>
-                    </div>
-                    <div class="g-places gallery_product col-sm-12 col-md-6 col-lg-4">
-                        <article class="event-default-wrap">
-                            <div class="event-default">
-                                <figure class="event-default-image"><img
-                                        src="./assets/images/4. Lake-Chamo-1024x652.jpg" alt="">
-                                </figure>
-                                <div class='img-info'>
-                                    <h4>Image Title 1</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Account section -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="form-container">
-                        <div class="d form-login">
-                            <div class="login-form mt-5">
-                                <h2 class="login">Login</h2>
-                                <hr class="divider" />
-                                <form action="">
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="email" id="form-label" type="text"
-                                            placeholder="E-mail or nickname">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
-                                    </div>
-                                    <div>
-                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
-                                            Sign In
-                                        </button>
-                                    </div>
-                                    <div class="form-group text-center col-md-12 mt-4">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
-                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
-                                                    href=""><i class="fab fa-twitter"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="google"><a
-                                                    href=""><i class="fab fa-google"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </form>
-                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
-                                            Up</a></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d form-spanner">
+        
+        <a href="#" id="go-to-top">^</a>
+    </div>
 
-                        </div>
-                        <div class="d form-register">
-                            <div class="login-form mt-5">
-                                <h2 class="login">Create account</h2>
-                                <hr class="divider" />
-                                <form action="">
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="name" id="form-label" type="text" placeholder="Full Name">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="email" id="form-label" type="text" placeholder="E-mail">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="cpassword" id="form-label" type="text"
-                                            placeholder="Confirm Password">
-                                    </div>
-                                    <div>
-                                        <button id="register-btn" class="login-btn col-md-12 mt-4">
-                                            Sign Up
-                                        </button>
-                                    </div>
-                                    <div class="form-group text-center col-md-12 mt-4">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
-                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
-                                                    href=""><i class="fab fa-twitter"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="google"><a
-                                                    href=""><i class="fab fa-google"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </form>
-                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
         <section class="container">
             <div class="row container-fluid destination-header gallery-footer my-5 py-5">

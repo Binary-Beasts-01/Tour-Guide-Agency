@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/media_query.css">
     <link rel="stylesheet" href="./assets/css/gallery.css">
-
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <title>Tour Guide Agency</title>
 </head>
 
@@ -62,8 +62,9 @@
             </div>
             <div class="collapsable">
                 <ul class=" ml-auto">
-                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
-
+                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                        href="#">Login/Register</a>
+                    <div class="user-avatar">N</div>
                 </ul>
             </div>
             <div class="navigation-menu">
@@ -368,6 +369,7 @@
         </script>
     <script src="./assets/js/isotope.js"></script>
     <script src="./assets/js/main.js"></script>
+
     <script>
         // init Isotope
         var $grid = $('.grid').isotope({

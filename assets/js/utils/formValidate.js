@@ -17,9 +17,24 @@ function validateForm(type, value, el = null) {
       result = validateCreditcard(value);
       if (!result) displayError(result, el);
       return result;
+    case INPUT_TYPE.password:
+      result = validatePassword(value);
+      if (!result) displayError(result, el);
+      return result;
+    case INPUT_TYPE.empty:
+      result = validateEmpty(value);
+      if (!result) displayError(result, el);
+      return result;
     default:
       return;
   }
+}
+
+function validateEmpty(value) {
+  if (value.length == 0) {
+    return false;
+  }
+  return true;
 }
 
 function validateEmail(value) {
@@ -32,8 +47,9 @@ function validateEmail(value) {
 }
 
 function validatePhoneNumber(phoneNumber) {
-  var pattern = /[+0-9]*/;
+  var pattern = /([+0-9]{13})/;
   let rg = new RegExp(pattern, 'ig');
+  console.log(phoneNumber.length);
   var phone = rg.exec(phoneNumber);
   if (phone) {
     return true;
@@ -61,7 +77,8 @@ function validateCreditcard(str) {
 }
 
 function validatePassword(str) {
-  if (str.length > 8) {
+  console.log(str.length);
+  if (str.length >= 8) {
     return true;
   } else {
     return false;
@@ -69,6 +86,7 @@ function validatePassword(str) {
 }
 
 function displayError(errorMsg, element, errDiv = null) {
+  console.log(errorMsg);
   if (element) {
     element.style.border = '1px solid red';
     if (errDiv) {

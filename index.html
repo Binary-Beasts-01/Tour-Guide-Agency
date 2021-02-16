@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/media_query.css">
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-
     <title>Tour Guide Agency</title>
 </head>
 
@@ -62,8 +61,9 @@
             </div>
             <div class="collapsable">
                 <ul class=" ml-auto">
-                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
-
+                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                        href="#">Login/Register</a>
+                    <div class="user-avatar">N</div>
                 </ul>
             </div>
             <div class="navigation-menu">
@@ -727,6 +727,9 @@
                                 <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
                                             Up</a></span>
                                 </p>
+                                <div class="col-md-8 error-div">
+
+                                </div>
                             </div>
                         </div>
                         <div class="d form-spanner">
@@ -750,6 +753,11 @@
                                         <input name="cpassword" id="form-label" type="text"
                                             placeholder="Confirm Password">
                                     </div>
+                                    <select class="form-select my-3" id="select-role">
+                                        <option selected>Choose Role</option>
+                                        <option value="user">User</option>
+                                        <option value="guide">Guide</option>
+                                    </select>
                                     <div>
                                         <button id="register-btn" class="login-btn col-md-12 mt-4">
                                             Sign Up

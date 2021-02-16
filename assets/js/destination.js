@@ -1,5 +1,7 @@
 const destinationContainer = document.querySelector("#tour_destination");
-
+const priceQuery = document.querySelector("#priceQuery");
+const searchQuery = document.querySelector("#searchQuery");
+// searchQuery.addEventListener("onkeyup", filter);
 
 // create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
@@ -46,5 +48,55 @@ function createDestinationContent(r) {
     </div>`;
 }
 
+function filterByName() {
+    let filter, a, txtValue;
+    filter = searchQuery.value.toUpperCase();
+    childs = Array.from(destinationContainer.children);
+    if (filter.value == '') {
+        childs.forEach(function(item) {
+            item.style.display = 'block';
+        })
+    } else {
+        childs.forEach(function(item) {
+            // console.log(item)
+            a = item.querySelector(".event-default-title");
+            txtValue = a.innerHTML.toString().trim();
+            console.log(txtValue);
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }   
+    
+        });
+        
+    }
+    
+}
+
+function filterByPrice() {
+    let filter, a, txtValue;
+    filter = priceQuery.value.toString();
+    childs = Array.from(destinationContainer.children);
+    if (filter.value == '') {
+        childs.forEach(function(item) {
+            item.style.display = 'block';
+        })
+    } else {
+        childs.forEach(function(item) {
+            // console.log(item)
+            a = item.querySelector(".event-default-price");
+            txtValue = a.innerHTML.toString().split(" ")[1];
+            console.log(txtValue);
+            if (Number(txtValue) <= Number(filter)) {
+                item.style.display = "";
+            } else {
+                item.style.display = "none";
+            }   
+
+        });
+    }
+    
+}
 
 

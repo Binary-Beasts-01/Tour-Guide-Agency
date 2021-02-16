@@ -1,26 +1,29 @@
 const destinationContainer = document.querySelector("#tour_destination");
 
 
-createTour("Lalibela", "Lalibela", 280, "/assets/images/gettyimages-111919734-2048x2048.jpg", "2020-10-18");
-createTour("Fasilades", "Gondar",  480, "/assets/images/gettyimages-138178737-2048x2048.jpg", "2020-10-18");
-createTour("Sof Umer Cave", "Afar", 550,"/assets/images/gettyimages-182174818-2048x2048.jpg", "2020-10-18");
-createTour("Addis Ababa", "Addis Ababa", 350, "/assets/images/gettyimages-697529054-612x612.jpg", "2020-10-18");
-createTour("Semen Mountains", "Semen", 520, "/assets/images/gettyimages-905176238-2048x2048.jpg", "2020-10-18");
-createTour("Konso", "Konso", 600, "/assets/images/gettyimages-988621664-2048x2048.jpg", "2020-10-18");
-//
+// create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Sof Umer Cave", location: "Afar", price: 550, image: "/assets/images/gettyimages-182174818-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Addis Ababa", location: "Addis Ababa", price: 350,  image: "/assets/images/gettyimages-697529054-612x612.jpg", date: "2020-10-18"});
+// create('tour', {name: "Semen Mountains", location: "Semen", price: 520,  image: "/assets/images/gettyimages-905176238-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Konso", location: "Konso", price: 600,  image: "/assets/images/gettyimages-988621664-2048x2048.jpg", date: "2020-10-18"});
 
 for (i = 0; i < 6; i++) {
     addTourToDestinationPage(i + 1);
 }
 
+(async () => {
+    let res = await retrieveAll('tour');
+    console.log(res);
+})(); 
 
 async function addTourToDestinationPage(id) {
 
     const tourResult = async () => {
-        const c = await retrieveTour(id);
+        const c = await retrieve('tour', id);
         destinationContainer.innerHTML += createDestinationContent(c);
     }
-    tourResult();
+    return tourResult();
 
 }
 
@@ -43,59 +46,5 @@ function createDestinationContent(r) {
     </div>`;
 }
 
-
-function createTour(name, location, price, image, date) {
-    db.transaction('rw', db.tour, function () {
-        db.tour
-          .add({ name, location, price, image, date})
-          .catch((e) => {
-            console.log('Error adding');
-          })
-          .then((r) => {
-            if (r) console.log('Tour destination added Success!');
-          });
-      })
-        .then(() => {
-          console.log('Transaction complete');
-        })
-        .catch(() => {
-          console.log('Transaction fail');
-        });
-}
-
-function retrieveTour(id) {
-    // return db.transaction('r', db.tour, function () {
-    return  db.tour
-          .get({id})
-          .then((r) => {
-            if (r) {
-                console.log(r);
-              return r;
-            } else {
-              console.log('failure');
-            }
-          });
-    //   })
-    //     .catch(() => {
-    //       console.log('Transaction fail');
-    //     });
-}
-
-function updateTourDestination(object) {
-    db.tour.update(object.id, object.value).then(function (updated) {
-        if (updated) {
-            console.log("Entry update successfully");
-        } else {
-            console.log("Can't find tour with this id");
-        }
-    })
-} 
-
-
-function deleteTourDestination(id) {
-    db.tour.delete(id).then(function (deleteCount) {
-        console.log("Dleted" + deleteCount + " objects");
-    });
-}
 
 

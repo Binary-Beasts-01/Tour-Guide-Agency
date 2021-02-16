@@ -93,7 +93,7 @@
     <div class="content-wrapper">
         <section>
 
-                <div class="container text-center">
+                <div class="container mt-5 text-center">
                     <h1 class="headline-1 mt-2">
                          Administrator
                       </h1>
@@ -102,26 +102,34 @@
                         <form class="w-50">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" id="seller" class="form-control form-input m-0" autocomplete="off"
+                                    <input type="text" id="name" class="form-control form-input m-0" autocomplete="off"
                                     placeholder="Tour destination" />
                                 </div>
                                 <div class="col">
-                                    <input type="text" id="price" class="form-control form-input m-0" autocomplete="off"
+                                    <input type="number" id="id" class="form-control form-input m-0" autocomplete="off" 
+                                    placeholder="Tour ID" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" id="location" class="form-control form-input" autocomplete="off"
+                                    placeholder="Location" />
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="price" class="form-control form-input" autocomplete="off"
                                     placeholder="Price" />
                                 </div>
                             </div>
-                            <input type="text" id="proname" class="form-control form-input" autocomplete="off"
-                            placeholder="Location" />
-                            <input type="text" id="userid" class="form-control form-input" autocomplete="off"
+                            <input type="text" id="image" class="form-control form-input" autocomplete="off"
                                 placeholder="Image relative location" />
                             <div class="row">
                                 <div class="col d-flex flex-row align-items-center">
-                                    <label for="toDate" class="text-left">From</label>
+                                    <label for="toDate" class="text-left p-2">From</label>
                                     <input type="date" id="fromDate" class="form-control form-input m-0" autocomplete="off"
                                     placeholder="Starting date" />
                                 </div>
                                 <div class="col d-flex flex-row align-items-center">
-                                    <label for="toDate" class="text-left">To</label>
+                                    <label for="toDate" class="text-left p-2">To</label>
                                     <input type="date" id="toDate" class="form-control form-input m-0" autocomplete="off"
                                     placeholder="End date" />
                                 </div>
@@ -132,7 +140,6 @@
                         <button class="btn" id="btn-create">Create</button>
                         <button class="btn" id="btn-read">Refresh</button>
                         <button class="btn" id="btn-update">Update</button>
-                        <button class="btn" id="btn-delete">Delete All</button>
                     </div>
                     <!--  Table -->
                     <div class="d-flex table-data pb-5">
@@ -140,11 +147,11 @@
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Landscape</th>
-                                    <th scope="col">Tour Agent</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Location</th>
                                     <th scope="col">Price</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Delete</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Date</th>
                                 </tr>
                             </thead>
                             <tbody id="tbody">
@@ -155,12 +162,6 @@
                     <div id="notfound"></div>
                 </div>
         </section>
-
-        <!-- Labels -->
-        <!-- <div class="w-100 btn btn-success insertmsg">Data Inserted Successfully...!</div>
-          <div class="w-100 btn btn-warning updatemsg">Data Updated..! Refresh Database To See Result</div>
-          <div class="w-100 btn btn-danger deletemsg">Data Deleted..!</div> -->
-
         <!-- footer section -->
         <footer id="footer" class="p-4 pt-5">
             <div class="row justify-content-sm-center align-items-md-center mx-5">
@@ -199,7 +200,10 @@
   </script>
   <!-- Include Dexie -->
   <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
+    <script src="./assets/js/admin.js"></script>
 </body>
 
 </html>

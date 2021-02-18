@@ -374,17 +374,18 @@ h6 {
   transform: translateX(-150%);
   transition: all 0.3s ease-in-out;
 }
-.card-guide:hover .cover {
+/* .profile:hover .cover {
   transform: translateX(0);
-}
-.card-guide:hover .profile {
+} */
+/* .card-guide:hover .profile {
   transform: translateY(-90%);
-}
+} */
 /* .card-guide .follow {
   margin-right: 4%;
   border-color: #2980b9;
   color: #2980b9;
 } */
+
 .card-guide h2 {
   margin: 0 0 5px;
   font-weight: 300;
@@ -400,4 +401,13 @@ h6 {
   font-size: 0.8em;
   letter-spacing: 1px;
   opacity: 0.8;
+}
+.checked {
+  color: orange;
+}
+.guide-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

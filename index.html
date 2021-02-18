@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./assets/css/media_query.css">
     <link rel="stylesheet" href="./assets/css/destination.css">
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
-
     <title>Tour Guide Agency</title>
 </head>
 
@@ -63,8 +62,9 @@
             </div>
             <div class="collapsable">
                 <ul class=" ml-auto">
-                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
-
+                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                        href="#">Login/Register</a>
+                    <div class="user-avatar">N</div>
                 </ul>
             </div>
             <div class="navigation-menu">
@@ -607,6 +607,11 @@
                                         <input name="cpassword" id="form-label" type="text"
                                             placeholder="Confirm Password">
                                     </div>
+                                    <select class="form-select my-3" id="select-role">
+                                        <option selected>Choose Role</option>
+                                        <option value="user">User</option>
+                                        <option value="guide">Guide</option>
+                                    </select>
                                     <div>
                                         <button id="register-btn" class="login-btn col-md-12 mt-4">
                                             Sign Up
@@ -681,6 +686,8 @@
         </script>
     <script src="./assets/js/database.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/utils/constants.js"></script>
+    <script src="./assets/js/utils/formValidate.js"></script>
     <script src="./assets/js/authUser.js"></script>
     <script src="./assets/js/homePage.js"></script>
     <script src="./assets/js/utils/crudOperations.js"></script>

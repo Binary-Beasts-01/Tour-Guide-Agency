@@ -1,72 +1,105 @@
-function validateEmail(inputText) {
-    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (inputText.value.match(mailformat)) {
-        alert("Valid email address!");
-        // document.form1.text1.focus();
-        return true;
-    } else {
-        return false;
-    }
+function validateForm(type, value, el = null) {
+  let result = false;
+  switch (type) {
+    case INPUT_TYPE.name:
+      result = validateUsername(value);
+      if (!result) displayError(result, el);
+      return result;
+    case INPUT_TYPE.email:
+      result = validateEmail(value);
+      if (!result) displayError(result, el);
+      return result;
+    case INPUT_TYPE.phone:
+      result = validatePhoneNumber(value);
+      if (!result) displayError(result, el);
+      return result;
+    case INPUT_TYPE.credit_card:
+      result = validateCreditcard(value);
+      if (!result) displayError(result, el);
+      return result;
+    case INPUT_TYPE.password:
+      result = validatePassword(value);
+      if (!result) displayError(result, el);
+      return result;
+    case INPUT_TYPE.empty:
+      result = validateEmpty(value);
+      if (!result) displayError(result, el);
+      return result;
+    default:
+      return;
+  }
+}
+
+function validateEmpty(value) {
+  if (value.length == 0) {
+    return false;
+  }
+  return true;
+}
+
+function validateEmail(value) {
+  var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (value.match(mailformat)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function validatePhoneNumber(phoneNumber) {
-    var regExp = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
-    var phone = phoneNumber.match(regExp);
-    if (phone) {
-      return true;
-    }
-    return false;
+  var pattern = /([+0-9]{13})/;
+  let rg = new RegExp(pattern, 'ig');
+  console.log(phoneNumber.length);
+  var phone = rg.exec(phoneNumber);
+  if (phone) {
+    return true;
   }
+  return false;
+}
 
 function validateUsername(name) {
-    var usernameRegex = /^[a-zA-Z]+$/;
-    var phone = phoneNumber.match(regExp);
-    if (phone) {
-      return true;
-    }
+  var usernameRegex = /^[a-zA-Z]+$/;
+  var name = name.match(usernameRegex);
+  if (name) {
+    return true;
+  }
+  return false;
+}
+
+function validateCreditcard(str) {
+  regexp = /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/;
+
+  if (regexp.test(str)) {
+    return true;
+  } else {
     return false;
   }
-
-function validateCreditcard(str)
-{
- regexp = /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/;
-  
-        if (regexp.test(str))
-          {
-            return true;
-          }
-        else
-          {
-            return false;
-          }
 }
 
-function validateZipcode(str)
-{
- regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
-  
-        if (regexp.test(str))
-          {
-            return true;
-          }
-        else
-          {
-            return false;
-          }
+function validatePassword(str) {
+  console.log(str.length);
+  if (str.length >= 8) {
+    return true;
+  } else {
+    return false;
+  }
 }
-function validateForm(type, vlaue) {
-  switch (type) {
-    case INPUT_TYPE.name:
-      break;
-    case INPUT_TYPE.email:
-      break;
-    case INPUT_TYPE.phone:
-      break;
-    case INPUT_TYPE.zip:
-      break;
-    case INPUT_TYPE.credit_card:
-      break;
-    default:
-      break;
+
+function displayError(errorMsg, element, errDiv = null) {
+  console.log(errorMsg);
+  if (element) {
+    element.style.border = '1px solid red';
+    if (errDiv) {
+      errDiv.innerHTML = errorMsg;
+    }
+  }
+}
+
+function clearError(element, errDiv = null) {
+  if (element) {
+    element.style.border = 'unset';
+    if (errDiv) {
+      errDiv.innerHTML = '';
+    }
   }
 }

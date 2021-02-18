@@ -3,15 +3,17 @@ const priceQuery = document.querySelector("#priceQuery");
 const searchQuery = document.querySelector("#searchQuery");
 // searchQuery.addEventListener("onkeyup", filter);
 
-// create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
-// create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
-// create('tour', {name: "Sof Umer Cave", location: "Afar", price: 550, image: "/assets/images/gettyimages-182174818-2048x2048.jpg", date: "2020-10-18"});
-// create('tour', {name: "Addis Ababa", location: "Addis Ababa", price: 350,  image: "/assets/images/gettyimages-697529054-612x612.jpg", date: "2020-10-18"});
-// create('tour', {name: "Semen Mountains", location: "Semen", price: 520,  image: "/assets/images/gettyimages-905176238-2048x2048.jpg", date: "2020-10-18"});
-// create('tour', {name: "Konso", location: "Konso", price: 600,  image: "/assets/images/gettyimages-988621664-2048x2048.jpg", date: "2020-10-18"});
+create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
+create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
+create('tour', {name: "Sof Umer Cave", location: "Afar", price: 550, image: "/assets/images/gettyimages-182174818-2048x2048.jpg", date: "2020-10-18"});
+create('tour', {name: "Addis Ababa", location: "Addis Ababa", price: 350,  image: "/assets/images/gettyimages-697529054-612x612.jpg", date: "2020-10-18"});
+create('tour', {name: "Semen Mountains", location: "Semen", price: 520,  image: "/assets/images/gettyimages-905176238-2048x2048.jpg", date: "2020-10-18"});
+create('tour', {name: "Konso", location: "Konso", price: 600,  image: "/assets/images/gettyimages-988621664-2048x2048.jpg", date: "2020-10-18"});
+
+//
 
 for (i = 0; i < 6; i++) {
-    addTourToDestinationPage(i + 1);
+  addTourToDestinationPage(i + 1);
 }
 
 (async () => {
@@ -30,7 +32,7 @@ async function addTourToDestinationPage(id) {
 }
 
 function createDestinationContent(r) {
-    return `<div class="col-sm-6 col-xl-4">
+  return `<div class="col-sm-6 col-xl-4">
     <article class="event-default-wrap">
         <div class="event-default">
             <figure class="event-default-image"><img
@@ -61,7 +63,6 @@ function filterByName() {
             // console.log(item)
             a = item.querySelector(".event-default-title");
             txtValue = a.innerHTML.toString().trim();
-            console.log(txtValue);
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 item.style.display = "";
             } else {
@@ -87,7 +88,6 @@ function filterByPrice() {
             // console.log(item)
             a = item.querySelector(".event-default-price");
             txtValue = a.innerHTML.toString().split(" ")[1];
-            console.log(txtValue);
             if (Number(txtValue) <= Number(filter)) {
                 item.style.display = "";
             } else {
@@ -98,5 +98,3 @@ function filterByPrice() {
     }
     
 }
-
-

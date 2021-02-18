@@ -6,5 +6,3 @@ db.version(1).stores({
   booking: '++id, user_id, tour_id, payment_status, guide_id, date',
   comments: '++id, username',
 });
-
-

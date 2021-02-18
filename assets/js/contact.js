@@ -1,0 +1,36 @@
+const cFNameField = document.querySelector('input[name=fname]');
+const cLNameField = document.querySelector('input[name=lname]');
+const cEmailField = document.querySelector('input[name=email]');
+const cPhoneField = document.querySelector('input[name=phone]');
+const cMessageArea = document.querySelector('.text-area');
+const cSubmit = document.querySelector('#form-submit');
+
+cSubmit.addEventListener('click', (e) => {
+  e.preventDefault();
+  clearError(cFNameField);
+  clearError(cLNameField);
+  clearError(cEmailField);
+  clearError(cPhoneField);
+  clearError(cMessageArea);
+  if (!validateForm(INPUT_TYPE.name, cFNameField.value)) {
+    displayError('Invalid first name format!', cFNameField, null);
+    return;
+  }
+  if (cLNameField) {
+    if (!validateForm(INPUT_TYPE.name, cLNameField.value)) {
+      displayError('Invalid last name format!', cLNameField, null);
+      return;
+    }
+  }
+  if (!validateForm(INPUT_TYPE.email, cEmailField.value)) {
+    console.log('object');
+    displayError('Invalid email format!', cEmailField, null);
+    return;
+  }
+  if (cPhoneField) {
+    if (!validateForm(INPUT_TYPE.phone, cPhoneField.value)) {
+      displayError('Passowrd must be of length 8 or above!', cPhoneField, null);
+      return;
+    }
+  }
+});

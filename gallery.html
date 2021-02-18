@@ -39,6 +39,13 @@
     </div>
     <!-- top header section -->
     <header id="landing-header">
+        <div class="search-form">
+            <div class="form-group">
+                <input name="search" type="search" placeholder="Search..." id="form-fname" class="form-input">
+                <button style="display: none;" data-toggle="modal" data-target="#searchModal"
+                    id="search-m-show"></button>
+            </div>
+        </div>
         <nav class="nav-center">
             <div class="nav-head">
                 <span class="navigation-toggler humberger-menu me-3">
@@ -49,19 +56,19 @@
 
             <div class="collapsable" id="nav-collapse">
                 <ul class="nav-list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item active"><a href="#">Home</a></li>
                     <li class="list-item"><a href="about.html">About</a></li>
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
                     <li class="list-item"><a href="guides.html">Guides</a></li>
-                    <li class="list-item active"><a href="gallery.html">Gallery</a></li>
+                    <li class="list-item"><a href="gallery.html">Gallery</a></li>
                     <li class="list-item"><a href="contact.html">Contact</a></li>
                     <li>
-                        <i class="fas fa-search"></i>
+                        <i class="search-bar fas fa-search"></i>
                     </li>
                 </ul>
             </div>
             <div class="collapsable">
-                <ul class=" ml-auto">
+                <ul>
                     <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
                         href="#">Login/Register</a>
                     <div class="user-avatar">N</div>
@@ -70,23 +77,33 @@
             <div class="navigation-menu">
                 <ul class="nav-list">
                     <li>
-                        <i class="fas fa-search px-4"></i>
+                        <i class="search-bar fas fa-search px-2 mx-2"></i>
                     </li>
                     <li>
-                        <i class="fas fa-2x fa-ellipsis-v"></i>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton1"
+                                href="#"><i class="nav-drop-menu fas fa-2x fa-ellipsis-v ps-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                                        href="#">Login/Register</a>
+                                    <div class="user-avatar">N</div>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="sidebar">
             <ul class="nav-list">
-                <li class="list-item"><a href="index.html">Home</a></li>
+                <li class="list-item active"><a href="#">Home</a></li>
                 <li class="list-item"><a href="about.html">About</a></li>
                 <li class="list-item"><a href="destination.html">Destinations</a></li>
                 <li class="list-item"><a href="guides.html">Guides</a></li>
-                <li class="list-item active"><a href="gallery.html">Gallery</a></li>
+                <li class="list-item"><a href="gallery.html">Gallery</a></li>
                 <li class="list-item"><a href="contact.html">Contact</a></li>
-                </li>
             </ul>
         </div>
     </header>
@@ -251,6 +268,25 @@
                 </div>
             </section>
         </section>
+
+        <!-- Search modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h2>Search Results</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- Modal -->
         <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
             aria-hidden="true">

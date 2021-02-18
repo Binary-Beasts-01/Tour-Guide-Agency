@@ -33,4 +33,16 @@ cSubmit.addEventListener('click', (e) => {
       return;
     }
   }
+
+  let data = {
+    username: cFNameField.value + cLNameField.value,
+    email: cEmailField.value,
+    phone: cPhoneField.value,
+    message: cMessageArea.value,
+  };
+  storeToDb(data);
 });
+
+function storeToDb(data) {
+  create('comments', data);
+}

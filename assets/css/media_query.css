@@ -96,6 +96,12 @@
     display: block;
     width: 100%;
   }
+  .headline-1 {
+    font-size: 2rem;
+  }
+  .headline-2 {
+    font-size: 1.5rem;
+  }
   .big-title-reflection {
     display: none;
   }
@@ -125,9 +131,9 @@
   }
   .search-form {
     position: absolute;
-    top: 5rem;
+    top: 3rem;
     left: unset;
-    right: 5%;
+    right: 10%;
     width: 300px;
   }
   .search-form input {

@@ -40,6 +40,13 @@
     </div>
     <!-- top header section -->
     <header id="landing-header">
+        <div class="search-form">
+            <div class="form-group">
+                <input name="search" type="search" placeholder="Search..." id="form-fname" class="form-input">
+                <button style="display: none;" data-toggle="modal" data-target="#searchModal"
+                    id="search-m-show"></button>
+            </div>
+        </div>
         <nav class="nav-center">
             <div class="nav-head">
                 <span class="navigation-toggler humberger-menu me-3">
@@ -50,37 +57,49 @@
 
             <div class="collapsable" id="nav-collapse">
                 <ul class="nav-list">
-                    <li class="list-item"><a href="index.html">Home</a></li>
+                    <li class="list-item active"><a href="#">Home</a></li>
                     <li class="list-item"><a href="about.html">About</a></li>
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
                     <li class="list-item"><a href="guides.html">Guides</a></li>
                     <li class="list-item"><a href="gallery.html">Gallery</a></li>
-                    <li class="list-item"><a href="gallery.html">Contact</a></li>
+                    <li class="list-item"><a href="contact.html">Contact</a></li>
                     <li>
-                        <i class="fas fa-search"></i>
+                        <i class="search-bar fas fa-search"></i>
                     </li>
                 </ul>
             </div>
             <div class="collapsable">
-                <ul class=" ml-auto">
-                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
-
+                <ul>
+                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                        href="#">Login/Register</a>
+                    <div class="user-avatar">N</div>
                 </ul>
             </div>
             <div class="navigation-menu">
                 <ul class="nav-list">
                     <li>
-                        <i class="fas fa-search px-4"></i>
+                        <i class="search-bar fas fa-search px-2 mx-2"></i>
                     </li>
                     <li>
-                        <i class="fas fa-2x fa-ellipsis-v"></i>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton1"
+                                href="#"><i class="nav-drop-menu fas fa-2x fa-ellipsis-v ps-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                                        href="#">Login/Register</a>
+                                    <div class="user-avatar">N</div>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="sidebar">
             <ul class="nav-list">
-                <li class="list-item"><a href="index.html">Home</a></li>
+                <li class="list-item active"><a href="#">Home</a></li>
                 <li class="list-item"><a href="about.html">About</a></li>
                 <li class="list-item"><a href="destination.html">Destinations</a></li>
                 <li class="list-item"><a href="guides.html">Guides</a></li>
@@ -107,7 +126,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section class="container">
             <div class="row mt-5">
                 <div class="col-xl-6 col-10">
@@ -122,10 +141,11 @@
                         <div class="col-1">
                         </div>
                         <div class="col-8">
-                            <p class="fw-bold h5">Vel nihil percipitur ei. Fugit option oportere est in, te dignissim philosophia mea,
+                            <p class="fw-bold h5">Vel nihil percipitur ei. Fugit option oportere est in, te dignissim
+                                philosophia mea,
                                 duo
                                 diceret eruditi ea. </p>
-                            
+
                         </div>
 
                     </div>
@@ -134,15 +154,15 @@
                         diceret eruditi ea. In eum porro bonorum, ut stet partiendo efficiantur vis. No errem platonem
                         consectetuer quo, legimus tincidunt percipitur pri id. No nec congue libris interpretaris</p>
 
-                        <ul class=" ml-auto">
-                            <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Book Now</a>
-        
-                        </ul>
+                    <ul class=" ml-auto">
+                        <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Book Now</a>
+
+                    </ul>
                 </div>
                 <div class="col-xl-6 col-10 p-5 d-flex align-items-center">
                     <img class="img-fluid" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
                 </div>
-                
+
             </div>
         </section>
 
@@ -160,153 +180,153 @@
                         <div class="card" id="hovcard">
                             <h5 class="card-header text-center">Basic</h5>
                             <div class="card-body">
-                              <h5 class="card-title text-center">350 Birr</h5>
-                              <div class="text-center">
-                                <button class="book-btn mt-4 ">
-                                    Book Now
-                                </button>
+                                <h5 class="card-title text-center">350 Birr</h5>
+                                <div class="text-center">
+                                    <button class="book-btn mt-4 ">
+                                        Book Now
+                                    </button>
+                                </div>
+                                <div class="my-4">
+                                    <ul>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                    </ul>
+
+                                </div>
                             </div>
-                             <div class="my-4">
-                                 <ul>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                 </ul>
-                                 
-                             </div>
-                            </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
                         <div class="card" id="hovcard">
                             <h5 class="card-header text-center">Standard</h5>
                             <div class="card-body">
-                              <h5 class="card-title text-center">450 Birr</h5>
-                              <div class="text-center">
-                                <button class="book-btn mt-4 ">
-                                    Book Now
-                                </button>
+                                <h5 class="card-title text-center">450 Birr</h5>
+                                <div class="text-center">
+                                    <button class="book-btn mt-4 ">
+                                        Book Now
+                                    </button>
+                                </div>
+                                <div class="my-4">
+                                    <ul>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                    </ul>
+
+                                </div>
                             </div>
-                             <div class="my-4">
-                                 <ul>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                 </ul>
-                                 
-                             </div>
-                            </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
                         <div class="card" id="hovcard">
                             <h5 class="card-header text-center">Gold</h5>
                             <div class="card-body">
-                              <h5 class="card-title text-center">650 Birr</h5>
-                              <div class="text-center">
-                                <button class="book-btn mt-4 ">
-                                    Book Now
-                                </button>
+                                <h5 class="card-title text-center">650 Birr</h5>
+                                <div class="text-center">
+                                    <button class="book-btn mt-4 ">
+                                        Book Now
+                                    </button>
+                                </div>
+                                <div class="my-4">
+                                    <ul>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                    </ul>
+
+                                </div>
                             </div>
-                             <div class="my-4">
-                                 <ul>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                 </ul>
-                                 
-                             </div>
-                            </div>
-                          </div>
+                        </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
                         <div class="card" id="hovcard">
                             <h5 class="card-header text-center">Platinum</h5>
                             <div class="card-body">
-                              <h5 class="card-title text-center">850 Birr</h5>
-                              <div class="text-center">
-                                <button class="book-btn mt-4 ">
-                                    Book Now
-                                </button>
+                                <h5 class="card-title text-center">850 Birr</h5>
+                                <div class="text-center">
+                                    <button class="book-btn mt-4 ">
+                                        Book Now
+                                    </button>
+                                </div>
+                                <div class="my-4">
+                                    <ul>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                        <article class="mt-2">
+                                            <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
+                                            <span>Lorem ipsum dolor sit</span>
+                                        </article>
+                                    </ul>
+
+                                </div>
                             </div>
-                             <div class="my-4">
-                                 <ul>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                    <article class="mt-2">
-                                        <span class="icons py-2 pe-3"><i class="fas fa-map-marker-alt"></i></span>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </article>
-                                 </ul>
-                                 
-                             </div>
-                            </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -320,39 +340,47 @@
                     <button class="collapsible mt-3">What are the advantages of purchasing your template?
                     </button>
                     <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    <button class="collapsible  mt-3">What do I receive when I order this  template?
+                    <button class="collapsible  mt-3">What do I receive when I order this template?
                     </button>
                     <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                     <button class="collapsible  mt-3">What am I allowed to do with the template?
                     </button>
                     <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                     <button class="collapsible  mt-3">Do you provide any scripts with the template?
                     </button>
                     <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
 
-                        
+
                 </div>
                 <div class="col-xl-6 col-10 p-5 d-flex align-items-center">
                     <img class="img-fluid" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
                 </div>
-                
+
             </div>
         </section>
-        
-            
-       
 
 
 
-        
+
+
+
+
         <a href="#" id="go-to-top">^</a>
     </div>
 
@@ -369,62 +397,80 @@
 
 
 
-        <section class="container">
-            <div class="row container-fluid destination-header gallery-footer my-5 py-5">
-                <div class="col-xl-10 col-md-9  col-sm-12 visit-us">
-                    <p class="display-4">Enjoy your stay at Ethiopia</p>
-                    <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional
-                        services.</p>
-                </div>
-                <div class="col-xl-2 col-md-3 col-sm-12">
-                    <button class="btn">Book Now</button>
-                </div>
+    <section class="container">
+        <div class="row container-fluid destination-header gallery-footer my-5 py-5">
+            <div class="col-xl-10 col-md-9  col-sm-12 visit-us">
+                <p class="display-4">Enjoy your stay at Ethiopia</p>
+                <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional
+                    services.</p>
             </div>
-        </section>
-
-
-        <!-- footer section -->
-        <footer id="footer" class="p-4 pt-5">
-            <div class="row justify-content-sm-center align-items-md-center mx-5">
-                <div class="col-md-10 col-lg-7 col-xl-4"></div>
-                <div class="col-md-10 col-lg-7 col-xl-4 text-xl-center">
-                    <p>&copy;2021. All Rights Reserved. Privacy Policy</p>
-                </div>
-                <div class="col-md-10 col-lg-7 col-xl-4 text-xl-end">
-                    <ul class="list-unstyled list-inline">
-                        <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
-                                    class="fab fa-facebook-f"></i></a></li>
-                        <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
-                                    class="fab fa-twitter"></i></a></li>
-                        <li class="list list-inline-item social-media-icon" id="instagram"><a href=""><i
-                                    class="fab fa-instagram"></i></a></li>
-                        <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
-                                    class="fab fa-google"></i></a></li>
-                        <li class="list list-inline-item social-media-icon" id="linkedin"><a href=""><i
-                                    class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
+            <div class="col-xl-2 col-md-3 col-sm-12">
+                <button class="btn">Book Now</button>
             </div>
-        </footer>
+        </div>
+    </section>
 
-        <a href="#" id="go-to-top">^</a>
+
+    <!-- Search modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <h2>Search Results</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- footer section -->
+    <footer id="footer" class="p-4 pt-5">
+        <div class="row justify-content-sm-center align-items-md-center mx-5">
+            <div class="col-md-10 col-lg-7 col-xl-4"></div>
+            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-center">
+                <p>&copy;2021. All Rights Reserved. Privacy Policy</p>
+            </div>
+            <div class="col-md-10 col-lg-7 col-xl-4 text-xl-end">
+                <ul class="list-unstyled list-inline">
+                    <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                class="fab fa-twitter"></i></a></li>
+                    <li class="list list-inline-item social-media-icon" id="instagram"><a href=""><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                class="fab fa-google"></i></a></li>
+                    <li class="list list-inline-item social-media-icon" id="linkedin"><a href=""><i
+                                class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" id="go-to-top">^</a>
     </div>
     <script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
 
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    } 
-  });
-}
-</script>
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

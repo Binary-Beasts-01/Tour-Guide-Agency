@@ -835,11 +835,15 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
   background-color: rgba(0, 0, 0, 0.4);
   transition: 550ms ease-in-out;
   opacity: 0;
 }
+
+.event-default-caption:hover {
+  color: white;
+}
+
 .event-default-image {
   transition: 550ms ease-in-out;
   object-fit: cover;

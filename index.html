@@ -67,7 +67,7 @@
                 </ul>
             </div>
             <div class="collapsable">
-                <ul class=" ml-auto">
+                <ul>
                     <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
                         href="#">Login/Register</a>
                     <div class="user-avatar">N</div>
@@ -76,10 +76,21 @@
             <div class="navigation-menu">
                 <ul class="nav-list">
                     <li>
-                        <i class="fas fa-search px-4"></i>
+                        <i class="search-bar fas fa-search px-2 mx-2"></i>
                     </li>
                     <li>
-                        <i class="fas fa-2x fa-ellipsis-v"></i>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton1"
+                                href="#"><i class="nav-drop-menu fas fa-2x fa-ellipsis-v ps-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                                        href="#">Login/Register</a>
+                                    <div class="user-avatar">N</div>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -1,13 +1,15 @@
 // checked loggedin user
-const userAvatar = document.querySelector('.user-avatar');
-const userLoginBtn = document.querySelector('.login-register');
+const userAvatar = document.querySelectorAll('.user-avatar');
+const userLoginBtn = document.querySelectorAll('.login-register');
 const loggedinUser = localStorage.getItem('user');
 if (loggedinUser) {
-  userAvatar.style.display = 'grid';
-  userLoginBtn.style.display = 'none';
-  userAvatar.innerHTML = JSON.parse(loggedinUser)
-    .name.slice(0, 1)
-    .toUpperCase();
+  userAvatar.forEach((e) => {
+    e.style.display = 'grid';
+    e.innerHTML = JSON.parse(loggedinUser).name.slice(0, 1).toUpperCase();
+  });
+  userLoginBtn.forEach((e) => {
+    e.style.display = 'none';
+  });
 }
 
 // Nav bar scroll listner
@@ -62,20 +64,24 @@ accountToggleR.addEventListener('click', (e) => {
 });
 
 // logout function
-userAvatar.addEventListener('click', (e) => {
-  if (confirm('Are you sure you want to logout?')) {
-    localStorage.removeItem('user');
-    window.location.reload();
-  }
+userAvatar.forEach((e) => {
+  e.addEventListener('click', (e) => {
+    if (confirm('Are you sure you want to logout?')) {
+      localStorage.removeItem('user');
+      window.location.reload();
+    }
+  });
 });
 
 // Search bar toggler
-const searchBar = document.querySelector('.search-bar ');
+const searchBar = document.querySelectorAll('.search-bar ');
 const searchForm = document.querySelector('.search-form input');
 const searchModal = document.querySelector('#search-m-show');
-searchBar.addEventListener('click', (e) => {
-  console.log('object');
-  searchForm.parentElement.classList.toggle('disp-toggle');
+
+searchBar.forEach((e) => {
+  e.addEventListener('click', (e) => {
+    searchForm.parentElement.parentElement.classList.toggle('disp-toggle');
+  });
 });
 
 searchForm.addEventListener('keyup', function (event) {

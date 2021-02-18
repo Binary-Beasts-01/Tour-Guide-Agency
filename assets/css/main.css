@@ -1132,7 +1132,7 @@ header {
 }
 .search-bar {
   cursor: pointer;
-  font-size: larger;
+  font-size: 1.3rem;
 }
 .search-form {
   position: absolute;
@@ -1141,18 +1141,23 @@ header {
   z-index: 120;
   background: transparent;
   cursor: pointer;
+  width: 340px;
+  display: none;
   transition: all 0.25s ease-in-out;
-
-  /* display: ; */
 }
 .search-form input {
+  width: 100%;
   padding: 1.2rem 1.4rem;
-  width: 340px;
   border-radius: 50px;
   border: none;
   background-color: #f7f7f7;
   box-shadow: var(--dark-shadow);
 }
 .disp-toggle {
-  display: none;
+  display: block;
+}
+
+.dropdown-toggle::after {
+  opacity: 0;
+  background: transparent;
 }

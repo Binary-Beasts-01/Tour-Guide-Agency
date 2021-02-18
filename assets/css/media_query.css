@@ -31,6 +31,20 @@
     display: flex;
     padding-top: 6rem;
   }
+  .search-form {
+    position: absolute;
+    top: 1rem;
+    left: unset;
+    right: 10%;
+    width: 320px;
+  }
+  .search-form input {
+    padding: 1rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: var(--dark-shadow);
+  }
 }
 @media screen and (max-width: 769px) {
   .logo-brand {
@@ -61,6 +75,13 @@
     justify-content: space-between;
     padding: 2rem 0;
     margin-left: 1rem;
+  }
+  .search-form {
+    position: absolute;
+    top: 0.5rem;
+    left: unset;
+    right: 14%;
+    width: 320px;
   }
 }
 @media screen and (max-width: 468px) {
@@ -101,6 +122,20 @@
   }
   .sidebar {
     padding-top: 5rem;
+  }
+  .search-form {
+    position: absolute;
+    top: 5rem;
+    left: unset;
+    right: 5%;
+    width: 300px;
+  }
+  .search-form input {
+    padding: 1.2rem;
+    border-radius: 50px;
+    border: none;
+    background-color: #f7f7f7;
+    box-shadow: var(--dark-shadow);
   }
 }
 @media screen and (max-width: 460px) {

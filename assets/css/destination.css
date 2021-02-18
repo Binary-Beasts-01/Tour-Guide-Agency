@@ -27,3 +27,17 @@
   background-color: var(--clr-brown);
   border-color: var(--clr-brown);
 }
+
+.form-input{
+  border-radius: 30px;
+  
+  width: 100%;
+  padding: .375rem .75rem;
+  margin: 1.5rem;
+
+  line-height:2.5;
+  border: none;
+  background-color:rgb(247, 247, 247);
+ 
+
+}

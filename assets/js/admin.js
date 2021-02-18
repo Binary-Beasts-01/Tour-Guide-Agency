@@ -1,106 +1,70 @@
-import prodb, {
-  bulkcreate,
-  createEle,
-  getData,
-  SortObj
-} from "./module.js";
+// create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Sof Umer Cave", location: "Afar", price: 550, image: "/assets/images/gettyimages-182174818-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Addis Ababa", location: "Addis Ababa", price: 350,  image: "/assets/images/gettyimages-697529054-612x612.jpg", date: "2020-10-18"});
+// create('tour', {name: "Semen Mountains", location: "Semen", price: 520,  image: "/assets/images/gettyimages-905176238-2048x2048.jpg", date: "2020-10-18"});
+// create('tour', {name: "Konso", location: "Konso", price: 600,  image: "/assets/images/gettyimages-988621664-2048x2048.jpg", date: "2020-10-18"});
 
+const idInput = document.getElementById("id");
+const nameInput = document.getElementById("name");
+const locationInput = document.getElementById("location");
+const priceInput = document.getElementById("price");
+const imageInput = document.getElementById("image");
+const fromDateInput = document.getElementById("fromDate");
+const toDateInput = document.getElementById("toDate");
 
-// let db = prodb("Productdb", {
-//   tour: `++id, name, location, price`
-// });
+const createBtn = document.getElementById("btn-create");
+createBtn.addEventListener("click", createTour);
+const refreshBtn = document.getElementById("btn-read");
+refreshBtn.addEventListener('click', displayAll);
+const updateBtn = document.getElementById("btn-update");
+updateBtn.addEventListener("click", updateTour);
+function createTour(e) {
+  e.preventDefault();
+  create('tour', {name: nameInput.value.toString(), location: locationInput.value.toString(), 
+    price: priceInput.value.toString(), image: imageInput.value.toString(), date: {from: fromDateInput.value.toString(), to: toDateInput.value.toString()}});
+  displayAll();
+}
 
-// input tags
-const userid = document.getElementById("userid");
-const proname = document.getElementById("proname");
-const location = document.getElementById("location");
-const image = document.getElementById("image");
-const price = document.getElementById("price");
-
-// create button
-const btncreate = document.getElementById("btn-create");
-const btnread = document.getElementById("btn-read");
-const btnupdate = document.getElementById("btn-update");
-const btndelete = document.getElementById("btn-delete");
-
-// user data
-
-// event listerner for create button
-btncreate.onclick = event => {
-  // insert values
-  let flag = bulkcreate(db.tour, {
-    name: proname.value,
-    location: location.value,
-    price: price.value, 
-    image: image.value
-  });
-  // reset textbox values
-  //proname.value = "";
-  //location.value = "";
-  // price.value = "";
-  proname.value = location.value = price.value = "";
-
-  // set id textbox value
-  // getData(db.tour, data => {
-  //   userid.value = data.id + 1 || 1;
-  // });
-  table();
-
-  // let insertmsg = document.querySelector(".insertmsg");
-  // getMsg(flag, insertmsg);
-};
-
-// event listerner for create button
-btnread.onclick = table;
-
-// button update
-btnupdate.onclick = () => {
-  if (id) {
-    // call dexie update method
-    db.tour.update(id, {
-      name: proname.value,
-      location: location.value,
-      price: price.value
-    }).then((updated) => {
-      // let get = updated ? `data updated` : `couldn't update data`;
-      let get = updated ? true : false;
-
-      // display message
-      let updatemsg = document.querySelector(".updatemsg");
-      getMsg(get, updatemsg);
-
-      proname.value = location.value = price.value = "";
-      //console.log(get);
-    })
-  } else {
-    console.log(`Please Select id: ${id}`);
+function updateTour(e) {
+  e.preventDefault();
+  let value = {};
+  if (nameInput.value.toString()) {
+    value.name = nameInput.value.toString();
   }
+  if (locationInput.value.toString()) {
+    value.location = locationInput.value.toString();
+  }
+  if (priceInput.value.toString()) {
+    value.price = priceInput.value.toString();
+  }
+  if (fromDateInput.value) {
+    value.date = {};
+    value.date.from = fromDateInput.value;
+    value.date.to = toDateInput.value;
+  }
+  update('tour', {id: Number(idInput.value.toString()), value});
+  displayAll();
 }
 
-// delete button
-btndelete.onclick = () => {
-  db.delete();
-  db = prodb("Productdb", {
-    tour: `++id, name, location, price`
-  });
-  db.open();
-  table();
-  textID(userid);
-  // display message
-  let deletemsg = document.querySelector(".deletemsg");
-  getMsg(true, deletemsg);
+async function displayAll() {
+  res = await retrieveAll('tour');
+  table(res);
 }
 
-window.onload = event => {
-  // set id textbox value
-  textID(userid);
-};
+displayAll();
 
+async function display(id) {
 
+  const tourResult = async () => {
+      const c = await retrieve('tour', id);
+      destinationContainer.innerHTML += createDestinationContent(c);
+  }
+  return tourResult();
 
+}
 
-// create dynamic table
-function table() {
+function table(res) {
   const tbody = document.getElementById("tbody");
   const notfound = document.getElementById("notfound");
   notfound.textContent = "";
@@ -109,74 +73,16 @@ function table() {
     tbody.removeChild(tbody.firstChild);
   }
 
-
-  getData(db.tour, (data, index) => {
-    if (data) {
-      createEle("tr", tbody, tr => {
-        for (const value in data) {
-          createEle("td", tr, td => {
-            td.textContent = data.price === data[value] ? `$ ${data[value]}` : data[value];
-          });
-        }
-        createEle("td", tr, td => {
-          createEle("i", td, i => {
-            i.className += "fas fa-edit btnedit";
-            i.setAttribute(`data-id`, data.id);
-            // store number of edit buttons
-            i.onclick = editbtn;
-          });
-        })
-        createEle("td", tr, td => {
-          createEle("i", td, i => {
-            i.className += "fas fa-trash-alt btndelete";
-            i.setAttribute(`data-id`, data.id);
-            // store number of edit buttons
-            i.onclick = deletebtn;
-          });
-        })
-      });
-    } else {
-      notfound.textContent = "No record found in the database...!";
-    }
-
-  });
-}
-
-const editbtn = (event) => {
-  let id = parseInt(event.target.dataset.id);
-  db.tour.get(id, function (data) {
-    let newdata = SortObj(data);
-    userid.value = newdata.id || 0;
-    proname.value = newdata.name || "";
-    location.value = newdata.location || "";
-    price.value = newdata.price || "";
-  });
-}
-
-// delete icon remove element 
-const deletebtn = event => {
-  let id = parseInt(event.target.dataset.id);
-  db.tour.delete(id);
-  table();
-}
-
-// textbox id
-function textID(textboxid) {
-  getData(db.tour, data => {
-    textboxid.value = data.id + 1 || 1;
-  });
-}
-
-// function msg
-function getMsg(flag, element) {
-  if (flag) {
-    // call msg 
-    element.className += " movedown";
-
-    setTimeout(() => {
-      element.classList.forEach(classname => {
-        classname == "movedown" ? undefined : element.classList.remove('movedown');
-      })
-    }, 4000);
+  let output = '';
+  for (entry of res) {
+    output +=   `<tr>
+    <td>${entry.id}</td>
+    <td>${entry.name}</td>
+    <td>${entry.location}</td>
+    <td>${entry.price}</td>
+    <td>${entry.image}</td>
+    <td>${entry.date}</td>
+  </tr>`;
   }
+  tbody.innerHTML = output;
 }

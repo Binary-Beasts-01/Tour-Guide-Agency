@@ -93,61 +93,66 @@
     <div class="content-wrapper">
         <section>
 
-            <div class="container text-center">
-                <h1 class="headline-1 mt-2">
-                    Administrator
-                </h1>
-                <hr class="divider" />
-                <div class="d-flex justify-content-center">
-                    <form class="w-50">
-                        <div class="row">
-                            <div class="col">
-                                <input type="text" id="seller" class="form-control form-input m-0" autocomplete="off"
+                <div class="container mt-5 text-center">
+                    <h1 class="headline-1 mt-2">
+                         Administrator
+                      </h1>
+                      <hr class="divider" />
+                    <div class="d-flex justify-content-center">
+                        <form class="w-50">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" id="name" class="form-control form-input m-0" autocomplete="off"
                                     placeholder="Tour destination" />
+                                </div>
+                                <div class="col">
+                                    <input type="number" id="id" class="form-control form-input m-0" autocomplete="off" 
+                                    placeholder="Tour ID" />
+                                </div>
                             </div>
-                            <div class="col">
-                                <input type="text" id="price" class="form-control form-input m-0" autocomplete="off"
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" id="location" class="form-control form-input" autocomplete="off"
+                                    placeholder="Location" />
+                                </div>
+                                <div class="col">
+                                    <input type="text" id="price" class="form-control form-input" autocomplete="off"
                                     placeholder="Price" />
                             </div>
-                        </div>
-                        <input type="text" id="proname" class="form-control form-input" autocomplete="off"
-                            placeholder="Location" />
-                        <input type="text" id="userid" class="form-control form-input" autocomplete="off"
-                            placeholder="Image relative location" />
-                        <div class="row">
-                            <div class="col d-flex flex-row align-items-center">
-                                <label for="toDate" class="text-left">From</label>
-                                <input type="date" id="fromDate" class="form-control form-input m-0" autocomplete="off"
+                            <input type="text" id="image" class="form-control form-input" autocomplete="off"
+                                placeholder="Image relative location" />
+                            <div class="row">
+                                <div class="col d-flex flex-row align-items-center">
+                                    <label for="toDate" class="text-left p-2">From</label>
+                                    <input type="date" id="fromDate" class="form-control form-input m-0" autocomplete="off"
                                     placeholder="Starting date" />
-                            </div>
-                            <div class="col d-flex flex-row align-items-center">
-                                <label for="toDate" class="text-left">To</label>
-                                <input type="date" id="toDate" class="form-control form-input m-0" autocomplete="off"
+                                </div>
+                                <div class="col d-flex flex-row align-items-center">
+                                    <label for="toDate" class="text-left p-2">To</label>
+                                    <input type="date" id="toDate" class="form-control form-input m-0" autocomplete="off"
                                     placeholder="End date" />
                             </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="d-flex justify-content-center">
-                    <button class="btn" id="btn-create">Create</button>
-                    <button class="btn" id="btn-read">Refresh</button>
-                    <button class="btn" id="btn-update">Update</button>
-                    <button class="btn" id="btn-delete">Delete All</button>
-                </div>
-                <!--  Table -->
-                <div class="d-flex table-data pb-5">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Landscape</th>
-                                <th scope="col">Tour Agent</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Edit</th>
-                                <th scope="col">Delete</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody">
+                        </form>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button class="btn" id="btn-create">Create</button>
+                        <button class="btn" id="btn-read">Refresh</button>
+                        <button class="btn" id="btn-update">Update</button>
+                    </div>
+                    <!--  Table -->
+                    <div class="d-flex table-data pb-5">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Location</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Image</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
 
                         </tbody>
                     </table>
@@ -155,12 +160,6 @@
                 <div id="notfound"></div>
             </div>
         </section>
-
-        <!-- Labels -->
-        <!-- <div class="w-100 btn btn-success insertmsg">Data Inserted Successfully...!</div>
-          <div class="w-100 btn btn-warning updatemsg">Data Updated..! Refresh Database To See Result</div>
-          <div class="w-100 btn btn-danger deletemsg">Data Deleted..!</div> -->
-
         <!-- footer section -->
         <footer id="footer" class="p-4 pt-5">
             <div class="row justify-content-sm-center align-items-md-center mx-5">
@@ -192,15 +191,23 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/utils/constants.js"></script>
-    <script src="./assets/js/utils/formValidate.js"></script>
-    <script src="./assets/js/authUser.js"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <!-- Include Dexie -->
+  <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="./assets/js/main.js"></script>
+<script src="./assets/js/utils/constants.js"></script>
+<script src="./assets/js/utils/formValidate.js"></script>
+<script src="./assets/js/authUser.js"></script>
+<script src="./assets/js/admin.js"></script>
 </body>
 
 </html>

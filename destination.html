@@ -123,6 +123,14 @@
                             tempora</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-4">
+                        <input class="form-input" type="text" id="searchQuery" onkeyup="filterByName()" placeholder="Search for names.." title="Type in a name">
+                    </div>
+                    <div class="col-4">
+                        <input class="form-input" type="text" id="priceQuery" onkeyup="filterByPrice()" placeholder="Search for max price" title="Type in a name">
+                    </div>
+                </div>
                 <div class="row" id="tour_destination">
                     <!-- Content is added here programatically -->
                 </div>
@@ -250,6 +258,7 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
     <script src="./assets/js/destination.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/utils/constants.js"></script>

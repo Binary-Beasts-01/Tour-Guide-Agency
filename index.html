@@ -38,6 +38,13 @@
     </div>
     <!-- top header section -->
     <header id="landing-header">
+        <div class="search-form">
+            <div class="form-group">
+                <input name="search" type="search" placeholder="Search..." id="form-fname" class="form-input">
+                <button style="display: none;" data-toggle="modal" data-target="#searchModal"
+                    id="search-m-show"></button>
+            </div>
+        </div>
         <nav class="nav-center">
             <div class="nav-head">
                 <span class="navigation-toggler humberger-menu me-3">
@@ -55,7 +62,7 @@
                     <li class="list-item"><a href="gallery.html">Gallery</a></li>
                     <li class="list-item"><a href="contact.html">Contact</a></li>
                     <li>
-                        <i class="fas fa-search"></i>
+                        <i class="search-bar fas fa-search"></i>
                     </li>
                 </ul>
             </div>
@@ -690,6 +697,26 @@
         </section>
         <!-- Account section -->
 
+
+        <!-- Search modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h2>Search Results</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- Modal -->
         <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
             aria-hidden="true">
@@ -781,7 +808,6 @@
                 </div>
             </div>
         </div>
-
         <section class="container">
             <div class="row container-fluid destination-header gallery-footer my-5 py-5">
                 <div class="col-xl-10 col-md-9  col-sm-12 visit-us">

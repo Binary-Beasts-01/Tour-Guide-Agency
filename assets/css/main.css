@@ -1125,3 +1125,34 @@ select {
   display: none;
   cursor: pointer;
 }
+
+/* search drop down */
+header {
+  position: relative;
+}
+.search-bar {
+  cursor: pointer;
+  font-size: larger;
+}
+.search-form {
+  position: absolute;
+  top: 81%;
+  left: 51%;
+  z-index: 120;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+
+  /* display: ; */
+}
+.search-form input {
+  padding: 1.2rem 1.4rem;
+  width: 340px;
+  border-radius: 50px;
+  border: none;
+  background-color: #f7f7f7;
+  box-shadow: var(--dark-shadow);
+}
+.disp-toggle {
+  display: none;
+}

@@ -68,3 +68,21 @@ userAvatar.addEventListener('click', (e) => {
     window.location.reload();
   }
 });
+
+// Search bar toggler
+const searchBar = document.querySelector('.search-bar ');
+const searchForm = document.querySelector('.search-form input');
+const searchModal = document.querySelector('#search-m-show');
+searchBar.addEventListener('click', (e) => {
+  console.log('object');
+  searchForm.parentElement.classList.toggle('disp-toggle');
+});
+
+searchForm.addEventListener('keyup', function (event) {
+  let query = searchForm.value;
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    this.value = '';
+    searchModal.click();
+  }
+});

@@ -53,7 +53,6 @@
                     <li class="list-item"><a href="guides.html">Guides</a></li>
                     <li class="list-item"><a href="gallery.html">Gallery</a></li>
                     <li class="list-item"><a href="gallery.html">Contact</a></li>
-                    <li class="list-item active"><a href="booking.html">Booking</a></li>
                     <li>
                         <i class="fas fa-search"></i>
                     </li>
@@ -94,7 +93,7 @@
         <!-- checkout section -->
         <section class="mt-2 pt-2 checkout">
             <div class="container">
-                <h1 class="my-5 text-center headline-2">Checkout form</h1>
+                <h1 class="my-5 text-center headline-2"><span class="headline-2 tour-name"></span> Booking Form</h1>
                 <div class="row">
                     <div class="col-md-8 mb-4">
                         <div class="card booking-form">
@@ -157,17 +156,6 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <div class="custom-control custom-checkbox">
-                                    <label class="custom-control-label" for="same-address">Shipping address is the same
-                                        <input type="checkbox" class="custom-control-input" id="same-address">
-                                        as my billing address</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <label class="custom-control-label" for="save-info">Save this information for next
-                                        <input type="checkbox" class="custom-control-input" id="save-info">
-                                        time</label>
-                                </div>
-                                <hr>
                                 <div class="d-block my-3">
                                     <div class="custom-control custom-radio">
                                         <label class="custom-control-label" for="credit">Credit card</label>
@@ -220,7 +208,7 @@
                                     </div>
                                 </div>
                                 <hr class="mb-4">
-                                <button class="btn pt-3" type="submit">Book</button>
+                                <button class="btn pt-3" type="submit" id="add-booking">Book</button>
                             </form>
 
                         </div>
@@ -242,54 +230,129 @@
                         <ul class="list-group mb-3 z-depth-1">
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
                                 <div>
-                                    <h6 class="my-0">Tour agent</h6>
-                                    <small class="text-muted">Brief description</small>
+                                    <h6 class="my-0">Tour Expense</h6>
+                                    <small class="text-muted tour-name">Tour destination price</small>
                                 </div>
-                                <span class="text-muted">1200 Birr</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">Travel Expense </h6>
-                                    <small class="text-muted">Brief description</small>
-                                </div>
-                                <span class="text-muted">8000 Birr</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                <div>
-                                    <h6 class="my-0">Reservations</h6>
-                                    <small class="text-muted">Brief description</small>
-                                </div>
-                                <span class="text-muted">1500 Birr</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between bg-light">
-                                <div class="text-success">
-                                    <h6 class="my-0">Miscellaneous</h6>
-                                    <small>Other Expenses</small>
-                                </div>
-                                <span class="text-success">-1300 Birr</span>
+                                <span class="text-muted tour-price">1200 Birr</span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between">
                                 <span>Total (ETB)</span>
-                                <strong>12000 Birr</strong>
+                                <strong class="total-tour-price">12000 Birr</strong>
                             </li>
                         </ul>
                         <!-- Cart -->
 
-                        <!-- Promo code -->
-                        <form class="card p-2">
-                            <div class="input-group d-flex justify-content-center">
-                                <input type="text" class="form-input" placeholder="Promo code"
-                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn pt-3 m-0" type="button">Redeem</button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </section>
 
+         <!-- Search modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h2>Search Results</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="form-container">
+                        <div class="d form-login">
+                            <div class="login-form mt-5">
+                                <h2 class="login">Login</h2>
+                                <hr class="divider" />
+                                <form action="">
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="email" id="form-label" type="text" placeholder="E-mail or nickname">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                    </div>
+                                    <div>
+                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
+                                            Sign In
+                                        </button>
+                                    </div>
+                                    <div class="form-group text-center col-md-12 mt-4">
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                                        class="fab fa-twitter"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                                        class="fab fa-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
+                                            Up</a></span>
+                                </p>
+                                <div class="col-md-8 error-div">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d form-spanner">
+
+                        </div>
+                        <div class="d form-register">
+                            <div class="login-form mt-5">
+                                <h2 class="login">Create account</h2>
+                                <hr class="divider" />
+                                <form action="">
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="name" id="form-label" type="text" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="email" id="form-label" type="text" placeholder="E-mail">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="cpassword" id="form-label" type="text" placeholder="Confirm Password">
+                                    </div>
+                                    <select class="form-select my-3" id="select-role">
+                                        <option selected>Choose Role</option>
+                                        <option value="user">User</option>
+                                        <option value="guide">Guide</option>
+                                    </select>
+                                    <div>
+                                        <button id="register-btn" class="login-btn col-md-12 mt-4">
+                                            Sign Up
+                                        </button>
+                                    </div>
+                                    <div class="form-group text-center col-md-12 mt-4">
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                                        class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                                        class="fab fa-twitter"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                                        class="fab fa-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- footer section -->
         <footer id="footer" class="p-4 pt-5">
@@ -321,7 +384,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
+    <script src="./assets/js/utils/constants.js"></script>
+    <!-- <script src="./assets/js/authUser.js"></script> -->
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/booking.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
       { lang: 'English', percent: 60 }
     ],
     experience: '3 Yrs',
-    rating: {totalRating: 0, ratingCount: 0}
+    rating: {totalRating: 0, ratingCount: 0},
+    work_ethics: {dedication: 90, professionalism: 74, experience: 86}
   });
   
   create('guides', {
@@ -17,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
       { lang: 'English', percent: 60 },
     ],
     experience: '3 Yrs',
-    rating: {totalRating: 0, ratingCount: 0}
+    rating: {totalRating: 0, ratingCount: 0},
+    work_ethics: {dedication: 90, professionalism: 74, experience: 86}
   });
 
   addTourGuide();

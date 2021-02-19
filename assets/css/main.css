@@ -1167,3 +1167,22 @@ header {
   opacity: 0;
   background: transparent;
 }
+.check_available {
+  padding: 1rem;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+.check_available > h3 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+.check_available li {
+  box-shadow: 1px 1px 10px 0px rgb(230, 229, 229);
+  border-radius: 10px;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+}
+.check_available li a {
+  text-decoration: none;
+  text-align: end;
+}

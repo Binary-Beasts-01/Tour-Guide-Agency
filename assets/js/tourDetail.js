@@ -1,10 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = Number(urlParams.get('id'));
-console.log(id);
 
+document.addEventListener("DOMContentLoaded", addTourDetail);
 
-
-async function addTourDetail(id) {
+async function addTourDetail() {
     
     const tourResult = async () => {
         const tour = await retrieve('tour', id);
@@ -19,5 +18,3 @@ async function addTourDetail(id) {
     return tourResult();
     
 }
-
-addTourDetail(id);

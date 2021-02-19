@@ -5,24 +5,30 @@
 // create('tour', {name: "Semen Mountains", location: "Semen", price: 520,  image: "/assets/images/gettyimages-905176238-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Konso", location: "Konso", price: 600,  image: "/assets/images/gettyimages-988621664-2048x2048.jpg", date: "2020-10-18"});
 
-const idInput = document.getElementById("id");
-const nameInput = document.getElementById("name");
-const locationInput = document.getElementById("location");
-const priceInput = document.getElementById("price");
-const imageInput = document.getElementById("image");
-const fromDateInput = document.getElementById("fromDate");
-const toDateInput = document.getElementById("toDate");
+const idInput = document.getElementById('id');
+const nameInput = document.getElementById('name');
+const locationInput = document.getElementById('location');
+const priceInput = document.getElementById('price');
+const imageInput = document.getElementById('image');
+const fromDateInput = document.getElementById('fromDate');
+const duration = document.getElementById('duration');
 
-const createBtn = document.getElementById("btn-create");
-createBtn.addEventListener("click", createTour);
-const refreshBtn = document.getElementById("btn-read");
+const createBtn = document.getElementById('btn-create');
+createBtn.addEventListener('click', createTour);
+const refreshBtn = document.getElementById('btn-read');
 refreshBtn.addEventListener('click', displayAll);
-const updateBtn = document.getElementById("btn-update");
-updateBtn.addEventListener("click", updateTour);
+const updateBtn = document.getElementById('btn-update');
+updateBtn.addEventListener('click', updateTour);
 function createTour(e) {
   e.preventDefault();
-  create('tour', {name: nameInput.value.toString(), location: locationInput.value.toString(), 
-    price: priceInput.value.toString(), image: imageInput.value.toString(), date: {from: fromDateInput.value.toString(), to: toDateInput.value.toString()}});
+  create('tour', {
+    name: nameInput.value.toString(),
+    location: locationInput.value.toString(),
+    price: priceInput.value.toString(),
+    image: imageInput.value.toString(),
+    start_date: fromDateInput.value.toString(),
+    duration: duration.value.toString(),
+  });
   displayAll();
 }
 
@@ -39,11 +45,10 @@ function updateTour(e) {
     value.price = priceInput.value.toString();
   }
   if (fromDateInput.value) {
-    value.date = {};
-    value.date.from = fromDateInput.value;
-    value.date.to = toDateInput.value;
+    value.start_date = fromDateInput.value;
+    value.duration = duration.value;
   }
-  update('tour', {id: Number(idInput.value.toString()), value});
+  update('tour', { id: Number(idInput.value.toString()), value });
   displayAll();
 }
 
@@ -55,33 +60,34 @@ async function displayAll() {
 displayAll();
 
 async function display(id) {
-
   const tourResult = async () => {
-      const c = await retrieve('tour', id);
-      destinationContainer.innerHTML += createDestinationContent(c);
-  }
+    const c = await retrieve('tour', id);
+    destinationContainer.innerHTML += createDestinationContent(c);
+  };
   return tourResult();
-
 }
 
 function table(res) {
-  const tbody = document.getElementById("tbody");
-  const notfound = document.getElementById("notfound");
-  notfound.textContent = "";
+  const tbody = document.getElementById('tbody');
+  const notfound = document.getElementById('notfound');
+  notfound.textContent = '';
   // remove all childs from the dom first
   while (tbody.hasChildNodes()) {
     tbody.removeChild(tbody.firstChild);
   }
-{/* <td>${entry.location}</td> */}
+  {
+    /* <td>${entry.location}</td> */
+  }
   let output = '';
   for (entry of res) {
-    output +=   `<tr>
+    output += `<tr>
     <td>${entry.id}</td>
     <td>${entry.name}</td>
     
     <td>${entry.price}</td>
     <td>${entry.image}</td>
-    <td>${entry.date}</td>
+    <td>${entry.start_date}</td>
+    <td>${entry.duration}</td>
   </tr>`;
   }
   tbody.innerHTML = output;

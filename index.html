@@ -176,38 +176,43 @@
                                     <div class="form-wrap-inline">
                                         <label class="form-label-outside">Choose Date</label>
                                         <div>
-                                            <input type="date" class="form-input" name="tour-time">
+                                            <input id="check_date" type="date" class="form-input" name="tour-time">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-wrap-inline">
                                         <label class="form-label-outside">Choose Destination</label>
-                                        <select name="select" id="select">
-                                            <option selected value="Danakil Depression">Addis Ababa</option>
+                                        <select name="select" id="check_place">
+                                            <option selected value="Addis Ababa">Addis Ababa</option>
                                             <option value="Danakil Depression">Danakil Depression</option>
-                                            <option value="Danakil Depression">National Museum of Ethiopia</option>
-                                            <option value="Danakil Depression">Axum</option>
-                                            <option value="Danakil Depression">Gheralta</option>
-                                            <option value="Danakil Depression">Rock-Hewn Churches of Lalibela
+                                            <option value="National Museum of Ethiopia">National Museum of Ethiopia
                                             </option>
-                                            <option value="Danakil Depression">Fasiledes Castle</option>
-                                            <option value="Danakil Depression">Simien Mountains</option>
-                                            <option value="Danakil Depression">Blue Nile Falls</option>
-                                            <option value="Danakil Depression">Brba Minch</option>
-                                            <option value="Danakil Depression">People of the Lower Omo Valley
+                                            <option value="Axum">Axum</option>
+                                            <option value="Gheralta">Gheralta</option>
+                                            <option value="Rock-Hewn Churches of Lalibela">Rock-Hewn Churches of
+                                                Lalibela
                                             </option>
-                                            <option value="Danakil Depression">Babile Elephant Sanctuary</option>
-                                            <option value="Danakil Depression">Harar Walled City</option>
-                                            <option value="Danakil Depression">Lake Tana Monasteries</option>
-                                            <option value="Danakil Depression">Nechsar National Park</option>
-                                            <option value="Danakil Depression">Sof Omar Cave</option>
-                                            <option value="Danakil Depression">Bale Mountains National Park</option>
+                                            <option value="Fasiledes Castle">Fasiledes Castle</option>
+                                            <option value="Simien Mountains">Simien Mountains</option>
+                                            <option value="Blue Nile Falls">Blue Nile Falls</option>
+                                            <option value="Brba Minch">Brba Minch</option>
+                                            <option value="People of the Lower Omo Valley">People of the Lower Omo
+                                                Valley
+                                            </option>
+                                            <option value="Babile Elephant Sanctuary">Babile Elephant Sanctuary</option>
+                                            <option value="Harar Walled City">Harar Walled City</option>
+                                            <option value="Lake Tana Monasteries">Lake Tana Monasteries</option>
+                                            <option value="Nechsar National Park">Nechsar National Park</option>
+                                            <option value="Sof Omar Cave">Sof Omar Cave</option>
+                                            <option value="Bale Mountains National Park">Bale Mountains National Park
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
-                            <button id="check_availablity" class="btn">Check Availability</button>
+                            <button type="button" data-toggle="modal" data-target="#checkModal" id="check_availablity"
+                                class="btn">Check Availability</button>
                         </form>
                     </div>
                 </div>
@@ -403,63 +408,8 @@
                     <div class="mx-auto">
                         <h1 class="testimonial-header">Testimonials</h3>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="item carousel-item active">
-                                        <div class="img-box">
-                                            <img src="./assets/images/gettyimages-120503242-2048x2048.jpg" alt="">
-                                        </div>
-                                        <div class="testi-content">
-                                            <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                elit.
-                                                Nam
-                                                eu
-                                                sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec
-                                                turpis
-                                                vel,
-                                                semper malesuada ante. Idac bibendum scelerisque non non purus.
-                                                Suspendisse
-                                                varius
-                                                nibh non aliquet.</p>
-                                            <p class="overview fw-bold">Jennifer Smith</p>
-                                            <p class="overview-occupation">Office Worker</p>
-                                        </div>
-                                    </div>
-                                    <div class="item carousel-item">
-                                        <div class="img-box">
-                                            <img src="./assets/images/gettyimages-154926670-2048x2048.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus.
-                                                Pellentesque
-                                                eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus.
-                                                Pellentesque
-                                                viverra
-                                                sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida
-                                                nibh,
-                                                facilisis gravida odio.</p>
-                                            <p class="overview fw-bold">Dauglas McNun</p>
-                                            <p class="overview-occupation">Financial Advisor</p>
-                                        </div>
-                                    </div>
-                                    <div class="item carousel-item">
-                                        <div class="img-box">
-                                            <img src="./assets/images/gettyimages-163639070-2048x2048.jpg" alt="">
-                                        </div>
-                                        <div>
-                                            <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra
-                                                feugiat
-                                                ante
-                                                id
-                                                lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at
-                                                accumsan
-                                                tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt
-                                                fringilla
-                                                massa.
-                                                Etiam hendrerit dolor eget rutrum.</p>
-                                            <p class="overview fw-bold mb-0 pb-0">Hellen Wright</p>
-                                            <p class="overview-occupation my-0 py-2">Athelete</p>
-                                        </div>
-                                    </div>
+                                <div class="carousel-inner" id="list-testimonal">
+
                                 </div>
                                 <a class="carousel-control left carousel-control-prev" type="button"
                                     data-bs-target="#myCarousel" data-bs-slide="prev">
@@ -561,20 +511,28 @@
 
 
         <!-- Search modal -->
-        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel"
             aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <h2>Search Results</h2>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <ul class="navbar-nav" style="padding: 1rem;" id="search-result">
+
                     </ul>
+                </div>
+            </div>
+        </div>
+        <!-- check availablity -->
+        <div class="modal fade" id="checkModal" tabindex="-1" role="dialog" aria-labelledby="checkModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="check_available">
+                        <h3>Search Results</h3>
+                        <ul class="navbar-nav" style="padding: 1rem;" id="available-result">
+
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -724,7 +682,7 @@
     <script src="./assets/js/utils/formValidate.js"></script>
     <script src="./assets/js/authUser.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/homePage.js"></script>
+    <script type="module" src="./assets/js/homePage.js"></script>
 </body>
 
 </html>

@@ -105,7 +105,7 @@ function login(email, password) {
           } else {
             localStorage.setItem(
               'user',
-              JSON.stringify({ name: r.name, email: r.email })
+              JSON.stringify({ id: r.id, name: r.name, email: r.email })
             );
             window.location.reload();
           }

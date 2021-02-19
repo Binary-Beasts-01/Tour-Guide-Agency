@@ -1,7 +1,7 @@
-var db = new Dexie('travel_database');
+const db = new Dexie('travel_database');
 db.version(1).stores({
   users: '++id, name, &email, role, password',
-  tour: '++id, &name, location, price, image, date',
+  tour: '++id, &name, location, price, image, start_date, duration',
   guides:
     '++id, &username, tour_id, rating, profile_picture, skills, experience',
   booking: '++id, user_id, tour_id, payment_status, guide_id, date',

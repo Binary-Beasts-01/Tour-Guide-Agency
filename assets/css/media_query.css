@@ -8,6 +8,9 @@
   .collapsable li {
     height: 4rem;
   }
+  .pre-header {
+    display: none;
+  }
   .nav-center {
     width: 100%;
     padding: 0.3rem 0.6rem;
@@ -106,9 +109,6 @@
     display: none;
   }
   .carousel-control {
-    display: none;
-  }
-  .pre-header {
     display: none;
   }
   #testimonals .carousel {

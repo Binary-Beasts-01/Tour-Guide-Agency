@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/destination.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
     <link rel="stylesheet" href="./assets/css/guides.css">
-    <link rel="stylesheet" href="./assets/css/guideDetalil.css">
+    <link rel="stylesheet" href="./assets/css/guideDetail.css">
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
 
     <title>Tour Guide Agency</title>
@@ -58,10 +58,10 @@
 
             <div class="collapsable" id="nav-collapse">
                 <ul class="nav-list">
-                    <li class="list-item active"><a href="#">Home</a></li>
+                    <li class="list-item"><a href="index.html">Home</a></li>
                     <li class="list-item"><a href="about.html">About</a></li>
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
-                    <li class="list-item"><a href="guides.html">Guides</a></li>
+                    <li class="list-item active"><a href="guides.html">Guides</a></li>
                     <li class="list-item"><a href="gallery.html">Gallery</a></li>
                     <li class="list-item"><a href="contact.html">Contact</a></li>
                     <li>
@@ -123,7 +123,7 @@
                         <ol class="breadcrumb d-flex flex-row justify-content-center align-items-center">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                             <li class="breadcrumb-item"><a href="guides.html">Guides</a></li>
-                            <li class="breadcrumb-item" aria-current="page">Guide Name</li>
+                            <li class="breadcrumb-item guideDetail_name" aria-current="page">Guide Name</li>
                         </ol>
                     </nav>
                 </div>
@@ -168,15 +168,30 @@
                 <div class="col-7 ms-5">
                     <div>
                         <h3 class="h2">Guide</h3>
-                        <h4 class="headline-2 guideDetail_name">Nabek Abebe</h4>
-                        <div class="divider divider-default my-4"></div>
+                        <div class="d-flex flex-column">
+                            <div>
+                                <h4 class="headline-2 guideDetail_name">Nabek Abebe</h4>
+                            </div>
+                            <div>
+                                <fieldset class="rating">
+                                    <span class="guide-rating">4.6<span class="total-rating">/5</span></span>
+                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                    <div class="rating-text"> <span>0 ratings</span> </div>
+                                </fieldset>
+                            </div>
+                            <div class="divider divider-default my-4"></div>
+                        </div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem velit omnis soluta nobis
                             doloremque nulla placeat earum, magni corporis ab numquam recusandae enim doloribus quod
                             nihil qui maiores laboriosam similique.</p>
                     </div>
                     <div class="skills-bar">
                         <div class="row d-flex justify-content-center mt-100">
-                            <div class="col-xl-4 col-md-4 col-sm-12">
+                            <div class="col-xl-4 col-md-6 col-sm-12">
                                 <div class="progress professionalism"> <span class="progress-left"> <span
                                             class="progress-bar"></span> </span> <span class="progress-right"> <span
                                             class="progress-bar"></span> </span>
@@ -184,7 +199,7 @@
                                 </div>
                                 <div class="progress-label" id="professionalism">Professionalism</div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-12">
+                            <div class="col-xl-4 col-md-6 col-sm-12">
                                 <div class="progress dedication"> <span class="progress-left"> <span
                                             class="progress-bar"></span> </span> <span class="progress-right"> <span
                                             class="progress-bar"></span> </span>
@@ -192,7 +207,7 @@
                                 </div>
                                 <div class="progress-label" id="dedication">Dedication</div>
                             </div>
-                            <div class="col-xl-4 col-md-4 col-sm-12 ">
+                            <div class="col-xl-4 col-md-6 col-sm-12 ">
                                 <div class="progress experience"> <span class="progress-left"> <span
                                             class="progress-bar"></span> </span> <span class="progress-right"> <span
                                             class="progress-bar"></span> </span>
@@ -205,9 +220,11 @@
                     <div class="row mt-4">
                         <div class="col-xl-6 col-md-6 col-sm-12">
                             <h4 class="h2">Skills</h4>
-                            <p>
-                                Communication, friendliness, organization, local knowledge, punctuality
-                            </p>
+                            <div class="guideDetail_skill">
+                                <p>
+                                    <!-- Communication, friendliness, organization, local knowledge, punctuality -->
+                                </p>
+                            </div>
                         </div>
                         <div class="col-xl-6 col-md-6 col-sm-12">
                             <h4 class="h2">Awards</h4>
@@ -480,11 +497,13 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     <script src="./assets/js/database.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/utils/constants.js"></script>
     <script src="./assets/js/utils/formValidate.js"></script>
     <script src="./assets/js/authUser.js"></script>
+    <script src="./assets/js/guideDetail.js"></script>
 </body>
 
 </html>

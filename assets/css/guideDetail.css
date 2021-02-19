@@ -21,7 +21,11 @@
     background-color: #f7f5ec;
   }
 
-  .progress {
+  .guideDetail_skill .progress-bar {
+      background-color: var(--clr-brown);
+  }
+
+  .skills-bar .progress {
     width: 150px;
     height: 150px !important;
     float: left;
@@ -32,7 +36,7 @@
     position: relative
 }
 
-.progress:after {
+.skills-bar .progress:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -43,7 +47,7 @@
     left: 0
 }
 
-.progress>span {
+.skills-bar .progress>span {
     width: 50%;
     height: 100%;
     overflow: hidden;
@@ -52,11 +56,11 @@
     z-index: 1
 }
 
-.progress .progress-left {
+.skills-bar .progress .progress-left {
     left: 0
 }
 
-.progress .progress-bar {
+.skills-bar .progress .progress-bar {
     width: 100%;
     height: 100%;
     background: none;
@@ -66,7 +70,7 @@
     top: 0
 }
 
-.progress .progress-left .progress-bar {
+.skills-bar .progress .progress-left .progress-bar {
     left: 100%;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
@@ -75,11 +79,11 @@
     transform-origin: center left
 }
 
-.progress .progress-right {
+.skills-bar .progress .progress-right {
     right: 0
 }
 
-.progress .progress-right .progress-bar {
+.skills-bar .progress .progress-right .progress-bar {
     left: -100%;
     border-top-left-radius: 80px;
     border-bottom-left-radius: 80px;
@@ -90,7 +94,7 @@
     /* animation: loading-1 1.8s linear forwards */
 }
 
-.progress .progress-value {
+.skills-bar .progress .progress-value {
     width: 90%;
     height: 90%;
     border-radius: 50%;
@@ -103,7 +107,7 @@
     left: 5%
 }
 
-.progress-label {
+.skills-bar .progress-label {
     width: 90%;
     height: 80%;
     font-size: 24px;
@@ -112,32 +116,32 @@
     text-align: center;
 }
 
-.progress .progress-bar {
+.skills-bar .progress .progress-bar {
     border-color: var(--clr-brown)
 }
 
-.progress.dedication .progress-right .progress-bar {
+.skills-bar .progress.dedication .progress-right .progress-bar {
     animation: loading-1 1.5s linear forwards;
 }
 
-.progress.dedication .progress-left .progress-bar {
+.skills-bar .progress.dedication .progress-left .progress-bar {
     animation: loading-2 1.5s linear forwards 1.5s;
 }
 
-.progress.professionalism .progress-right .progress-bar {
+.skills-bar .progress.professionalism .progress-right .progress-bar {
     animation: loading-1 1.8s linear forwards;
 }
 
-.progress.professionalism .progress-left .progress-bar {
+.skills-bar .progress.professionalism .progress-left .progress-bar {
     animation: loading-4 1.8s linear forwards 1.8s;
 }
 
 
-.progress.experience .progress-right .progress-bar {
+.skills-bar .progress.experience .progress-right .progress-bar {
     animation: loading-1 1.5s linear forwards;
 }
 
-.progress.experience .progress-left .progress-bar {
+.skills-bar .progress.experience .progress-left .progress-bar {
     animation: loading-3 1.5s linear forwards 1.5s;
 }
 
@@ -188,3 +192,50 @@
         transform: rotate(144deg)
     }
 }
+
+.rating { 
+    border: none;
+    float: left;
+  }
+  
+  .rating > input { display: none; } 
+  .rating > label:before { 
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+  }
+  
+  .rating > .half:before { 
+    content: "\f089";
+    position: absolute;
+  }
+  
+  .rating > label { 
+    color: #ddd; 
+   float: right; 
+  }
+  
+  /***** CSS Magic to Highlight Stars on Hover *****/
+  
+  .rating > input:checked ~ label, /* show gold star when clicked */
+  .rating:not(:checked) > label:hover, /* hover current star */
+  .rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+  
+  .rating > input:checked + label:hover, /* hover current star when changing rating */
+  .rating > input:checked ~ label:hover,
+  .rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+  .rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+  
+  .guide-rating {
+    font-size: 1.5rem;
+    margin: 10px;
+  }
+  .rating-text {
+    margin: 10px;
+  }
+  
+  .total-rating {
+    font-size: 1.3rem;
+  } 

@@ -24,3 +24,8 @@ $('.owl-carousel').owlCarousel({
     },
   },
 });
+
+const checkAvailablity = document.querySelector('.check_availablity');
+checkAvailablity.addEventListener('click', (e) => {
+  // search in db
+});

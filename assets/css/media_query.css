@@ -131,9 +131,9 @@
   }
   .search-form {
     position: absolute;
-    top: 3rem;
+    top: 4.3rem;
     left: unset;
-    right: 10%;
+    right: 2%;
     width: 300px;
   }
   .search-form input {

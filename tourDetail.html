@@ -57,7 +57,7 @@
 
             <div class="collapsable" id="nav-collapse">
                 <ul class="nav-list">
-                    <li class="list-item active"><a href="#">Home</a></li>
+                    <li class="list-item"><a href="#">Home</a></li>
                     <li class="list-item"><a href="about.html">About</a></li>
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
                     <li class="list-item"><a href="guides.html">Guides</a></li>
@@ -99,7 +99,7 @@
         </nav>
         <div class="sidebar">
             <ul class="nav-list">
-                <li class="list-item active"><a href="index.html">Home</a></li>
+                <li class="list-item active"><a href="#">Home</a></li>
                 <li class="list-item"><a href="about.html">About</a></li>
                 <li class="list-item"><a href="destination.html">Destinations</a></li>
                 <li class="list-item"><a href="guides.html">Guides</a></li>
@@ -114,13 +114,14 @@
     <div class="content-wrapper">
         <section class="container-fluid d-flex align-items-end justify-content-center" id="tourdetail-header">
             <div>
-                <h1 class="headline-1">Tour Detail</h1>
+                <h1 class="headline-1 tour_name">Tour Detail</h1>
 
                 <div class="d-flex justify-content-center mb-5" id="breadcrumb">
                     <nav class="my-4" id="breadcrumb-nav" aria-label="breadcrumb">
                         <ol class="breadcrumb d-flex flex-row justify-content-center align-items-center">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item" aria-current="page">Tour Detail</li>
+                            <li class="breadcrumb-item"><a href="destination.html">Destination</a></li>
+                            <li class="breadcrumb-item tour_name" aria-current="page">Tour Detail</li>
                         </ol>
                     </nav>
                 </div>
@@ -160,14 +161,21 @@
                     </ul>
                 </div>
                 <div class="col-xl-6 col-10 p-5 d-flex align-items-center">
-                    <img class="img-fluid" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
+                    <img class="img-fluid tour_image" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
                 </div>
 
             </div>
         </section>
 
 
-
+        <div class="container-fluid p-0" id="location_Map">
+            <div class="gmap_canvas">
+                <iframe width="100%" id="gmap_canvas"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8654808078077!2d40.843027514772736!3d6.906684695009491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x17c96479a1bf0a9f%3A0x3c49c40d45686c72!2sHolqa%20Soof%20Umar(Sof%20Omar%20Cave)!5e0!3m2!1sen!2set!4v1613643399283!5m2!1sen!2set"
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
 
         <section class="section services" id="services">
             <div class="container-fluid">
@@ -337,70 +345,42 @@
                 <div class="col-xl-6 col-10">
 
                     <h1>Frequently Asked Questions</h1>
-                    <button class="collapsible mt-3">What are the advantages of purchasing your template?
+                    <button class="collapsible mt-3">What are the main types of tourism?
                     </button>
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    <button class="collapsible  mt-3">What do I receive when I order this template?
+                    <button class="collapsible  mt-3">What do I receive when I book?
                     </button>
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
-                    <button class="collapsible  mt-3">What am I allowed to do with the template?
+                    <button class="collapsible  mt-3">What am I allowed to do during my tour?
                     </button>
                     <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    </div>
-                    <button class="collapsible  mt-3">Do you provide any scripts with the template?
-                    </button>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="pt-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
 
 
                 </div>
                 <div class="col-xl-6 col-10 p-5 d-flex align-items-center">
-                    <img class="img-fluid" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
+                    <img class="img-fluid tour_image" src="assets/images/ethiopia-4117559_1920.jpg" alt="">
                 </div>
 
             </div>
         </section>
-
-
-
-
-
-
-
         <a href="#" id="go-to-top">^</a>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <section class="container">
         <div class="row container-fluid destination-header gallery-footer my-5 py-5">
             <div class="col-xl-10 col-md-9  col-sm-12 visit-us">
-                <p class="display-4">Enjoy your stay at Ethiopia</p>
+                <p class="display-4">Enjoy your stay at <span class="tour_name">Ethiopia</span></p>
                 <p class="h6 text-muted">Book your room now to take advantage of our accommodation and additional
                     services.</p>
             </div>
@@ -426,6 +406,95 @@
                     <li>Lorem ipsum dolor sit amet consectetur.</li>
                     <li>Lorem ipsum dolor sit amet consectetur.</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="form-container">
+                    <div class="d form-login">
+                        <div class="login-form mt-5">
+                            <h2 class="login">Login</h2>
+                            <hr class="divider" />
+                            <form action="">
+                                <div class="form-group col-md-12 mt-4">
+                                    <input name="email" id="form-label" type="text" placeholder="E-mail or nickname">
+                                </div>
+                                <div class="form-group col-md-12 mt-4">
+                                    <input name="password" id="form-label" type="text" placeholder="Password">
+                                </div>
+                                <div>
+                                    <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
+                                        Sign In
+                                    </button>
+                                </div>
+                                <div class="form-group text-center col-md-12 mt-4">
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                                    class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                                    class="fab fa-google"></i></a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
+                                        Up</a></span>
+                            </p>
+                            <div class="col-md-8 error-div">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d form-spanner">
+
+                    </div>
+                    <div class="d form-register">
+                        <div class="login-form mt-5">
+                            <h2 class="login">Create account</h2>
+                            <hr class="divider" />
+                            <form action="">
+                                <div class="form-group col-md-12 mt-4">
+                                    <input name="name" id="form-label" type="text" placeholder="Full Name">
+                                </div>
+                                <div class="form-group col-md-12 mt-4">
+                                    <input name="email" id="form-label" type="text" placeholder="E-mail">
+                                </div>
+                                <div class="form-group col-md-12 mt-4">
+                                    <input name="password" id="form-label" type="text" placeholder="Password">
+                                </div>
+                                <div class="form-group col-md-12 mt-4">
+                                    <input name="cpassword" id="form-label" type="text" placeholder="Confirm Password">
+                                </div>
+                                <select class="form-select my-3" id="select-role">
+                                    <option selected>Choose Role</option>
+                                    <option value="user">User</option>
+                                    <option value="guide">Guide</option>
+                                </select>
+                                <div>
+                                    <button id="register-btn" class="login-btn col-md-12 mt-4">
+                                        Sign Up
+                                    </button>
+                                </div>
+                                <div class="form-group text-center col-md-12 mt-4">
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list list-inline-item social-media-icon" id="facebook"><a href=""><i
+                                                    class="fab fa-facebook-f"></i></a></li>
+                                        <li class="list list-inline-item social-media-icon" id="twitter"><a href=""><i
+                                                    class="fab fa-twitter"></i></a></li>
+                                        <li class="list list-inline-item social-media-icon" id="google"><a href=""><i
+                                                    class="fab fa-google"></i></a></li>
+                                    </ul>
+                                </div>
+                            </form>
+                            <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -480,9 +549,11 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     <script src="./assets/js/database.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
+    <script src="./assets/js/utils/constants.js"></script>
     <script src="./assets/js/authUser.js"></script>
-    <script src="./assets/js/homePage.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/tourDetail.js"></script>
 </body>
 
 </html>

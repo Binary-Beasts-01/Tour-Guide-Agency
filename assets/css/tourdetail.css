@@ -1,67 +1,66 @@
 #tourdetail-header {
-    height: 27rem;
-    background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
-    background-size: cover;
-    background-position-y: center;
-    color: white;
-    margin-bottom: 8rem;
+  height: 27rem;
+  background-image: url(../images/main_slide/lesly-derksen-v1pcGRXSmW8-unsplash.jpg);
+  background-size: cover;
+  background-position-y: center;
+  color: white;
+  margin-bottom: 8rem;
 }
 
 #breadcrumb-nav {
-    margin-top: 5rem;
-    color: white;
-    --bs-breadcrumb-divider: "";
+  margin-top: 5rem;
+  color: white;
+  --bs-breadcrumb-divider: '';
 }
 
 #breadcrumb {
-    margin-top: 6rem;
+  margin-top: 6rem;
 }
-#contact-container{
-    padding-left: 70px;
+#contact-container {
+  padding-left: 70px;
 }
-.form-input{
-    border-radius: 30px;
-    
-    width: 100%;
-    padding: .375rem .75rem;
+.form-input {
+  border-radius: 30px;
 
-    line-height:2.5;
-    border: none;
-    background-color:rgb(247, 247, 247);
-   
+  width: 100%;
+  padding: 0.375rem 0.75rem;
 
+  line-height: 2.5;
+  border: none;
+  background-color: rgb(247, 247, 247);
 }
 
-
-.breadcrumb-item > a, .breadcrumb-item > a::after {
-    color: var(--clr-white);
-    content: " > ";
-    font-weight: lighter; 
+.breadcrumb-item > a,
+.breadcrumb-item > a::after {
+  color: var(--clr-white);
+  content: ' > ';
+  font-weight: lighter;
 }
 .breadcrumb-item > a:hover {
-    color: gray;
+  color: gray;
 }
 
-
-.card-header{
+.card-header {
   background-color: var(--clr-brown);
   color: var(--clr-white);
-  
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.card{
+/* #hovcard */
+.card {
   border: none;
   background-color: var(--clr-brown);
 }
-.card-body{
+.card-body {
   background-color: var(--clr-white);
 }
-.card:hover{
+.card:hover {
   background-color: var(--clr-white) !important;
-  border-color:var(--clr-white);
+  border-color: var(--clr-white);
   box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
   border: none;
-  
-  
 }
 .card:hover .card-header {
   background-color: black;
@@ -79,7 +78,7 @@
   user-select: none;
   transition: 0.25s all ease;
   white-space: nowrap;
-  color:var(--clr-white);
+  color: var(--clr-white);
   background-color: var(--clr-brown);
 }
 
@@ -88,7 +87,7 @@
 }
 
 .collapsible {
-  background-color:transparent;
+  background-color: transparent;
   color: black;
   cursor: pointer;
   padding: 18px;
@@ -100,20 +99,16 @@
   box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
 }
 
-
 .collapsible:after {
   content: '\002B';
-  color:black;
+  color: black;
   font-weight: bold;
   float: right;
   margin-left: 5px;
-
-}
 }
 
 .active:after {
-  content: "\2212";
-  
+  content: '\2212';
 }
 
 .content {
@@ -121,8 +116,24 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
- 
+  background-color: white;
+  box-shadow: 0 10px 32px 0 rgb(129 132 146 / 14%);
 }
 
+.gmap_canvas {
+  overflow: hidden;
+  height: 400px;
+  width: 100%;
+}
 
+.gmap_canvas iframe {
+  width: '100%' !important;
+  height: 100%;
+}
 
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 200rem;
+  width: 100%;
+}

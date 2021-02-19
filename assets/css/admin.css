@@ -8,37 +8,5 @@
 }
 
 .d-flex table {
-    margin: 1em 10em;
-}
-
-table .btnedit {
-    color: lightgreen;
-    cursor: pointer;
-}
-
-table .btndelete {
-    color: tomato;
-    cursor: pointer;
-}
-
-/* messages */
-.updatemsg,
-.deletemsg,
-.insertmsg {
-    position: absolute;
-    top: -40px;
-}
-
-.movedown {
-    animation: slideup 3.4s ease;
-}
-
-@keyframes slideup {
-    50% {
-        top: 0
-    }
-
-    100% {
-        top: -40px;
-    }
+    margin: 1em;
 }

@@ -170,14 +170,13 @@
                 <div class="slide-banner mt-5">
                     <div class="form-request-modern">
                         <h3>Browse Destinations</h3>
-                        <form novalidate="novalidate">
+                        <form action="#">
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-wrap-inline">
                                         <label class="form-label-outside">Choose Date</label>
                                         <div>
-                                            <input type="date" class="form-input" id="data-time-picker-arrow"
-                                                id="tour-time" name="tour-time">
+                                            <input type="date" class="form-input" name="tour-time">
                                         </div>
                                     </div>
                                 </div>
@@ -208,9 +207,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-button">
-                                <button id="check_availablity" class="btn" type="submit">Check Availability</button>
-                            </div>
+                            <button id="check_availablity" class="btn">Check Availability</button>
                         </form>
                     </div>
                 </div>
@@ -240,9 +237,9 @@
 
             </div>
             <div class="text-center my-5">
-                <button class="btn">
+                <a class="btn" href="destination.html">
                     View All
-                </button>
+                </a>
             </div>
         </section>
 
@@ -722,13 +719,12 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
         </script>
     <script src="./assets/js/database.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/utils/crudOperations.js"></script>
     <script src="./assets/js/utils/constants.js"></script>
     <script src="./assets/js/utils/formValidate.js"></script>
     <script src="./assets/js/authUser.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/homePage.js"></script>
-    <script src="./assets/js/utils/crudOperations.js"></script>
-    <script src="./assets/js/destination.js"></script>
 </body>
 
 </html>

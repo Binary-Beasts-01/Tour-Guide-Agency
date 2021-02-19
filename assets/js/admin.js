@@ -72,13 +72,13 @@ function table(res) {
   while (tbody.hasChildNodes()) {
     tbody.removeChild(tbody.firstChild);
   }
-
+{/* <td>${entry.location}</td> */}
   let output = '';
   for (entry of res) {
     output +=   `<tr>
     <td>${entry.id}</td>
     <td>${entry.name}</td>
-    <td>${entry.location}</td>
+    
     <td>${entry.price}</td>
     <td>${entry.image}</td>
     <td>${entry.date}</td>

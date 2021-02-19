@@ -63,7 +63,7 @@ Variables
   --fixed-width: 620px;
   --fs-headline-1: 4.5rem;
   --fs-headline-2: 4rem;
-  --card-color: #d6b348;
+  --card-color: #4e4d49;
 }
 
 /*
@@ -836,11 +836,15 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
   background-color: rgba(0, 0, 0, 0.4);
   transition: 550ms ease-in-out;
   opacity: 0;
 }
+
+.event-default-caption:hover {
+  color: white;
+}
+
 .event-default-image {
   transition: 550ms ease-in-out;
   object-fit: cover;

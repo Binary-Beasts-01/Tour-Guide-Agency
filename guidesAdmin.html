@@ -91,11 +91,11 @@
     <div id="overlay">
     </div>
     <div class="content-wrapper">
-        <section>
+        <section style="min-height: 70vh;">
             <div class="container-fluid mt-5 ">
                 <div class="text-center">
                     <h1 class="headline-1 mt-2 ">
-                        Administrator
+                        Guide Nabek
                     </h1>
                     <hr class="divider" />
                 </div>
@@ -105,36 +105,20 @@
                         <div class="row align-items-center">
                             <div class="col-sm-12 col-md-6 col-lg-4">
                                 <input type="text" id="name" class="form-control form-input m-0" autocomplete="off"
-                                    placeholder="Tour destination" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="number" id="id" class="form-control form-input m-0" autocomplete="off"
-                                    placeholder="Tour ID" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="text" id="location" class="form-control form-input" autocomplete="off"
-                                    placeholder="Location" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="text" id="price" class="form-control form-input" autocomplete="off"
-                                    placeholder="Price" />
+                                    placeholder="Username" />
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-4">
                                 <input type="text" id="image" class="form-control form-input" autocomplete="off"
-                                    placeholder="Image relative location" />
+                                    placeholder="profile_picture" />
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-4">
-                                <label for="duration" class="text-left p-2">Duration</label>
-                                <input type="number" id="duration" class="form-control form-input m-0"
-                                    autocomplete="off" placeholder="tour duration" />
+                                <input type="text" id="location" class="form-control form-input" autocomplete="off"
+                                    placeholder="skills" />
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-4">
-                                <label for="fromDate" class="text-left p-2">From</label>
-                                <input type="date" id="fromDate" class="form-control form-input m-0" autocomplete="off"
-                                    placeholder="Starting date" />
+                                <input type="text" id="location" class="form-control form-input" autocomplete="off"
+                                    placeholder="work_ethics" />
                             </div>
-
-
                         </div>
                     </form>
 
@@ -145,71 +129,7 @@
                 </div>
             </div>
         </section>
-        <div class="container mb-5">
-            <div class="row mt-5">
-                <div class="col-10">
-                    <h1 class="text-center">
-                        Tour Destinations
-                    </h1>
-                </div>
-                <!--  Table Tour-->
-                <div class="d-flex table-data pb-5">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <!-- <th scope="col">Location</th> -->
-                                <th scope="col">Price</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Start Date</th>
-                                <th scope="col">Duration</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody">
 
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-2">
-                    <button class="btn" id="btn-read">Refresh</button>
-                </div>
-            </div>
-            <div id="notfound"></div>
-
-            <div class="row mt-5">
-                <div class="col-10">
-                    <h1 class="text-center">
-                        Tour Guides
-                    </h1>
-                </div>
-                <!--  Table Guides-->
-                <div class="d-flex table-data pb-5">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">tour_id</th>
-                                <th scope="col">rating</th>
-                                <th scope="col">profile_picture</th>
-                                <th scope="col">skills</th>
-                                <th scope="col">work_ethics</th>
-                                <th scope="col">approved</th>
-                            </tr>
-                        </thead>
-                        <tbody id="gbody">
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-2">
-                    <button class="btn" id="btn-read">Refresh</button>
-                </div>
-            </div>
-
-            <div id="gnotfound"></div>
-        </div>
 
         <!-- footer section -->
         <footer id="footer" class="p-4 pt-5">
@@ -256,7 +176,7 @@
     <script src="./assets/js/utils/formValidate.js"></script>
     <script src="./assets/js/authUser.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/admin.js"></script>
+    <script src="./assets/js/guideAdmin.js"></script>
 </body>
 
 </html>

@@ -53,11 +53,11 @@ function updateTour(e) {
 }
 
 async function displayAll() {
-  res = await retrieveAll('tour');
+  const res = await retrieveAll('tour');
+  const resGuide = await retrieveAll('guides');
   table(res);
+  gTable(resGuide);
 }
-
-displayAll();
 
 async function display(id) {
   const tourResult = async () => {
@@ -92,3 +92,76 @@ function table(res) {
   }
   tbody.innerHTML = output;
 }
+
+// guides: '++id, &username, tour_id, rating, profile_picture, skills, work_ethics, approved',
+
+function gTable(res) {
+  const gbody = document.getElementById('gbody');
+  const notfound = document.getElementById('gnotfound');
+  notfound.textContent = '';
+  // remove all childs from the dom first
+  while (gbody.hasChildNodes()) {
+    gbody.removeChild(gbody.firstChild);
+  }
+  {
+    /* <td>${entry.location}</td> */
+  }
+  let output = '';
+  for (entry of res) {
+    output += `<tr>
+    <td>${entry.id}</td>
+    <td>${entry.username}</td>
+    <td>${entry.tour_id}</td>
+    <td><ul>
+    <li>Rating Count: ${entry.rating.ratingCount}</li>
+    <li>Total Rating: ${entry.rating.totalRating}</li>
+    </></td>
+    <td>${entry.profile_picture}</td>
+    <td><ul>${listLang(entry.skills)}</ul></td>
+    <td><ul>${listEthics(entry.work_ethics)}</ul></td>
+    <td><button id=${entry.id} type="button" class="btn-danger guide_manage">${
+      entry.approved == true ? 'disapprove' : 'approve'
+    }</button></td>
+  </tr>`;
+  }
+  gbody.innerHTML = output;
+
+  const guideManage = document.querySelectorAll('.guide_manage');
+  guideManage.forEach((g) => {
+    g.addEventListener('click', (e) => {
+      e.preventDefault();
+      let id = e.target.id;
+      let value;
+      if (e.target.innerHTML == 'disapprove') {
+        value = { approved: false };
+      } else {
+        value = { approved: true };
+      }
+      update('guides', { id: Number(id), value });
+      displayAll();
+    });
+  });
+}
+
+function listLang(skills) {
+  let res = '';
+  for (let i = 0; i < skills.length; i++) {
+    const s = skills[i];
+    res += ` <li>Language: ${s.lang} => ${s.percent}</li>`;
+  }
+  return res;
+}
+
+function listEthics(ethics) {
+  let res = '';
+  for (const key in ethics) {
+    if (Object.hasOwnProperty.call(ethics, key)) {
+      const element = ethics[key];
+      res += `<li>${key}:  => ${element}</li>`;
+    }
+  }
+
+  return res;
+}
+
+displayAll();

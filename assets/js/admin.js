@@ -4,6 +4,10 @@
 // create('tour', {name: "Addis Ababa", location: "Addis Ababa", price: 350,  image: "/assets/images/gettyimages-697529054-612x612.jpg", date: "2020-10-18"});
 // create('tour', {name: "Semen Mountains", location: "Semen", price: 520,  image: "/assets/images/gettyimages-905176238-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Konso", location: "Konso", price: 600,  image: "/assets/images/gettyimages-988621664-2048x2048.jpg", date: "2020-10-18"});
+if (JSON.parse(loggedinUser).role != 'admin') {
+  localStorage.removeItem('user');
+  window.location.replace('index.html');
+}
 
 const idInput = document.getElementById('id');
 const nameInput = document.getElementById('name');
@@ -114,8 +118,8 @@ function gTable(res) {
     <td>${entry.username}</td>
     <td>${entry.tour_id}</td>
     <td><ul>
-    <li>Rating Count: ${entry.rating.ratingCount}</li>
-    <li>Total Rating: ${entry.rating.totalRating}</li>
+    <li>Rating Count: ${0}</li>
+    <li>Total Rating: ${0}</li>
     </></td>
     <td>${entry.profile_picture}</td>
     <td><ul>${listLang(entry.skills)}</ul></td>

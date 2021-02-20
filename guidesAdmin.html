@@ -94,7 +94,7 @@
         <section style="min-height: 70vh;">
             <div class="container-fluid mt-5 ">
                 <div class="text-center">
-                    <h1 class="headline-1 mt-2 ">
+                    <h1 class="headline-1 mt-2 guide-name">
                         Guide Nabek
                     </h1>
                     <hr class="divider" />
@@ -104,28 +104,29 @@
                     <form class="w-50">
                         <div class="row align-items-center">
                             <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="text" id="name" class="form-control form-input m-0" autocomplete="off"
-                                    placeholder="Username" />
-                            </div>
-                            <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="text" id="image" class="form-control form-input" autocomplete="off"
+                                <input type="text" id="image" name="image" class="form-control form-input" autocomplete="off"
                                     placeholder="profile_picture" />
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="text" id="location" class="form-control form-input" autocomplete="off"
+                                <input type="text" id="skills" name="skills" class="form-control form-input" autocomplete="off"
                                     placeholder="skills" />
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-4">
-                                <input type="text" id="location" class="form-control form-input" autocomplete="off"
-                                    placeholder="work_ethics" />
+                                <input type="number" min="1" max="100" id="dedication" name="dedication" class="form-control form-input" autocomplete="off" placeholder="Dedication in percentage"/>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <input type="number" min="1" max="100" id="commitment" name="commitment" class="form-control form-input" autocomplete="off" placeholder="Commitment in percentage"/>
+                            </div>
+                            <div class="col-sm-12 col-md-6 col-lg-4">
+                                <input type="number" min="1" max="100" id="professionalism" name="professionalism" class="form-control form-input" autocomplete="off" placeholder="Professionalism in percentage"/>
                             </div>
                         </div>
                     </form>
 
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button class="btn" id="btn-create">Create</button>
-                    <button class="btn" id="btn-update">Update</button>
+                    <button class="btn" id="btn-requestAcc">Request Account</button>
+                    <button class="btn" id="btn-updateAcc">Update Account Info</button>
                 </div>
             </div>
         </section>

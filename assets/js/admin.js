@@ -19,6 +19,7 @@ const refreshBtn = document.getElementById('btn-read');
 refreshBtn.addEventListener('click', displayAll);
 const updateBtn = document.getElementById('btn-update');
 updateBtn.addEventListener('click', updateTour);
+
 function createTour(e) {
   e.preventDefault();
   create('tour', {

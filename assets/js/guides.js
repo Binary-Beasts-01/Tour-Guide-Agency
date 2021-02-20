@@ -1,12 +1,12 @@
 const tourContainer = document.querySelector('#tour_guides');
 document.addEventListener("DOMContentLoaded", () => {
   create('guides', {
+    id: 1,
     username: 'Nabek',
     skills: [
       { lang: 'Amharic', percent: 30 },
       { lang: 'English', percent: 60 }
     ],
-    experience: '3 Yrs',
     rating: {totalRating: 0, ratingCount: 0},
     work_ethics: {dedication: 90, professionalism: 74, experience: 86}
   });
@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       { lang: 'Amharic', percent: 30 },
       { lang: 'English', percent: 60 },
     ],
-    experience: '3 Yrs',
     rating: {totalRating: 0, ratingCount: 0},
     work_ethics: {dedication: 90, professionalism: 74, experience: 86}
   });

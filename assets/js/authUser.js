@@ -105,7 +105,7 @@ function login(email, password) {
           if (r.role == 'admin') {
             window.location.replace('admin.html');
           } else if (r.role == 'guide') {
-            window.location.replace('guideDetail.html');
+            window.location.replace(`guidesAdmin.html?id=${r.id}`);
           } else {
             window.location.reload();
           }

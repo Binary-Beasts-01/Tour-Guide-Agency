@@ -175,11 +175,16 @@
                             <div>
                                 <fieldset class="rating">
                                     <span class="guide-rating">4.6<span class="total-rating">/5</span></span>
-                                    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
-                                    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
-                                    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
-                                    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
-                                    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+                                    <input type="radio" id="star5" name="rating" value="5" /><label class="full"
+                                        for="star5" title="Awesome - 5 stars"></label>
+                                    <input type="radio" id="star4" name="rating" value="4" /><label class="full"
+                                        for="star4" title="Pretty good - 4 stars"></label>
+                                    <input type="radio" id="star3" name="rating" value="3" /><label class="full"
+                                        for="star3" title="Meh - 3 stars"></label>
+                                    <input type="radio" id="star2" name="rating" value="2" /><label class="full"
+                                        for="star2" title="Kinda bad - 2 stars"></label>
+                                    <input type="radio" id="star1" name="rating" value="1" /><label class="full"
+                                        for="star1" title="Sucks big time - 1 star"></label>
                                     <div class="rating-text"> <span>0 ratings</span> </div>
                                 </fieldset>
                             </div>
@@ -191,10 +196,13 @@
                     </div>
                     <div class="skills-bar row justify-content-center">
                         <div class="col-4">
-                            <div class="progressdiv"  data-percent="88">
-                                <svg class="progressC" width="178" height="178" viewport="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                                <circle r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4" stroke-dashoffset="0" ></circle>
-                                <circle class="bar" r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4" stroke-dashoffset="0"></circle>
+                            <div class="progressdiv" data-percent="88">
+                                <svg class="progressC" width="178" height="178" viewport="0 0 100 100" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle r="80" cx="89" cy="89" fill="transparent" stroke-dasharray="502.4"
+                                        stroke-dashoffset="0"></circle>
+                                    <circle class="bar" r="80" cx="89" cy="89" fill="transparent"
+                                        stroke-dasharray="502.4" stroke-dashoffset="0"></circle>
                                 </svg>
                                 <div class="h5 mt-2 text-center">
                                     Dedication
@@ -381,7 +389,7 @@
                                             placeholder="E-mail or nickname">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                        <input name="password" id="form-label" type="password" placeholder="Password">
                                     </div>
                                     <div>
                                         <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
@@ -419,12 +427,17 @@
                                         <input name="email" id="form-label" type="text" placeholder="E-mail">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                        <input name="password" id="form-label" type="password" placeholder="Password">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input name="cpassword" id="form-label" type="text"
+                                        <input name="cpassword" id="form-label" type="password"
                                             placeholder="Confirm Password">
                                     </div>
+                                    <select class="form-select my-3" id="select-role">
+                                        <option selected>Choose Role</option>
+                                        <option value="user">User</option>
+                                        <option value="guide">Guide</option>
+                                    </select>
                                     <div>
                                         <button id="register-btn" class="login-btn col-md-12 mt-4">
                                             Sign Up

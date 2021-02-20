@@ -38,6 +38,13 @@
     </div>
     <!-- top header section -->
     <header id="landing-header">
+        <div class="search-form">
+            <div class="form-group">
+                <input name="search" type="search" placeholder="Search..." id="form-fname" class="form-input">
+                <button style="display: none;" data-toggle="modal" data-target="#searchModal"
+                    id="search-m-show"></button>
+            </div>
+        </div>
         <nav class="nav-center">
             <div class="nav-head">
                 <span class="navigation-toggler humberger-menu me-3">
@@ -53,37 +60,49 @@
                     <li class="list-item"><a href="destination.html">Destinations</a></li>
                     <li class="list-item"><a href="guides.html">Guides</a></li>
                     <li class="list-item"><a href="gallery.html">Gallery</a></li>
-                    <li class="list-item"><a href="gallery.html">Contact</a></li>
+                    <li class="list-item"><a href="contact.html">Contact</a></li>
                     <li>
-                        <i class="fas fa-search"></i>
+                        <i class="search-bar fas fa-search"></i>
                     </li>
                 </ul>
             </div>
             <div class="collapsable">
-                <ul class=" ml-auto">
-                    <a class="btn" data-toggle="modal" data-target="#accountModal" href="#">Login/Register</a>
+                <ul>
+                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                        href="#">Login/Register</a>
+                    <div class="user-avatar">N</div>
                 </ul>
             </div>
             <div class="navigation-menu">
                 <ul class="nav-list">
                     <li>
-                        <i class="fas fa-search px-4"></i>
+                        <i class="search-bar fas fa-search px-2 mx-2"></i>
                     </li>
                     <li>
-                        <i class="fas fa-2x fa-ellipsis-v"></i>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" type="button" data-bs-toggle="dropdown" id="dropdownMenuButton1"
+                                href="#"><i class="nav-drop-menu fas fa-2x fa-ellipsis-v ps-1"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                                        href="#">Login/Register</a>
+                                    <div class="user-avatar">N</div>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="sidebar">
             <ul class="nav-list">
-                <li class="list-item"><a href="index.html">Home</a></li>
+                <li class="list-item active"><a href="index.html">Home</a></li>
                 <li class="list-item"><a href="about.html">About</a></li>
                 <li class="list-item"><a href="destination.html">Destinations</a></li>
                 <li class="list-item"><a href="guides.html">Guides</a></li>
                 <li class="list-item"><a href="gallery.html">Gallery</a></li>
                 <li class="list-item"><a href="contact.html">Contact</a></li>
-                </li>
             </ul>
         </div>
     </header>
@@ -120,6 +139,20 @@
                                     placeholder="work_ethics" />
                             </div>
                         </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <input type="hidden" name="count" value="1" />
+                            <div class="controls" id="profs">
+                                <label class="control-label" for="field1">Add Language Skills in Percentage(eg. Ahmaric,
+                                    50)</label>
+                                <form class="input-append">
+                                    <div id="field"><input autocomplete="off" class="input form-control form-input"
+                                            id="field1" name="prof1" type="text" placeholder="Enter language skill"
+                                            data-items="8" />
+                                        <button id="b1" class="btn-primary add-more" type="button">+</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </form>
 
                 </div>
@@ -129,7 +162,94 @@
                 </div>
             </div>
         </section>
+        <!-- Modal -->
+        <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="form-container">
+                        <div class="d form-login">
+                            <div class="login-form mt-5">
+                                <h2 class="login">Login</h2>
+                                <hr class="divider" />
+                                <form action="">
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="email" id="form-label" type="text"
+                                            placeholder="E-mail or nickname">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="password" id="form-label" type="password" placeholder="Password">
+                                    </div>
+                                    <div>
+                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
+                                            Sign In
+                                        </button>
+                                    </div>
+                                    <div class="form-group text-center col-md-12 mt-4">
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
+                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
+                                                    href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="google"><a
+                                                    href=""><i class="fab fa-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
+                                            Up</a></span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d form-spanner">
 
+                        </div>
+                        <div class="d form-register">
+                            <div class="login-form mt-5">
+                                <h2 class="login">Create account</h2>
+                                <hr class="divider" />
+                                <form action="">
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="name" id="form-label" type="text" placeholder="Full Name">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="email" id="form-label" type="text" placeholder="E-mail">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="password" id="form-label" type="password" placeholder="Password">
+                                    </div>
+                                    <div class="form-group col-md-12 mt-4">
+                                        <input name="cpassword" id="form-label" type="password"
+                                            placeholder="Confirm Password">
+                                    </div>
+                                    <select class="form-select my-3" id="select-role">
+                                        <option selected>Choose Role</option>
+                                        <option value="user">User</option>
+                                        <option value="guide">Guide</option>
+                                    </select>
+                                    <div>
+                                        <button id="register-btn" class="login-btn col-md-12 mt-4">
+                                            Sign Up
+                                        </button>
+                                    </div>
+                                    <div class="form-group text-center col-md-12 mt-4">
+                                        <ul class="list-unstyled list-inline">
+                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
+                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
+                                                    href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li class="list list-inline-item social-media-icon" id="google"><a
+                                                    href=""><i class="fab fa-google"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </form>
+                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- footer section -->
         <footer id="footer" class="p-4 pt-5">

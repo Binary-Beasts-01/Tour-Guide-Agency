@@ -68,7 +68,7 @@ userAvatar.forEach((e) => {
   e.addEventListener('click', (e) => {
     if (confirm('Are you sure you want to logout?')) {
       localStorage.removeItem('user');
-      window.location.reload();
+      window.location.replace('index.html');
     }
   });
 });

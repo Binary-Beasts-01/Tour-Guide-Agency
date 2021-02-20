@@ -100,7 +100,12 @@ function login(email, password) {
         if (r) {
           localStorage.setItem(
             'user',
-            JSON.stringify({ id: r.id, name: r.name, email: r.email })
+            JSON.stringify({
+              id: r.id,
+              name: r.name,
+              email: r.email,
+              role: r.role,
+            })
           );
           if (r.role == 'admin') {
             window.location.replace('admin.html');

@@ -98,15 +98,15 @@ function login(email, password) {
       })
       .then((r) => {
         if (r) {
+          localStorage.setItem(
+            'user',
+            JSON.stringify({ id: r.id, name: r.name, email: r.email })
+          );
           if (r.role == 'admin') {
             window.location.replace('admin.html');
           } else if (r.role == 'guide') {
             window.location.replace('guideDetail.html');
           } else {
-            localStorage.setItem(
-              'user',
-              JSON.stringify({id: r.id, name: r.name, email: r.email })
-            );
             window.location.reload();
           }
           console.log('Login success');

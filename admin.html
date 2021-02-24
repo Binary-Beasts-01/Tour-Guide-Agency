@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/media_query.css">
     <link rel="stylesheet" href="./assets/css/contact.css">
@@ -164,70 +165,49 @@
                 </div>
             </div>
         </section>
-        <div class="container mb-5">
-            <div class="row mt-5">
-                <div class="col-10">
-                    <h1 class="text-center">
-                        Tour Destinations
-                    </h1>
-                </div>
-                <!--  Table Tour-->
-                <div class="d-flex table-data pb-5">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <!-- <th scope="col">Location</th> -->
-                                <th scope="col">Price</th>
-                                <th scope="col">Image</th>
-                                <th scope="col">Start Date</th>
-                                <th scope="col">Duration</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tbody">
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-2">
-                    <button class="btn" id="btn-read">Refresh</button>
-                </div>
+        <div class="container my-5">
+            <!--  Table Tour-->
+            <div class="pb-5">
+                <h1 class="text-center">
+                    Tour Destinations
+                </h1>
+                <table class="display" id="destinationTable">
+                    
+                </table>
             </div>
-            <div id="notfound"></div>
-
-            <div class="row mt-5">
-                <div class="col-10">
-                    <h1 class="text-center">
-                        Tour Guides
-                    </h1>
-                </div>
-                <!--  Table Guides-->
-                <div class="d-flex table-data pb-5">
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">tour_id</th>
-                                <th scope="col">rating</th>
-                                <th scope="col">profile_picture</th>
-                                <th scope="col">skills</th>
-                                <th scope="col">work_ethics</th>
-                                <th scope="col">approved</th>
-                            </tr>
-                        </thead>
-                        <tbody id="gbody">
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-2">
-                    <button class="btn" id="btn-read">Refresh</button>
-                </div>
+            <div class="col-2">
+                <button class="btn" id="btn-read">Refresh</button>
             </div>
+        </div>
+        <div class="container my-5">
+            <!--  Table Guides-->
+            <div class="pb-5">
+                <h1 class="text-center">
+                    Tour Guides
+                </h1>
+                <table class="display" id="guidesTabel">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">tour_id</th>
+                            <th scope="col">rating</th>
+                            <th scope="col">profile_picture</th>
+                            <th scope="col">skills</th>
+                            <th scope="col">work_ethics</th>
+                            <th scope="col">approved</th>
+                        </tr>
+                    </thead>
+                    <tbody id="gbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2">
+                <button class="btn" id="btn-read">Refresh</button>
+            </div>
+        </div>
 
-            <div id="gnotfound"></div>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
@@ -358,6 +338,7 @@
         </script>
     <!-- Include Dexie -->
     <!-- <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script> -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
     <script src="./assets/js/db/dexie.js"></script>
     <script src="./assets/js/database.js"></script>
     <script src="./assets/js/utils/crudOperations.js"></script>

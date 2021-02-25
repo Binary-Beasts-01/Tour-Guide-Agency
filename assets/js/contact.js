@@ -45,6 +45,14 @@ cSubmit.addEventListener('click', (e) => {
   storeToDb(data);
 });
 
+// adding fake data to display
+storeToDb(  {
+  username: "Surafel Kassahun",
+  email: "se.surafel.kassahun@gmail.com",
+  phone: "0949024607",
+  message: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, dolorem molestiae? Ipsam iste rem dicta asperiores vel. Doloremque, repellendus dicta labore ratione architecto voluptate similique commodi enim, exercitationem fugit porro?"
+});
+
 function storeToDb(data) {
   create('comments', data);
 }

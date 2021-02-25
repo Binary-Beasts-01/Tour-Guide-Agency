@@ -1,3 +1,4 @@
+import {update, create, retrieve} from './utils/crudOperations.js';
 if (!loggedinUser) {
     window.location.replace('index.html');
   }
@@ -74,10 +75,6 @@ async function addLoggedGuideInfo() {
     return guideResult();
 }
 
-
-function requestGuideAccount() {
-
-}
 
 const createBtn = document.getElementById('btn-requestAcc');
 createBtn.addEventListener('click', sendAccRequest);

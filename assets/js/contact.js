@@ -1,3 +1,5 @@
+import {create} from './utils/crudOperations.js';
+
 const cFNameField = document.querySelector('input[name=fname]');
 const cLNameField = document.querySelector('input[name=lname]');
 const cEmailField = document.querySelector('input[name=email]');

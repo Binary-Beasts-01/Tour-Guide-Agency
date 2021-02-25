@@ -1,3 +1,5 @@
+import {create, retrieve, retrieveAll} from './utils/crudOperations.js';
+
 const destinationContainer = document.querySelector('#tour_destination');
 const priceQuery = document.querySelector('#priceQuery');
 const searchQuery = document.querySelector('#searchQuery');
@@ -70,9 +72,9 @@ viewAll.addEventListener('click', async () => {
 searchQuery.addEventListener('onchange', filterByName);
 priceQuery.addEventListener('onchange', filterByPrice);
 
-function viewLess() {
+export function viewLess() {
   destinationContainer.innerHTML = '';
-  for (i = 0; i < 6; i++) {
+  for (let i = 0; i < 6; i++) {
     addTourToDestinationPage(i + 1);
   }
 }
@@ -93,7 +95,7 @@ async function sortByDate() {
   }
 }
 
-async function addTourToDestinationPage(id) {
+export async function addTourToDestinationPage(id) {
   const tourResult = async () => {
     const c = await retrieve('tour', id);
     destinationContainer.innerHTML += createDestinationContent(c);
@@ -101,7 +103,7 @@ async function addTourToDestinationPage(id) {
   return tourResult();
 }
 
-function createDestinationContent(r) {
+export function createDestinationContent(r) {
   return `<div class="col-sm-6 col-xl-4">
     <article class="event-default-wrap">
         <div class="event-default">

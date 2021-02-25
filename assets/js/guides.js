@@ -1,3 +1,5 @@
+import {retrieve, create} from './utils/crudOperations.js';
+
 const tourContainer = document.querySelector('#tour_guides');
 document.addEventListener("DOMContentLoaded", () => {
   create('guides', {
@@ -27,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function addTourGuide() {
   tourContainer.innerHTML = '';
-  for (i = 0; i < 2; i++) {
+  for (let i = 0; i < 2; i++) {
     addGuide(i + 1);
   }
 }

@@ -1,3 +1,5 @@
+import {update, create, retrieveAll} from './utils/crudOperations.js';
+
 // create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Sof Umer Cave", location: "Afar", price: 550, image: "/assets/images/gettyimages-182174818-2048x2048.jpg", date: "2020-10-18"});
@@ -68,7 +70,7 @@ async function displayAll() {
 
 function table(res) {
   destinationDataSet = [];
-  for (entry of res) {
+  for (let entry of res) {
     let temp = [entry.id, entry.name, entry.price, entry.image, entry.start_date, entry.duration];
     destinationDataSet.push(temp);
   }
@@ -95,7 +97,7 @@ function table(res) {
 
 function gTable(res) {
   guidesDataSet = [];
-  for (entry of res) {
+  for (let entry of res) {
     let temp = [entry.id, entry.username, 'entry.tour_id', `${0}`, 'entry.profile_picture', listLang(entry.skills), listEthics(entry.work_ethics), 
     `<button id=${entry.id} type="button" class="btn-danger guide_manage">${
       entry.approved == true ? 'Reject' : 'Accept'

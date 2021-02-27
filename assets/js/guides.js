@@ -34,29 +34,6 @@ function addTourGuide() {
   }
 }
 
-function guideContent(guide, user) {
-  return `<div class="col-sm-12 col-md-3">
-    <div class="card-guide">
-      <img src="./assets/images/gettyimages-170065590-2048x2048.jpg" />
-      <figcaption>
-        <img src="./assets/images/profile.png" alt="profile" class="profile" />
-        <h2 class="guide_name">${guide.username}<span>Tour Guide</span></h2>
-        <h3>Language</h3>
-        <div class="navbar-nav">
-          ${listSkills(guide.skills)}
-          </li>
-        </div>
-        <div class="guide-info">
-          <a href="guideDetail.html?id=${guide.id}" class="info me-3">More Info</a>
-          <div>
-            ${rating(guide.rating)}
-          </div>
-        </div>
-      </figcaption>
-    </div>
-    </div>`;
-}
-
 function listSkills(arr) {
   let output = '';
   for (let i = 0; i < arr.length; i++) {

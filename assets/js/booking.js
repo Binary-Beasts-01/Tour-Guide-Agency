@@ -33,4 +33,6 @@ document.querySelector("#add-booking").addEventListener('click', (e) => {
         tourist_address: touristAddress.value, tourist_country: touristCountry.value, tourist_state: touristState.value,
         date: `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`};
     create('booking', value);
+    // window.location.replace('index.html')
 });
+

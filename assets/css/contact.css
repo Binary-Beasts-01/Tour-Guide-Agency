@@ -19,6 +19,7 @@
 #contact-container{
     padding-left: 70px;
 }
+
 .form-input{
     border-radius: 30px;
     
@@ -30,6 +31,9 @@
     background-color:rgb(247, 247, 247);
    
 
+}
+h5{
+    font-family: var(--ff-primary);
 }
 
 .icons {
@@ -53,15 +57,26 @@
 }
 .container-fluid{
     padding-left: 0px;
-    padding-right: 0px;}
+    padding-right: 0px;
+}
+
+
+
 .gmap_canvas {
     overflow:hidden;
     height:12.5rem;
     width:100%;
 }
+
 .mapouter{
     position:relative;
     text-align:right;
     height: 200rem;
     width:100%;
+}
+p{
+    font-family: var(--ff-primary);
+}
+span , label{
+    font-family: var(--ff-primary);
 }

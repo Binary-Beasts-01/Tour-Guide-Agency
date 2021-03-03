@@ -67,7 +67,9 @@ h5{
     height:12.5rem;
     width:100%;
 }
-
+.listfont{
+    font-family: var(--ff-primary);
+}
 .mapouter{
     position:relative;
     text-align:right;

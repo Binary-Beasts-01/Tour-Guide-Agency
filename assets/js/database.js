@@ -8,3 +8,5 @@ db.version(1).stores({
   tour: '++id, &name, location, price, image, start_date, duration, guides',
   comments: '++id, username, email, phone, message',
 });
+
+export {db};

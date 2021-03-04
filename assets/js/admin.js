@@ -1,3 +1,5 @@
+import {update, create, retrieveAll} from './utils/crudOperations.js';
+
 // create('tour', {name: "Fasilades", location: "Gondar",  price: 480,  image: "/assets/images/gettyimages-138178737-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Lalibela", location: "Lalibela", price: 280,  image: "/assets/images/gettyimages-111919734-2048x2048.jpg", date: "2020-10-18"});
 // create('tour', {name: "Sof Umer Cave", location: "Afar", price: 550, image: "/assets/images/gettyimages-182174818-2048x2048.jpg", date: "2020-10-18"});
@@ -8,6 +10,8 @@ if (JSON.parse(loggedinUser).role != 'admin') {
   localStorage.removeItem('user');
   window.location.replace('index.html');
 }
+var destinationDataSet = [];
+var guidesDataSet = [];
 
 const idInput = document.getElementById('id');
 const nameInput = document.getElementById('name');
@@ -16,6 +20,7 @@ const priceInput = document.getElementById('price');
 const imageInput = document.getElementById('image');
 const fromDateInput = document.getElementById('fromDate');
 const duration = document.getElementById('duration');
+const guide_id = document.getElementById('id_guide');
 
 const createBtn = document.getElementById('btn-create');
 createBtn.addEventListener('click', createTour);
@@ -26,6 +31,8 @@ updateBtn.addEventListener('click', updateTour);
 
 function createTour(e) {
   e.preventDefault();
+  console.log(guide_id.value.toString(), nameInput.value.toString())
+  update('guides', { id: Number(guide_id.value.toString()), value: {tour_id:nameInput.value.toString()} });
   create('tour', {
     name: nameInput.value.toString(),
     location: locationInput.value.toString(),
@@ -34,8 +41,10 @@ function createTour(e) {
     start_date: fromDateInput.value.toString(),
     duration: duration.value.toString(),
   });
+
   displayAll();
 }
+
 
 function updateTour(e) {
   e.preventDefault();
@@ -64,89 +73,75 @@ async function displayAll() {
   gTable(resGuide);
 }
 
-async function display(id) {
-  const tourResult = async () => {
-    const c = await retrieve('tour', id);
-    destinationContainer.innerHTML += createDestinationContent(c);
-  };
-  return tourResult();
+function table(res) {
+  destinationDataSet = [];
+  for (let entry of res) {
+    let temp = [entry.id, entry.name, entry.price, entry.image, entry.start_date, entry.duration];
+    destinationDataSet.push(temp);
+  }
+  $(document).ready( function () {
+    if ($.fn.dataTable.isDataTable('#destinationTable')) {
+      $('#destinationTable').DataTable().clear().destroy();               
+    }
+    $('#destinationTable').DataTable( {
+      data: destinationDataSet,
+      columns: [
+              { title: "ID" },
+              { title: "Name" },
+              { title: "Price" },
+              { title: "Image" },
+              { title: "Start Date" },
+              { title: "Duration" }
+      ]
+    });
+  });
 }
 
-function table(res) {
-  const tbody = document.getElementById('tbody');
-  const notfound = document.getElementById('notfound');
-  notfound.textContent = '';
-  // remove all childs from the dom first
-  while (tbody.hasChildNodes()) {
-    tbody.removeChild(tbody.firstChild);
-  }
-  {
-    /* <td>${entry.location}</td> */
-  }
-  let output = '';
-  for (entry of res) {
-    output += `<tr>
-    <td>${entry.id}</td>
-    <td>${entry.name}</td>
-    
-    <td>${entry.price}</td>
-    <td>${entry.image}</td>
-    <td>${entry.start_date}</td>
-    <td>${entry.duration}</td>
-  </tr>`;
-  }
-  tbody.innerHTML = output;
-}
 
 // guides: '++id, &username, tour_id, rating, profile_picture, skills, work_ethics, approved',
 
 function gTable(res) {
-  const gbody = document.getElementById('gbody');
-  const notfound = document.getElementById('gnotfound');
-  notfound.textContent = '';
-  // remove all childs from the dom first
-  while (gbody.hasChildNodes()) {
-    gbody.removeChild(gbody.firstChild);
+  guidesDataSet = [];
+  for (let entry of res) {
+    let temp = [entry.id, entry.username, 'entry.tour_id', `${0}`, 'entry.profile_picture', listLang(entry.skills), listEthics(entry.work_ethics), 
+    `<button id=${entry.id} type="button" class="btn-danger guide_manage">${
+      entry.approved == true ? 'Reject' : 'Accept'
+    }</button>`
+  ];
+  guidesDataSet.push(temp);
   }
-  {
-    /* <td>${entry.location}</td> */
-  }
-  let output = '';
-  for (entry of res) {
-    output += `<tr>
-    <td>${entry.id}</td>
-    <td>${entry.username}</td>
-    <td>${entry.tour_id}</td>
-    <td><ul>
-    <li>Rating Count: ${0}</li>
-    <li>Total Rating: ${0}</li>
-    </></td>
-    <td>${entry.profile_picture}</td>
-    <td><ul>${listLang(entry.skills)}</ul></td>
-    <td><ul>${listEthics(entry.work_ethics)}</ul></td>
-    <td><button id=${entry.id} type="button" class="btn-danger guide_manage">${
-      entry.approved == true ? 'disapprove' : 'approve'
-    }</button></td>
-  </tr>`;
-  }
-  gbody.innerHTML = output;
-
-  const guideManage = document.querySelectorAll('.guide_manage');
-  guideManage.forEach((g) => {
-    g.addEventListener('click', (e) => {
-      e.preventDefault();
-      let id = e.target.id;
-      let value;
-      if (e.target.innerHTML == 'disapprove') {
-        value = { approved: false };
-      } else {
-        value = { approved: true };
-      }
-      update('guides', { id: Number(id), value });
-      displayAll();
+  $(document).ready( function () {
+    $('#guidesTabel').DataTable( {
+      destroy: true,
+      data: guidesDataSet,
+      columns: [
+        { title: "ID" },
+        { title: "User Name" },
+        { title: "Tour ID" },
+        { title: "rating" },
+              { title: "Profile Picture" },
+              { title: "Skills" },
+              { title: "Work Ethics" },
+              { title: "Status" },
+            ]
     });
+    $('.guide_manage').each(function () {
+      $(this).on('click', function(e) {
+          e.preventDefault();
+          let id = e.target.id;
+          let value;
+          if (e.target.innerHTML == 'Reject') {
+            value = { approved: false };
+          } else {
+            value = { approved: true };
+          }
+          update('guides', { id: Number(id), value });
+          displayAll();
+        } )
+      })
   });
 }
+
 
 function listLang(skills) {
   let res = '';
@@ -165,7 +160,7 @@ function listEthics(ethics) {
       res += `<li>${key}:  => ${element}</li>`;
     }
   }
-
+  
   return res;
 }
 

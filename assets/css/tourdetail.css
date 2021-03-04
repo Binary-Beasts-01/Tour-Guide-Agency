@@ -137,3 +137,7 @@
   height: 200rem;
   width: 100%;
 }
+li > a{
+  font-family: var(--ff-primary);
+  font-weight: 400;  
+}

@@ -20,7 +20,7 @@
     <div class="pre-header d-none d-lg-flex">
         <div class="contact-list">
             <p><i class="fas fa-phone"></i> +25194516911</p>
-            <p><i class="fas fa-map-marker"></i> 6 Kilo Squer, Addis Ababa</p>
+            <p><i class="fas fa-map-marker"></i> 6 Kilo Square, Addis Ababa</p>
             <p><i class="fas fa-phone"></i> +25194516911</p>
         </div>
         <div class="social-icons">
@@ -117,12 +117,16 @@
                     Notifications
                 </div>
                 <div class="card-body list-notification">
+<<<<<<< HEAD
                     <div class="not-card d-flex align-items-center">
                         <p class="card-text">With supporting text below as a natural lead-in to additional content.
                         </p>
                         <a type="button" class="replay btn btn-sm"><i class="fas fa-thumbs-up"></i></a>
                         <a type="button" class="replay btn btn-sm"><i class="fas fa-thumbs-down"></i></a>
                     </div>
+=======
+                    
+>>>>>>> bac77b5aded17a648b9c1fa86fbee5344a869606
 
                 </div>
             </div>
@@ -308,15 +312,16 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
         </script>
     <!-- Include Dexie -->
-    <!-- <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script> -->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="./assets/js/db/dexie.js"></script>
-    <script src="./assets/js/database.js"></script>
-    <script src="./assets/js/utils/crudOperations.js"></script>
+    <script type="module" src="./assets/js/database.js"></script>
+    <script type="module" src="./assets/js/utils/crudOperations.js"></script>
     <script src="./assets/js/utils/constants.js"></script>
     <script src="./assets/js/utils/formValidate.js"></script>
-    <script src="./assets/js/authUser.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+    <script type="module" src="./assets/js/authUser.js"></script>
     <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/guideAdmin.js"></script>
+    <script type="module" src="./assets/js/guideAdmin.js"></script>
 </body>
 
 </html>

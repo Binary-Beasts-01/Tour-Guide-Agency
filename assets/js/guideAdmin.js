@@ -1,3 +1,5 @@
+import { update, create, retrieve } from './utils/crudOperations.js';
+import { db } from './database.js';
 if (!loggedinUser) {
   window.location.replace('index.html');
 }
@@ -54,9 +56,7 @@ const user = JSON.parse(loggedinUser);
 
 document.addEventListener('DOMContentLoaded', () => {
   addLoggedGuideInfo();
-  getNotification().then((r) => {
-    console.log(r);
-  });
+  getNotification();
 });
 
 async function addLoggedGuideInfo() {
@@ -79,8 +79,6 @@ async function addLoggedGuideInfo() {
   return guideResult();
 }
 
-function requestGuideAccount() {}
-
 const createBtn = document.getElementById('btn-requestAcc');
 createBtn.addEventListener('click', sendAccRequest);
 const updateBtn = document.getElementById('btn-updateAcc');
@@ -97,6 +95,7 @@ function sendAccRequest(e) {
     id: id,
     username: user.name,
     profile_picture: profilePicture.value.toString(),
+    tour_id: '',
     skills: skills,
     work_ethics: {
       dedication: Number(dedication.value),
@@ -135,18 +134,28 @@ function updateAccount(e) {
   update('guides', { id: id, value });
 }
 
-// add notification
+// notification system
 const notifyContainer = document.querySelector('.list-notification');
 
 async function getNotification() {
-  const result = async () => {
-    return db.transaction('r', [db.guides], async () => {
-      const austin = await db.guides.get({
-        id: 4,
-      });
-      return austin;
-    });
+  const guideResult = async () => {
+    const guide = await retrieve('guides', id);
+    console.log(guide.tour_id);
+    let guide_tours = guide.tour_id;
+    if (guide_tours) {
+      notifyContainer.innerHTML = `<div class="not-card d-flex align-items-center">
+      <p class="card-text">You are assigned a tour:  ${guide_tours}
+      </p>
+      <a type="button" class="replay btn btn-sm"><i class="fas fa-thumbs-up"></i></a>
+      <a type="button" class="replay btn btn-sm"><i class="fas fa-thumbs-down"></i></a>
+  </div>`;
+    } else {
+      notifyContainer.innerHTML = `<div class="not-card d-flex align-items-center">
+      <p class="card-text">there are no tour assigned!
+      </p>
+  </div>`;
+    }
   };
 
-  return result();
+  return guideResult();
 }

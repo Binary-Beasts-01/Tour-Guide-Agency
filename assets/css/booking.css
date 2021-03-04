@@ -14,3 +14,10 @@
 .card.booking-form{
     border: 0;
 }
+label, span{
+    font-family: var(--ff-primary);
+}
+li > a{
+    font-family: var(--ff-primary);
+    font-weight: 400;  
+}

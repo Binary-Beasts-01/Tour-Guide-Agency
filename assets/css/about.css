@@ -41,6 +41,10 @@
     font-size: 3rem;
 }
 
+p{
+    font-family: var(--ff-primary);
+}
+
 .social-media-icon > a {
     color: var(--clr-light-brown);
 }

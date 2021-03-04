@@ -97,7 +97,10 @@ h6 {
 .f-w-600 {
   font-weight: 600;
 }
-
+li > a{
+  font-family: var(--ff-primary);
+  font-weight: 400;  
+}
 .m-b-20 {
   margin-bottom: 20px;
 }

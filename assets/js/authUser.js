@@ -1,3 +1,4 @@
+import { db } from './database.js';
 // const formBox = document.querySelectorAll('.form-container .form input');
 const loginBtn = document.querySelector('#sign-in-btn');
 const registerBtn = document.querySelector('#register-btn');
@@ -63,6 +64,7 @@ registerBtn.addEventListener('click', (e) => {
 });
 
 function register(name, email, role, password) {
+  password = CryptoJS.AES.encrypt(password, 'CIPHERKEY').toString();
   name = name.toLowerCase();
   email = email.toLowerCase();
   db.transaction('rw', db.users, function () {
@@ -90,9 +92,10 @@ function register(name, email, role, password) {
 function login(email, password) {
   email = email.trim().toLowerCase();
   password = password.trim();
+  // password = CryptoJS.AES.encrypt(password, "CIPHERKEY").toString();
   db.transaction('r', db.users, function () {
     db.users
-      .get({ email, password })
+      .get({ email })
       .catch((e) => {
         console.log('Error getting');
       })
@@ -107,14 +110,20 @@ function login(email, password) {
               role: r.role,
             })
           );
-          if (r.role == 'admin') {
-            window.location.replace('admin.html');
-          } else if (r.role == 'guide') {
-            window.location.replace(`guidesAdmin.html?id=${r.id}`);
-          } else {
-            window.location.reload();
+          if (
+            CryptoJS.AES.decrypt(r.password, 'CIPHERKEY').toString(
+              CryptoJS.enc.Utf8
+            ) == password
+          ) {
+            if (r.role == 'admin') {
+              window.location.replace('admin.html');
+            } else if (r.role == 'guide') {
+              window.location.replace(`guidesAdmin.html?id=${r.id}`);
+            } else {
+              window.location.reload();
+            }
+            console.log('Login success');
           }
-          console.log('Login success');
         } else {
           console.log('Login failure');
           errorDiv.style.display = 'block';

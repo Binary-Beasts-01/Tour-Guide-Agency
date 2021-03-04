@@ -7,6 +7,13 @@
   color: white;
   margin-bottom: 7rem;
 }
+p ,h4,span{
+  font-family: var(--ff-primary);
+}
+li > a{
+  font-family: var(--ff-primary);
+  font-weight: 400;  
+}
 
 @media screen and (max-width: 2500px) {
   #gallery {

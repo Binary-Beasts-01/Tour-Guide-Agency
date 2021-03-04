@@ -92,3 +92,4 @@ searchForm.addEventListener('keyup', function (event) {
     searchModal.click();
   }
 });
+

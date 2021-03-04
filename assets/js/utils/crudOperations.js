@@ -1,4 +1,6 @@
-function create(table, values) {
+import {db} from '../database.js';
+
+export function create(table, values) {
   db.transaction('rw', db[table], function () {
     db[table]
       .add(values)
@@ -17,7 +19,7 @@ function create(table, values) {
     });
 }
 
-async function retrieve(table, id) {
+export async function retrieve(table, id) {
   const result = async () => {
     const c = await retrieveResult(table, id);
     console.log('object', c);
@@ -27,7 +29,7 @@ async function retrieve(table, id) {
   return result();
 }
 
-async function retrieveAll(table) {
+export async function retrieveAll(table) {
   const result = async () => {
     const c = await db[table].toArray();
     return c;
@@ -36,7 +38,7 @@ async function retrieveAll(table) {
   return result();
 }
 
-function retrieveResult(table, id) {
+export function retrieveResult(table, id) {
   return db[table].get({ id }).then((r) => {
     if (r) {
       // console.log(r);
@@ -47,7 +49,7 @@ function retrieveResult(table, id) {
   });
 }
 
-function update(table, object) {
+export function update(table, object) {
   db[table].update(object.id, object.value).then(function (updated) {
     if (updated) {
       console.log('Entry update successfully');
@@ -57,7 +59,7 @@ function update(table, object) {
   });
 }
 
-function deleteEntry(table, id) {
+export function deleteEntry(table, id) {
   db[table].delete(id).then(function (deleteCount) {
     console.log('Dleted' + deleteCount + ' objects');
   });

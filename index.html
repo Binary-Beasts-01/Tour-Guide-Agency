@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/media_query.css">
-    <link rel="stylesheet" href="./assets/css/destination.css">
+        <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/media_query.css">
+        <link rel="stylesheet" href="./assets/css/destination.css">
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <title>Tour Guide Agency</title>
 </head>
@@ -253,7 +254,7 @@
             <div class="container-fluid">
                 <h1 class="text-center">Our Services</h1>
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-3 mb-3">
+                    <div class="col-sm-12 col-md-6 col-lg-3 mb-3" data-aos="fade-right">
                         <article class="box-minimal-border">
                             <div class="box-minimal-icon novi-icon linearicons-wifi">
                                 <i class="fas fa-car"></i>
@@ -666,6 +667,14 @@
     <script type="module" src="./assets/js/authUser.js"></script>
     <script src="./assets/js/main.js"></script>
     <script type="module" src="./assets/js/homePage.js"></script>
+    <script>
+        AOS.init({
+        disable: 'mobile',
+        offset: 200,
+        easing: 'slide',
+        duration: 1000,
+        });
+    </script>
 </body>
 
 </html>

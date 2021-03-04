@@ -60,7 +60,7 @@ registerBtn.addEventListener('click', (e) => {
     displayError("Password doesn't match!", rCpasswordField, null);
     return;
   }
-  register(nameVal, emailVal, "admin", rPasswordField.value);
+  register(nameVal, emailVal,rRoleField.value, rPasswordField.value);
 });
 
 function register(name, email, role, password) {

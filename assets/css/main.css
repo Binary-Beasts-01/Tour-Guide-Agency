@@ -289,6 +289,9 @@ ol > li {
   font-family: var(--ff-primary);
   font-weight: 400;  
 }
+h4,p,a,h3{
+  font-family: var(--ff-primary);
+}
 .nav-center {
   width: 100%;
   padding: 0 1rem;

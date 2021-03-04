@@ -82,3 +82,8 @@ p{
 span , label{
     font-family: var(--ff-primary);
 }
+li > a{
+    font-family: var(--ff-primary);
+    font-weight: 400;  
+}
+

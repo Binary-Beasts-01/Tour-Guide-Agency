@@ -60,7 +60,7 @@
             </div>
             <div class="collapsable">
                 <ul class=" ml-auto">
-                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
+                    <a class="btn login-register " data-toggle="modal" data-target="#accountModal"
                         href="#">Login/Register</a>
                     <div class="user-avatar">N</div>
                 </ul>
@@ -147,7 +147,7 @@
                                 </div>
 
                                 <div>
-                                    <button id="form-submit" class="btn pt-5">
+                                    <button id="form-submit" class="btn pt-5 fontFamily">
                                         Send Message
                                     </button>
                                 </div>
@@ -211,89 +211,7 @@
 
         <!-- map section -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="form-container">
-                        <div class="d form-login">
-                            <div class="login-form mt-5">
-                                <h2 class="login">Login</h2>
-                                <hr class="divider" />
-                                <form class="form" action="">
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="email" id="form-label" type="text"
-                                            placeholder="E-mail or nickname">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
-                                    </div>
-                                    <div>
-                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
-                                            Sign In
-                                        </button>
-                                    </div>
-                                    <div class="form-group text-center col-md-12 mt-4">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
-                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
-                                                    href=""><i class="fab fa-twitter"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="google"><a
-                                                    href=""><i class="fab fa-google"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </form>
-                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
-                                            Up</a></span>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="d form-spanner">
-
-                        </div>
-                        <div class="d form-register">
-                            <div class="login-form mt-5">
-                                <h2 class="login">Create account</h2>
-                                <hr class="divider" />
-                                <form action="">
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="name" id="form-label" type="text" placeholder="Full Name">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="email" id="form-label" type="text" placeholder="E-mail">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
-                                    </div>
-                                    <div class="form-group col-md-12 mt-4">
-                                        <input name="cpassword" id="form-label" type="text"
-                                            placeholder="Confirm Password">
-                                    </div>
-                                    <div>
-                                        <button id="register-btn" class="login-btn col-md-12 mt-4">
-                                            Sign Up
-                                        </button>
-                                    </div>
-                                    <div class="form-group text-center col-md-12 mt-4">
-                                        <ul class="list-unstyled list-inline">
-                                            <li class="list list-inline-item social-media-icon" id="facebook"><a
-                                                    href=""><i class="fab fa-facebook-f"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="twitter"><a
-                                                    href=""><i class="fab fa-twitter"></i></a></li>
-                                            <li class="list list-inline-item social-media-icon" id="google"><a
-                                                    href=""><i class="fab fa-google"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </form>
-                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <div class="container-fluid p-0">
             <div class="gmap_canvas">
                 <iframe width="100%" height="200rem" id="gmap_canvas"
@@ -303,6 +221,25 @@
             </div>
         </div>
 
+        <!-- Search modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <h2>Search Results</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <!-- Modal -->
         <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
             aria-hidden="true">
@@ -322,7 +259,7 @@
                                         <input name="password" id="form-label" type="text" placeholder="Password">
                                     </div>
                                     <div>
-                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
+                                        <button id="sign-in-btn fontFamily" class="login-btn col-md-12 mt-4">
                                             Sign In
                                         </button>
                                     </div>
@@ -337,7 +274,7 @@
                                         </ul>
                                     </div>
                                 </form>
-                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
+                                <p class="account-toggle l fontFamily">I don't have an account? <span><a href="#">Sign
                                             Up</a></span>
                                 </p>
                             </div>
@@ -384,7 +321,7 @@
                                         </ul>
                                     </div>
                                 </form>
-                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
+                                <p class="account-toggle r fontFamily">I have an account? <span><a href="#">Sign In</a></span></p>
                             </div>
                         </div>
                     </div>
@@ -397,7 +334,7 @@
             <div class="row justify-content-sm-center align-items-md-center mx-5">
                 <div class="col-md-10 col-lg-7 col-xl-4"></div>
                 <div class="col-md-10 col-lg-7 col-xl-4 text-xl-center">
-                    <p>&copy;2021. All Rights Reserved. Privacy Policy</p>
+                    <p class="fontFamily">&copy;2021. All Rights Reserved. Privacy Policy</p>
                 </div>
                 <div class="col-md-10 col-lg-7 col-xl-4 text-xl-end">
                     <ul class="list-unstyled list-inline">

@@ -6,3 +6,7 @@
     margin: 1.5em .6em;
     padding: .3em 2.4em;
 }
+li > a{
+    font-family: var(--ff-primary);
+    font-weight: 400;  
+}

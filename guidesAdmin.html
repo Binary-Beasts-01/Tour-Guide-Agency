@@ -110,6 +110,18 @@
     <div id="overlay">
     </div>
     <div class="content-wrapper">
+        <div class="msg-notification">
+            <div class="card">
+                <i class="notif fas fa-bell"></i>
+                <div class="card-header">
+                    Notifications
+                </div>
+                <div class="card-body list-notification">
+                    
+
+                </div>
+            </div>
+        </div>
         <section style="min-height: 70vh;">
             <div class="container-fluid mt-5 ">
                 <div class="text-center">
@@ -285,10 +297,10 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
         </script>
     <!-- Include Dexie -->
-    <!-- <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script> -->
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
     <script src="./assets/js/db/dexie.js"></script>
-    <!-- <script src="./assets/js/database.js"></script> -->
-    <!-- <script src="./assets/js/utils/crudOperations.js"></script> -->
+    <script type="module" src="./assets/js/database.js"></script>
+    <script type="module" src="./assets/js/utils/crudOperations.js"></script>
     <script src="./assets/js/utils/constants.js"></script>
     <script src="./assets/js/utils/formValidate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>

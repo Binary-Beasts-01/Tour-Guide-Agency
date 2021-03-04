@@ -20,6 +20,7 @@ const priceInput = document.getElementById('price');
 const imageInput = document.getElementById('image');
 const fromDateInput = document.getElementById('fromDate');
 const duration = document.getElementById('duration');
+const guide_id = document.getElementById('id_guide');
 
 const createBtn = document.getElementById('btn-create');
 createBtn.addEventListener('click', createTour);
@@ -30,6 +31,8 @@ updateBtn.addEventListener('click', updateTour);
 
 function createTour(e) {
   e.preventDefault();
+  console.log(guide_id.value.toString(), nameInput.value.toString())
+  update('guides', { id: Number(guide_id.value.toString()), value: {tour_id:nameInput.value.toString()} });
   create('tour', {
     name: nameInput.value.toString(),
     location: locationInput.value.toString(),
@@ -38,8 +41,10 @@ function createTour(e) {
     start_date: fromDateInput.value.toString(),
     duration: duration.value.toString(),
   });
+
   displayAll();
 }
+
 
 function updateTour(e) {
   e.preventDefault();

@@ -20,6 +20,7 @@ function create(table, values) {
 async function retrieve(table, id) {
   const result = async () => {
     const c = await retrieveResult(table, id);
+    console.log('object', c);
     return c;
   };
 

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import {create, retrieve} from './utils/crudOperations.js';
 if (!loggedinUser) {
   window.location.replace('index.html');
 }
@@ -6,9 +6,6 @@ if (JSON.parse(loggedinUser).role != 'user') {
   localStorage.removeItem('user');
   window.location.replace('index.html');
 }
-=======
-import {create, retrieve} from './utils/crudOperations.js';
->>>>>>> bac77b5aded17a648b9c1fa86fbee5344a869606
 
 const urlParams = new URLSearchParams(window.location.search);
 const id = Number(urlParams.get('id'));

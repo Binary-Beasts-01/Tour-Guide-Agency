@@ -134,6 +134,10 @@ p {
   margin-bottom: 1.25rem;
   letter-spacing: 0.02em;
 }
+.fontFamily{
+  font-family: var(--ff-primary);
+}
+
 .headline-1 {
   font-size: var(--fs-headline-1);
   font-weight: 700;
@@ -179,8 +183,8 @@ p {
   max-width: 100%;
   padding: 12px 0px;
   font-size: 16px;
-  font-family: 'Nanum Myeongjo', 'Times New Roman', Times, serif;
-  font-weight: 700;
+  font-weight: 400;
+  font-family: var(--ff-primary);;
   letter-spacing: 0.02em;
   border: 0;
   background: transparent;
@@ -276,6 +280,17 @@ header {
 .fixed-nav .logo-brand img,
 .fixed-nav nav {
   height: 4rem;
+}
+li > a{
+  font-family: var(--ff-primary);
+  font-weight: 400;  
+}
+ol > li {
+  font-family: var(--ff-primary);
+  font-weight: 400;  
+}
+h4,p,a,h3{
+  font-family: var(--ff-primary);
 }
 .nav-center {
   width: 100%;

@@ -37,3 +37,7 @@
   border: none;
   background-color: rgb(247, 247, 247);
 }
+li > a{
+    font-family: var(--ff-primary);
+    font-weight: 400;  
+}

@@ -1,56 +1,111 @@
 .d-flex input {
-    margin: .9em 0em;
+  margin: 0.9em 0em;
 }
 
 .d-flex button {
-    margin: 1.5em .6em;
-    padding: .3em 2.4em;
+  margin: 1.5em 0.6em;
+  padding: 0.3em 2.4em;
+}
+li > a {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+}
+
+.d-flex table {
+  margin: 1em;
 }
 
 /* guide admin */
 .msg-notification {
-    position: absolute;
-    right: 0;
-    top: 200px;
-    max-width: 380px;
-  }
-  .msg-notification .card {
-    position: relative;
-  }
-  .msg-notification .card .notif {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    margin: 5px;
-    color: red;
-  }
-  .msg-notification .card .card-text {
-    position: relative;
-    padding: 0.4rem;
-    border-bottom: 1px solid rgba(219, 214, 214, 0.71);
-    margin-bottom: 0.4rem;
-  }
-  .msg-notification .card .card-text::before {
-    position: absolute;
-    content: '';
-    height: 100%;
-    width: 3px;
-    background-color: rgb(70, 28, 28);
-    top: 0;
-    left: -3px;
-  }
-  .msg-notification .card .replay {
-    font-size: small;
-    border-bottom: none;
-    border: 1px solid rgba(219, 214, 214, 0.71);
-    align-items: center;
-    color: white;
-    height: 10px;
-    padding: 1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--clr-brown-darken);
-  }
+  position: absolute;
+  right: 0;
+  top: 200px;
+  max-width: 380px;
+}
+.msg-notification .card {
+  position: relative;
+}
+.msg-notification .card .notif {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  margin: 5px;
+  color: red;
+}
+.msg-notification .card .card-text {
+  position: relative;
+  padding: 0.4rem;
+  border-bottom: 1px solid rgba(219, 214, 214, 0.71);
+  margin-bottom: 0.4rem;
+}
+.msg-notification .card .card-text::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 3px;
+  background-color: rgb(70, 28, 28);
+  top: 0;
+  left: -3px;
+}
+.msg-notification .card .replay {
+  font-size: small;
+  border-bottom: none;
+  border: 1px solid rgba(219, 214, 214, 0.71);
+  align-items: center;
+  color: white;
+  height: 10px;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-brown-darken);
+}
+/* guide admin */
+.msg-notification {
+  position: absolute;
+  right: 0;
+  top: 200px;
+  max-width: 380px;
+}
+.msg-notification .card {
+  position: relative;
+}
+.msg-notification .card .notif {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  margin: 5px;
+  color: red;
+}
+.msg-notification .card .card-text {
+  position: relative;
+  padding: 0.4rem;
+  border-bottom: 1px solid rgba(219, 214, 214, 0.71);
+  margin-bottom: 0.4rem;
+}
+.msg-notification .card .card-text::before {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 3px;
+  background-color: rgb(70, 28, 28);
+  top: 0;
+  left: -3px;
+}
+.msg-notification .card .replay {
+  font-size: small;
+  border-bottom: none;
+  border: 1px solid rgba(219, 214, 214, 0.71);
+  align-items: center;
+  color: white;
+  height: 10px;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--clr-brown-darken);
+}

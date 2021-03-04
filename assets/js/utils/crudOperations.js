@@ -22,6 +22,7 @@ export function create(table, values) {
 export async function retrieve(table, id) {
   const result = async () => {
     const c = await retrieveResult(table, id);
+    console.log('object', c);
     return c;
   };
 

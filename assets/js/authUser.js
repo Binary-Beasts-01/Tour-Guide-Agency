@@ -1,4 +1,4 @@
-import {db} from './database.js';
+import { db } from './database.js';
 // const formBox = document.querySelectorAll('.form-container .form input');
 const loginBtn = document.querySelector('#sign-in-btn');
 const registerBtn = document.querySelector('#register-btn');
@@ -60,11 +60,11 @@ registerBtn.addEventListener('click', (e) => {
     displayError("Password doesn't match!", rCpasswordField, null);
     return;
   }
-  register(nameVal, emailVal,rRoleField.value, rPasswordField.value);
+  register(nameVal, emailVal, rRoleField.value, rPasswordField.value);
 });
 
 function register(name, email, role, password) {
-  password = CryptoJS.AES.encrypt(password, "CIPHERKEY").toString();
+  password = CryptoJS.AES.encrypt(password, 'CIPHERKEY').toString();
   name = name.toLowerCase();
   email = email.toLowerCase();
   db.transaction('rw', db.users, function () {
@@ -95,7 +95,7 @@ function login(email, password) {
   // password = CryptoJS.AES.encrypt(password, "CIPHERKEY").toString();
   db.transaction('r', db.users, function () {
     db.users
-      .get({ email})
+      .get({ email })
       .catch((e) => {
         console.log('Error getting');
       })
@@ -110,7 +110,11 @@ function login(email, password) {
               role: r.role,
             })
           );
-          if (CryptoJS.AES.decrypt(r.password, "CIPHERKEY").toString(CryptoJS.enc.Utf8) == password) {
+          if (
+            CryptoJS.AES.decrypt(r.password, 'CIPHERKEY').toString(
+              CryptoJS.enc.Utf8
+            ) == password
+          ) {
             if (r.role == 'admin') {
               window.location.replace('admin.html');
             } else if (r.role == 'guide') {

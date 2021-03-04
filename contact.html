@@ -66,8 +66,8 @@
                 </ul>
             </div>
             <div class="collapsable">
-                <ul class=" ml-auto">
-                    <a class="btn login-register " data-toggle="modal" data-target="#accountModal"
+                <ul>
+                    <a class="btn login-register" data-toggle="modal" data-target="#accountModal"
                         href="#">Login/Register</a>
                     <div class="user-avatar">N</div>
                 </ul>
@@ -228,8 +228,8 @@
                 <a href="https://www.divi-discounts.com"></a>
             </div>
         </div>
-<!-- search modal -->
-        
+        <!-- search modal -->
+
 
         <!-- Search modal -->
         <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="accountModalLabel"
@@ -266,10 +266,10 @@
                                             placeholder="E-mail or nickname">
                                     </div>
                                     <div class="form-group col-md-12 mt-4">
-                                        <input name="password" id="form-label" type="text" placeholder="Password">
+                                        <input name="password" id="form-label" type="password" placeholder="Password">
                                     </div>
                                     <div>
-                                        <button id="sign-in-btn fontFamily" class="login-btn col-md-12 mt-4">
+                                        <button id="sign-in-btn" class="login-btn col-md-12 mt-4">
                                             Sign In
                                         </button>
                                     </div>
@@ -284,7 +284,7 @@
                                         </ul>
                                     </div>
                                 </form>
-                                <p class="account-toggle l fontFamily">I don't have an account? <span><a href="#">Sign
+                                <p class="account-toggle l">I don't have an account? <span><a href="#">Sign
                                             Up</a></span>
                                 </p>
                             </div>
@@ -331,8 +331,7 @@
                                         </ul>
                                     </div>
                                 </form>
-                                <p class="account-toggle r fontFamily">I have an account? <span><a href="#">Sign
-                                            In</a></span></p>
+                                <p class="account-toggle r">I have an account? <span><a href="#">Sign In</a></span></p>
                             </div>
                         </div>
                     </div>
@@ -372,12 +371,13 @@
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
     <script src="./assets/js/db/dexie.js"></script>
-    <script src="./assets/js/database.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/database.js"></script> -->
+    <script type="module" src="./assets/js/utils/crudOperations.js"></script>
     <script src="./assets/js/utils/constants.js"></script>
     <script src="./assets/js/utils/formValidate.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
     <script type="module" src="./assets/js/authUser.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script type="module" src="./assets/js/contact.js"></script>
 </body>
 
